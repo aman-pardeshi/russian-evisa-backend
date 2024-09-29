@@ -1,0 +1,42 @@
+{
+  "resource": "Dashboards",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "/dashboards/event_statistics",
+  "description": "List The Statistics for selected event",
+  "explanation": null,
+  "parameters": [
+    {
+      "type": "integer",
+      "required": true,
+      "name": "id",
+      "description": "Pass Event Id"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/dashboards/event_statistics?id=14",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/vnd.eventible.com; version=1",
+        "Content-Type": "application/json",
+        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTU0NTE2MTUsInVzZXJfaWQiOjEzfQ.dos2IA-6K7m1QXQ5DRL3YFqm7m4MKUyDXhv1nLaoiiY"
+      },
+      "request_query_parameters": {
+        "id": "14"
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"data\": {\n    \"complete_reviews\": 0,\n    \"time_spent_per_event\": 0.0,\n    \"pending_reviews\": 0,\n    \"flagged_reviews\": 0,\n    \"decline_reviews\": 0,\n    \"hold_reviews\": 0,\n    \"flag_reviews\": {\n      \"did_not_attended_event\": null,\n      \"content_in_appropriate_language\": null,\n      \"is_duplicate\": null,\n      \"other\": null\n    }\n  }\n}",
+      "response_headers": {
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

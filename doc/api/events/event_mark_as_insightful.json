@@ -1,0 +1,50 @@
+{
+  "resource": "Events",
+  "resource_explanation": null,
+  "http_method": "POST",
+  "route": "events/insights",
+  "description": "Event mark as insightful",
+  "explanation": "If user marked insightful to true",
+  "parameters": [
+    {
+      "type": "integer",
+      "name": "id",
+      "description": "Event Id"
+    },
+    {
+      "type": "boolean",
+      "name": "is_bookmarked",
+      "description": "Pass Boolean value"
+    },
+    {
+      "type": "boolean",
+      "name": "is_insightful",
+      "description": "Pass Boolean value"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "events/insights",
+      "request_body": "{\"id\":120,\"is_insightful\":true}",
+      "request_headers": {
+        "Accept": "application/vnd.eventible.com; version=1",
+        "Content-Type": "application/json",
+        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTU0NTE2MjUsInVzZXJfaWQiOjM5fQ.XVyvCLCjMUVXNc9gAjGZWOdzgsztUyFjW5tB4pVwBOw"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"data\": {\n    \"id\": 120,\n    \"title\": \"Colette Schaden\",\n    \"url_name\": \"JGLYJHYWCV\",\n    \"description\": \"Iure est et. Est iusto tempore. Nemo repellat suscipit.\",\n    \"logo\": {\n      \"url\": null\n    },\n    \"banner\": {\n      \"url\": null\n    },\n    \"agenda_file\": {\n      \"url\": null\n    },\n    \"start_date\": \"2021-02-11T10:00:00.000Z\",\n    \"end_date\": \"2021-02-11T15:00:00.000Z\",\n    \"total_review\": 0,\n    \"timezone\": null,\n    \"eventible_score\": 0.0,\n    \"status\": \"pending\",\n    \"discount_percentage\": 38.0,\n    \"price\": 266,\n    \"registration_url\": \"https://robohash.org/etrerumeos.png?size=300x300&set=set1\",\n    \"event_type\": \"virtual\",\n    \"edition\": \"Kathe Huels MD\",\n    \"reject_note\": null,\n    \"is_paid\": false,\n    \"date_in_days\": 0,\n    \"is_top_rated\": false,\n    \"country\": \"Haiti\",\n    \"job_title\": \"Marketing\",\n    \"campaign_links\": [\n      {\n        \"id\": \"b7d4b6da-c8d6-4e75-9c5b-a1dd0c57bdaa\",\n        \"expiry_date\": \"2021-02-11\",\n        \"reward_amount\": \"20\",\n        \"link\": \"http://localhost:3002/review/JGLYJHYWCV/6zXcHOkzgn\"\n      }\n    ],\n    \"is_upcoming\": false,\n    \"is_bookmarked\": false,\n    \"is_insightful\": true,\n    \"coupons\": [\n      {\n        \"id\": 22,\n        \"name\": null,\n        \"description\": \"Veniam ab quia cumque.\",\n        \"discount_percentage\": 40.0,\n        \"registration_url\": \"http://cummings.net/victorina\",\n        \"validity\": \"2021-02-11T08:33:45.028Z\"\n      }\n    ]\n  }\n}",
+      "response_headers": {
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

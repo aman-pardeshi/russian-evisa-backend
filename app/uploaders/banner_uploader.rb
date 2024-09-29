@@ -1,0 +1,2 @@
+class BannerUploader < BaseUploader
+end

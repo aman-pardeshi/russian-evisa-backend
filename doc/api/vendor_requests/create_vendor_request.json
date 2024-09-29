@@ -1,0 +1,78 @@
+{
+  "resource": "Vendor Requests",
+  "resource_explanation": null,
+  "http_method": "POST",
+  "route": "/vendor_requests",
+  "description": "Create Vendor Request",
+  "explanation": "Create vendor request ",
+  "parameters": [
+    {
+      "type": "string",
+      "required": true,
+      "name": "name",
+      "description": "Vendor Name"
+    },
+    {
+      "type": "string",
+      "required": true,
+      "name": "email",
+      "description": "Vendor Email"
+    },
+    {
+      "type": "string",
+      "required": true,
+      "name": "designation",
+      "description": "Vendor JobRole"
+    },
+    {
+      "type": "string",
+      "required": true,
+      "name": "company_name",
+      "description": "Vendor company_name"
+    },
+    {
+      "type": "string",
+      "name": "linkedin_url",
+      "description": "Vendor Linkedin URL"
+    },
+    {
+      "type": "string",
+      "name": "twitter_handle",
+      "description": "Vendor Twitter Handle"
+    },
+    {
+      "type": "boolean",
+      "name": "is_event_listed",
+      "description": "Is event listed boolean value"
+    },
+    {
+      "type": "integer",
+      "name": "user_id",
+      "description": "Pass this when user login using google/linkedin or if user login already"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/vendor_requests",
+      "request_body": "{\"name\":\"XYZ PQR\",\"email\":\"xyz@gmail.com\",\"designation\":\"HR\",\"company_name\":\"zsert\"}",
+      "request_headers": {
+        "Accept": "application/vnd.eventible.com; version=1",
+        "Content-Type": "application/json"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"message\": \"We received your vendor access request successfully. Eventible Team will verify and contact you\"\n}",
+      "response_headers": {
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

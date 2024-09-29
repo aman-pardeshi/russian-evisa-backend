@@ -1,0 +1,43 @@
+{
+  "resource": "Sessions",
+  "resource_explanation": null,
+  "http_method": "POST",
+  "route": "/sessions/google",
+  "description": "Failure Response if user sent invalid params",
+  "explanation": "Failure Response of Sign in user with Google",
+  "parameters": [
+    {
+      "name": "google_response",
+      "description": "Response Which is sent by google after login"
+    },
+    {
+      "scope": "google_response",
+      "name": "profileObj",
+      "description": "Profile Object Of User"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/sessions/google",
+      "request_body": "{\"google_response\":{\"profileObj\":{\"googleId\":\"117331728813189843960\",\"imageUrl\":\"https://lh3.googleusercontent.com/a-AOh14Gimkf_-Rw-0425QVtueNFbG1R1fx4oCW35u--YD=s96-c\",\"email\":\"prashant.bangar@joshsoftware.com\",\"name\":\"prashant bangar\",\"givenName\":\"prashant\",\"familyName\":\"bangar\"}}}",
+      "request_headers": {
+        "Accept": "application/vnd.eventible.com; version=1",
+        "Content-Type": "application/json"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 422,
+      "response_status_text": "Unprocessable Entity",
+      "response_body": "{\n  \"message\": \"google_response[:accessToken], google_response[:profileObj] is missing\"\n}",
+      "response_headers": {
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "resource": "Events",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "/events/autocomplete",
+  "description": "Autocomplete Search if query is present",
+  "explanation": "Events autocomplete search api",
+  "parameters": [
+    {
+      "required": true,
+      "name": "query",
+      "description": "Event query parameter"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/events/autocomplete?query=Wes",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/vnd.eventible.com; version=1",
+        "Content-Type": "application/json",
+        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTU0NTE2MjAsInVzZXJfaWQiOjI5fQ.dcl4HKc57wBSWB9nqUYDc-K1qGzpL2nwVhbRFNd2dec"
+      },
+      "request_query_parameters": {
+        "query": "Wes"
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"data\": [\n    {\n      \"id\": 70,\n      \"title\": \"Wes Brown\"\n    }\n  ]\n}",
+      "response_headers": {
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

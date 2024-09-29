@@ -1,0 +1,50 @@
+{
+  "resource": "Reviews",
+  "resource_explanation": null,
+  "http_method": "POST",
+  "route": "/reviews",
+  "description": "Review creation failed due to missing params",
+  "explanation": "Failed review creation due to missing params",
+  "parameters": [
+    {
+      "required": true,
+      "name": "attended_as",
+      "description": "Attended as [attendee/speaker/sponsor]"
+    },
+    {
+      "required": true,
+      "name": "utm_source",
+      "description": "Utm source type [campaign/web]"
+    },
+    {
+      "required": true,
+      "name": "event_id",
+      "description": "Event id"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/reviews",
+      "request_body": "{\"attended_as\":\"attendee\",\"utm_source\":\"web\",\"event_id\":166}",
+      "request_headers": {
+        "Accept": "application/vnd.eventible.com; version=1",
+        "Content-Type": "application/json",
+        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTU0NTE2MzIsInVzZXJfaWQiOjY1fQ.EGXxRnfzuP-mjsknTrbvMEjGRDuXY2LRCdRjlQBo6PM"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 422,
+      "response_status_text": "Unprocessable Entity",
+      "response_body": "{\n  \"message\": \"event_id, attended_as, utm_source, answer is missing\"\n}",
+      "response_headers": {
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "resource": "Vendor Requests",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "/vendor_requests/:id",
+  "description": "With InValid Vendor Request id",
+  "explanation": null,
+  "parameters": [
+    {
+      "type": "integer",
+      "required": true,
+      "name": "id",
+      "description": "Vendor Request ID"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/vendor_requests/7",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/vnd.eventible.com; version=1",
+        "Content-Type": "application/json",
+        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTU0NTE2MzcsInVzZXJfaWQiOjE1MX0._4w5KnKMM7hv_IiuXkgLp7Wc9m7bBZgzge9o47E8lRY"
+      },
+      "request_query_parameters": {
+        "{}": null
+      },
+      "request_content_type": "application/json",
+      "response_status": 422,
+      "response_status_text": "Unprocessable Entity",
+      "response_body": "{\n  \"message\": \"{:model=>\\\"vendor request\\\"} Not found\"\n}",
+      "response_headers": {
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

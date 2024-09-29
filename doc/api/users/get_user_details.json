@@ -1,0 +1,42 @@
+{
+  "resource": "Users",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "/users/:id",
+  "description": "get user details",
+  "explanation": "get user details",
+  "parameters": [
+    {
+      "type": "integer",
+      "required": true,
+      "name": "id",
+      "description": "User Id "
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/users/99",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/vnd.eventible.com; version=1",
+        "Content-Type": "application/json",
+        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTU0NTE2MzYsInVzZXJfaWQiOjk5fQ.kbOW8Zf2Uf0wEc7hE0TjHY_bRO9uTwi_cUi2jAW4CNU"
+      },
+      "request_query_parameters": {
+        "{}": null
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"data\": {\n    \"id\": 99,\n    \"name\": \"Shayne Nicolas Ret.\",\n    \"email\": \"melaine@deckow-abbott.io\",\n    \"role\": \"admin\",\n    \"designation\": null,\n    \"profile\": null,\n    \"last_sign_in_ip\": \"\",\n    \"last_sign_in_at\": \" \",\n    \"current_sign_in_ip\": \"\",\n    \"current_sign_in_at\": \" \",\n    \"sign_in_count\": 0,\n    \"status\": \"active\",\n    \"mobile_number\": null,\n    \"company_name\": null,\n    \"member_since\": \"11th Feb 2021\",\n    \"reward_amount\": 0,\n    \"events_reviewd\": 0,\n    \"saved_reviews\": 0,\n    \"bookmarked_events\": 0,\n    \"is_password_set\": true,\n    \"linkedin_url\": null,\n    \"twitter_handle\": null,\n    \"invitation_status\": null\n  }\n}",
+      "response_headers": {
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

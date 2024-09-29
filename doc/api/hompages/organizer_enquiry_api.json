@@ -1,0 +1,50 @@
+{
+  "resource": "Hompages",
+  "resource_explanation": null,
+  "http_method": "POST",
+  "route": "homepages/organizer_enquiry",
+  "description": "Organizer Enquiry API",
+  "explanation": "Organizer Enquiry API",
+  "parameters": [
+    {
+      "type": "string",
+      "name": "name",
+      "description": "Pass Name"
+    },
+    {
+      "type": "string",
+      "name": "company",
+      "description": "Pass Company name"
+    },
+    {
+      "type": "string",
+      "name": "email",
+      "description": "Pass Email"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "homepages/organizer_enquiry",
+      "request_body": "{\"name\":\"PQR MNP\",\"company\":\"josh\",\"email\":\"xyz@gmail.com\"}",
+      "request_headers": {
+        "Accept": "application/vnd.eventible.com; version=1",
+        "Content-Type": "application/json",
+        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTU0NTE2MjksInVzZXJfaWQiOjUwfQ.yjM32nkoBWKOG6en_HQoJ170HMBgmvUocP9yGyXLb1I"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"message\": \"We received your enquiry successfully, Eventible team will contact you soon\"\n}",
+      "response_headers": {
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

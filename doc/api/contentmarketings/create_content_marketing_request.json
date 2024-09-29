@@ -1,0 +1,55 @@
+{
+  "resource": "ContentMarketings",
+  "resource_explanation": null,
+  "http_method": "POST",
+  "route": "/content_marketings",
+  "description": "Create Content Marketing Request",
+  "explanation": null,
+  "parameters": [
+    {
+      "type": "boolean",
+      "name": "is_open_for_ideas_discussion",
+      "description": "We would love for Eventible's Managing Editor to interview our speakers via email?"
+    },
+    {
+      "type": "boolean",
+      "name": "is_allowed_to_interview",
+      "description": "We would love for Eventible's Managing Editor to interview our speakers via email?"
+    },
+    {
+      "type": "boolean",
+      "name": "is_allowed_to_publish_article",
+      "description": "We are happy to contribute articles to be published to Mentorifi - Eventible's blog"
+    },
+    {
+      "type": "boolean",
+      "name": "is_allowed_to_video_interview",
+      "description": "We would love for Eventible's Managing Editor to conduct video interviews with our speakers?"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/content_marketings",
+      "request_body": "{\"is_open_for_ideas_discussion\":true,\"is_allowed_to_interview\":true,\"is_allowed_to_publish_article\":true,\"is_allowed_to_video_interview\":true}",
+      "request_headers": {
+        "Accept": "application/vnd.eventible.com; version=1",
+        "Content-Type": "application/json",
+        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTU1NjA3MDQsInVzZXJfaWQiOjl9.D24rr8yjBRx6tVynmEg23m1NHDzgvXRriI07icda1T8"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"data\": {\n    \"id\": 2,\n    \"is_allowed_to_video_interview\": true,\n    \"is_allowed_to_publish_article\": true,\n    \"is_allowed_to_interview\": true,\n    \"is_open_for_ideas_discussion\": true\n  }\n}",
+      "response_headers": {
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "resource": "Events",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "/events/:id/similar_events",
+  "description": "Get Similar Events",
+  "explanation": "Get Similar events api",
+  "parameters": [
+    {
+      "type": "integer",
+      "required": true,
+      "name": "id",
+      "description": "Send event Id"
+    },
+    {
+      "type": "integer",
+      "name": "page",
+      "description": "Send Page number for pagination"
+    },
+    {
+      "type": "integer",
+      "name": "limit",
+      "description": "send limit for per page"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/events/116/similar_events?page=1&limit=10",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/vnd.eventible.com; version=1",
+        "Content-Type": "application/json",
+        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTU0NTE2MjQsInVzZXJfaWQiOjM4fQ.SqIkavGbpFIii5e-CJyOMUVn5tBE5-adFOG-euCxpxM"
+      },
+      "request_query_parameters": {
+        "page": "1",
+        "limit": "10"
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"data\": [\n    {\n      \"id\": 119,\n      \"title\": \"Sherie Bashirian\",\n      \"url_name\": \"NNNQQSHIFW\",\n      \"description\": \"Non velit deleniti. Necessitatibus explicabo quis. Aut non est.\",\n      \"logo\": {\n        \"url\": null\n      },\n      \"banner\": {\n        \"url\": null\n      },\n      \"agenda_file\": {\n        \"url\": null\n      },\n      \"start_date\": \"2021-02-23T08:33:44.504Z\",\n      \"end_date\": \"2021-03-08T08:33:44.505Z\",\n      \"total_review\": 0,\n      \"timezone\": null,\n      \"eventible_score\": 0.0,\n      \"status\": \"approved\",\n      \"discount_percentage\": 186.0,\n      \"price\": 270,\n      \"registration_url\": \"https://robohash.org/maximedistinctiodolor.png?size=300x300&set=set1\",\n      \"event_type\": \"virtual\",\n      \"edition\": \"Marcene Gerlach\",\n      \"reject_note\": null,\n      \"is_paid\": false,\n      \"date_in_days\": 12,\n      \"is_top_rated\": false,\n      \"country\": \"Venezuela\",\n      \"job_title\": \"Marketing\",\n      \"campaign_links\": [\n\n      ],\n      \"is_upcoming\": true,\n      \"is_bookmarked\": false,\n      \"is_insightful\": false,\n      \"coupons\": [\n\n      ]\n    },\n    {\n      \"id\": 118,\n      \"title\": \"Jordan Barton\",\n      \"url_name\": \"EDJIENLIRP\",\n      \"description\": \"Quis pariatur qui. Eligendi natus ex. Ipsam neque doloribus.\",\n      \"logo\": {\n        \"url\": null\n      },\n      \"banner\": {\n        \"url\": null\n      },\n      \"agenda_file\": {\n        \"url\": null\n      },\n      \"start_date\": \"2021-02-23T08:33:44.488Z\",\n      \"end_date\": \"2021-03-08T08:33:44.488Z\",\n      \"total_review\": 0,\n      \"timezone\": null,\n      \"eventible_score\": 0.0,\n      \"status\": \"approved\",\n      \"discount_percentage\": 844.0,\n      \"price\": 750,\n      \"registration_url\": \"https://robohash.org/errorquiquis.png?size=300x300&set=set1\",\n      \"event_type\": \"virtual\",\n      \"edition\": \"Carlena Bednar\",\n      \"reject_note\": null,\n      \"is_paid\": false,\n      \"date_in_days\": 12,\n      \"is_top_rated\": false,\n      \"country\": \"Timor-Leste\",\n      \"job_title\": \"Marketing\",\n      \"campaign_links\": [\n\n      ],\n      \"is_upcoming\": true,\n      \"is_bookmarked\": false,\n      \"is_insightful\": false,\n      \"coupons\": [\n\n      ]\n    },\n    {\n      \"id\": 117,\n      \"title\": \"Garnett Rath\",\n      \"url_name\": \"AEJWIFXXRY\",\n      \"description\": \"Hic at modi. Harum cumque deserunt. Veritatis qui explicabo.\",\n      \"logo\": {\n        \"url\": null\n      },\n      \"banner\": {\n        \"url\": null\n      },\n      \"agenda_file\": {\n        \"url\": null\n      },\n      \"start_date\": \"2021-02-21T08:33:44.468Z\",\n      \"end_date\": \"2021-03-03T08:33:44.468Z\",\n      \"total_review\": 2,\n      \"timezone\": null,\n      \"eventible_score\": 0.0,\n      \"status\": \"approved\",\n      \"discount_percentage\": 412.0,\n      \"price\": 22,\n      \"registration_url\": \"https://robohash.org/quiutut.png?size=300x300&set=set1\",\n      \"event_type\": \"virtual\",\n      \"edition\": \"Msgr. Adella Wehner\",\n      \"reject_note\": null,\n      \"is_paid\": false,\n      \"date_in_days\": 10,\n      \"is_top_rated\": false,\n      \"country\": \"Japan\",\n      \"job_title\": \"Marketing\",\n      \"campaign_links\": [\n\n      ],\n      \"is_upcoming\": true,\n      \"is_bookmarked\": false,\n      \"is_insightful\": false,\n      \"coupons\": [\n\n      ]\n    }\n  ],\n  \"meta\": {\n    \"page\": \"1\",\n    \"limit\": \"10\",\n    \"total_records\": 3,\n    \"current_records\": 3\n  }\n}",
+      "response_headers": {
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

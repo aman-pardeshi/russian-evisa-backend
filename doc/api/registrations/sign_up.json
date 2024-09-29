@@ -1,0 +1,54 @@
+{
+  "resource": "Registrations",
+  "resource_explanation": null,
+  "http_method": "POST",
+  "route": "/users",
+  "description": "Sign up",
+  "explanation": "Signup user with email",
+  "parameters": [
+    {
+      "required": true,
+      "name": "name",
+      "description": "Full name"
+    },
+    {
+      "required": true,
+      "name": "email",
+      "description": "Email Address"
+    },
+    {
+      "required": true,
+      "name": "password",
+      "description": "password"
+    },
+    {
+      "required": true,
+      "name": "password_confirmation",
+      "description": "Password Confirmation"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/users",
+      "request_body": "{\"name\":\"Prashant Bangar\",\"email\":\"testing1@gmail.com\",\"password\":\"welcome\",\"password_confirmation\":\"welcome\"}",
+      "request_headers": {
+        "Accept": "application/vnd.eventible.com; version=1",
+        "Content-Type": "application/json"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"message\": \"You will receive an email with instructions for how to confirm your email address in a few minutes.\"\n}",
+      "response_headers": {
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

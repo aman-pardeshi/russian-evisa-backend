@@ -1,0 +1,96 @@
+{
+  "resource": "Reviews",
+  "resource_explanation": null,
+  "http_method": "POST",
+  "route": "/reviews/:review_id/verifications",
+  "description": "Create Verification for review",
+  "explanation": "Creating checklist for review",
+  "parameters": [
+    {
+      "type": "integer",
+      "required": true,
+      "name": "review_id",
+      "description": "Review Id"
+    },
+    {
+      "type": "boolean",
+      "name": "exists_on_outreach_db",
+      "description": "Exists on outreach database"
+    },
+    {
+      "type": "boolean",
+      "name": "valid_linkedin_profile",
+      "description": "Has a valid linkedin profile with 50 connections"
+    },
+    {
+      "type": "boolean",
+      "name": "not_competitor_or_representative",
+      "description": "Is not a competitor representative of event organizer"
+    },
+    {
+      "type": "boolean",
+      "name": "not_violent_lang",
+      "description": "Does not contain inappropriate language hateful speech"
+    },
+    {
+      "type": "boolean",
+      "name": "not_duplicate_review",
+      "description": "Not A duplicate or plagiarized review"
+    },
+    {
+      "type": "boolean",
+      "name": "gc_amount_approved",
+      "description": "Gc Amount Approved"
+    },
+    {
+      "type": "string",
+      "name": "gc_amount",
+      "description": "GC Amount Text"
+    },
+    {
+      "type": "boolean",
+      "name": "add_on_incentive",
+      "description": "Add on incentive"
+    },
+    {
+      "type": "string",
+      "name": "incentive_value",
+      "description": "Add on incentive text"
+    },
+    {
+      "type": "boolean",
+      "name": "on_hold",
+      "description": "On hold"
+    },
+    {
+      "type": "string",
+      "name": "on_hold_reason",
+      "description": "On hold Text"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/reviews/90/verifications",
+      "request_body": "{\"exists_on_outreach_db\":true,\"valid_linkedin_profile\":true,\"not_competitor_or_representative\":true,\"not_violent_lang\":false,\"not_duplicate_review\":false,\"gc_amount_approved\":true,\"gc_amount\":\"10\",\"add_on_incentive\":true,\"incentive_value\":\"50\",\"on_hold\":true,\"on_hold_reason\":\"On Hold\"}",
+      "request_headers": {
+        "Accept": "application/vnd.eventible.com; version=1",
+        "Content-Type": "application/json",
+        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTU0NTE2MzUsInVzZXJfaWQiOjc5fQ.nWWTAq3YISyII07OjkMqPrxTukaPfRfNc_qZz4ikwAM"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"data\": {\n    \"id\": 90,\n    \"status\": \"on_hold\",\n    \"utm_source\": \"web\",\n    \"attended_as\": null,\n    \"is_flaged\": false,\n    \"is_saved\": false,\n    \"created_at\": \"2021-02-11\",\n    \"event\": {\n      \"id\": 173,\n      \"logo\": {\n        \"url\": null\n      },\n      \"title\": \"Lisha Nienow\",\n      \"edition\": \"Frank Oberbrunner\"\n    },\n    \"country\": \"Myanmar\",\n    \"mode_of_attendance\": null,\n    \"personal_score\": null,\n    \"source_text\": null,\n    \"total_insight_review\": 0,\n    \"is_insightful\": false,\n    \"is_bookmarked\": false,\n    \"source_heading\": \"Organic\",\n    \"gc_amount\": null,\n    \"flaged_reason\": null,\n    \"flaged_by\": null,\n    \"saved_by\": null,\n    \"review_submissions\": [\n      {\n        \"id\": 77,\n        \"question_id\": 2252,\n        \"question\": null,\n        \"question_type\": null,\n        \"mode_of_attendance\": null,\n        \"answer\": \"The Hon. Chastity Bayer\",\n        \"scale\": null\n      }\n    ],\n    \"verification\": {\n      \"id\": 12,\n      \"exists_on_outreach_db\": true,\n      \"valid_linkedin_profile\": true,\n      \"not_competitor_or_representative\": true,\n      \"not_violent_lang\": false,\n      \"not_duplicate_review\": false,\n      \"gc_amount_approved\": true,\n      \"gc_amount\": \"10\",\n      \"add_on_incentive\": true,\n      \"incentive_value\": \"50\",\n      \"on_hold\": true,\n      \"on_hold_reason\": \"On Hold\"\n    },\n    \"reviewer\": {\n      \"id\": 79,\n      \"name\": \"Selina Hahn\",\n      \"email\": \"risa@damore.io\",\n      \"role\": \"admin\",\n      \"designation\": null,\n      \"profile\": null,\n      \"last_sign_in_ip\": \"\",\n      \"last_sign_in_at\": \" \",\n      \"current_sign_in_ip\": \"\",\n      \"current_sign_in_at\": \" \",\n      \"sign_in_count\": 0,\n      \"status\": \"active\",\n      \"mobile_number\": null,\n      \"company_name\": null,\n      \"member_since\": \"11th Feb 2021\",\n      \"reward_amount\": 0,\n      \"events_reviewd\": 0,\n      \"saved_reviews\": 0,\n      \"bookmarked_events\": 0,\n      \"is_password_set\": true,\n      \"linkedin_url\": null,\n      \"twitter_handle\": null,\n      \"invitation_status\": null\n    }\n  }\n}",
+      "response_headers": {
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "resource": "ClaimRequests",
+  "resource_explanation": null,
+  "http_method": "POST",
+  "route": "/claim_requests",
+  "description": "Create Claim request for unclaimed event",
+  "explanation": "creating claim request for unclaimed event",
+  "parameters": [
+    {
+      "type": "integer",
+      "required": true,
+      "name": "event_id",
+      "description": "Event Id"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/claim_requests",
+      "request_body": "{\"event_id\":1}",
+      "request_headers": {
+        "Accept": "application/vnd.eventible.com; version=1",
+        "Content-Type": "application/json",
+        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTU0NTE2MTUsInVzZXJfaWQiOjF9.cWSrf0kGX7fdx_U01D1HvUMYn-lhqw9YuqrOFK7MIOo"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"data\": {\n    \"id\": 3,\n    \"status\": \"pending\",\n    \"created_at\": \"2021-02-11T08:33:35.090Z\",\n    \"updated_at\": \"2021-02-11T08:33:35.090Z\",\n    \"event\": {\n      \"id\": 1,\n      \"title\": \"Lola Zulauf CPA\",\n      \"start_date\": \"2021-02-11T10:00:00.000Z\",\n      \"end_date\": \"2021-02-11T15:00:00.000Z\",\n      \"event_type\": \"virtual\",\n      \"is_paid\": false,\n      \"is_upcoming\": false\n    },\n    \"claimed_by\": {\n      \"id\": 1,\n      \"email\": \"rolf@strosin-daniel.biz\",\n      \"name\": \"Vito Senger\",\n      \"role\": \"admin\",\n      \"designation\": null,\n      \"company_name\": null\n    },\n    \"updated_by\": null\n  }\n}",
+      "response_headers": {
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

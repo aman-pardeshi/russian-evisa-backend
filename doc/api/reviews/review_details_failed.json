@@ -1,0 +1,42 @@
+{
+  "resource": "Reviews",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "/reviews/:id",
+  "description": "Review details failed",
+  "explanation": "Reviews details failed due to unauthorized user",
+  "parameters": [
+    {
+      "type": "inetege",
+      "required": true,
+      "name": "id",
+      "description": "Review Id"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/reviews/80",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/vnd.eventible.com; version=1",
+        "Content-Type": "application/json",
+        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTU0NTE2MzMsInVzZXJfaWQiOjY5fQ.WRTJ_fddi-T7oe-X2_vDOeSoVgkE8JaJo4DfVcg7vNA"
+      },
+      "request_query_parameters": {
+        "{}": null
+      },
+      "request_content_type": "application/json",
+      "response_status": 422,
+      "response_status_text": "Unprocessable Entity",
+      "response_body": "{\n  \"message\": \"Access Denied, you don't have permissions\"\n}",
+      "response_headers": {
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

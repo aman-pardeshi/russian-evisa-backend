@@ -1,0 +1,39 @@
+{
+  "resource": "Questitons",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "/questions",
+  "description": "If Pass invalid parameter of question_for",
+  "explanation": "If Pass invalid parameter value",
+  "parameters": [
+    {
+      "name": "question_for",
+      "description": "Question For [aatendee/speakers/sponsor]"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/questions?question_for=attend",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/vnd.eventible.com; version=1",
+        "Content-Type": "application/json"
+      },
+      "request_query_parameters": {
+        "question_for": "attend"
+      },
+      "request_content_type": "application/json",
+      "response_status": 422,
+      "response_status_text": "Unprocessable Entity",
+      "response_body": "{\n  \"message\": \"question_for value should be attendee/speaker/sponsor\"\n}",
+      "response_headers": {
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

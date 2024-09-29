@@ -1,0 +1,40 @@
+{
+  "resource": "Events",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "/events/:id",
+  "description": "Event Not Found",
+  "explanation": "If Event Not Found",
+  "parameters": [
+    {
+      "required": true,
+      "name": "id",
+      "description": "Event Id"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/events/1",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/vnd.eventible.com; version=1",
+        "Content-Type": "application/json",
+        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTU0NTE2MTgsInVzZXJfaWQiOjI1fQ.MTic2UyLIORBjBLjed90piaTZ2j_zd-IvQPNsNRlVaE"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 422,
+      "response_status_text": "Unprocessable Entity",
+      "response_body": "{\n  \"message\": \"event Not found\"\n}",
+      "response_headers": {
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

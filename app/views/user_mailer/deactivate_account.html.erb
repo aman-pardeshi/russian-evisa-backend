@@ -1,0 +1,10 @@
+Hi <%= @user.first_name %>,
+<p>We regret to inform you that your account with Eventible has been de-activated due to a
+violation of our user policy.</p>
+<p>For further clarity on our processes we encourage you to visit the following section: <%= link_to "Legal Section", "#{ENV.fetch("FRONTEND_URL")}/legal/general-user-terms" %></p>
+
+<p>If you feel this step may have been taken in error, please feel free to write to: support@eventible.com</p> 
+
+<p>Best,<br>
+Reviews & Quality Team<br>
+Eventible</p>

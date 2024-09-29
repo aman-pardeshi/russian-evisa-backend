@@ -1,0 +1,55 @@
+{
+  "resource": "Reviews",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "/reviews",
+  "description": "Review Listing on admin side",
+  "explanation": "Review Listing with pagination",
+  "parameters": [
+    {
+      "type": "integer",
+      "required": true,
+      "name": "page",
+      "description": "Page number for pagination"
+    },
+    {
+      "type": "integer",
+      "required": true,
+      "name": "limit",
+      "description": "Limit Per Page"
+    },
+    {
+      "type": "string",
+      "optional": true,
+      "name": "query",
+      "description": "search term"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/reviews?page=1&limit=10",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/vnd.eventible.com; version=1",
+        "Content-Type": "application/json",
+        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTU0NTE2MzUsInVzZXJfaWQiOjc3fQ.UEZcUXYPbqB83zQn0-AzaVUFFG79KzBEIt3ZBkv6BYw"
+      },
+      "request_query_parameters": {
+        "page": "1",
+        "limit": "10"
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"reviews\": [\n    {\n      \"id\": 89,\n      \"status\": \"pending\",\n      \"utm_source\": \"web\",\n      \"attended_as\": null,\n      \"is_flaged\": false,\n      \"is_saved\": false,\n      \"created_at\": \"2021-02-11\",\n      \"event\": {\n        \"id\": 172,\n        \"title\": \"Usha Padberg PhD\",\n        \"edition\": \"Frankie Lehner\",\n        \"logo\": {\n          \"url\": null\n        }\n      },\n      \"country\": \"Guatemala\",\n      \"mode_of_attendance\": null,\n      \"personal_score\": null,\n      \"source_text\": null,\n      \"total_insight_review\": 0,\n      \"is_insightful\": false,\n      \"is_bookmarked\": false,\n      \"source_heading\": \"Organic\",\n      \"gc_amount\": null,\n      \"flaged_reason\": null,\n      \"flaged_by\": null,\n      \"saved_by\": null,\n      \"review_submissions\": [\n\n      ],\n      \"verification\": {\n        \"id\": 10,\n        \"exists_on_outreach_db\": true,\n        \"valid_linkedin_profile\": true,\n        \"not_competitor_or_representative\": true,\n        \"not_violent_lang\": false,\n        \"not_duplicate_review\": false,\n        \"gc_amount_approved\": true,\n        \"gc_amount\": \"10\",\n        \"add_on_incentive\": true,\n        \"incentive_value\": \"50\",\n        \"on_hold\": true,\n        \"on_hold_reason\": \"On Hold\"\n      },\n      \"reviewer\": {\n        \"id\": 77,\n        \"name\": \"Ignacio Larkin V\",\n        \"email\": \"nicolas_yundt@hodkiewicz.biz\",\n        \"role\": \"admin\",\n        \"designation\": null,\n        \"profile\": null,\n        \"last_sign_in_ip\": \"\",\n        \"last_sign_in_at\": \" \",\n        \"current_sign_in_ip\": \"\",\n        \"current_sign_in_at\": \" \",\n        \"sign_in_count\": 0,\n        \"status\": \"active\",\n        \"mobile_number\": null,\n        \"company_name\": null,\n        \"member_since\": \"11th Feb 2021\",\n        \"reward_amount\": 0,\n        \"events_reviewd\": 0,\n        \"saved_reviews\": 0,\n        \"bookmarked_events\": 0,\n        \"is_password_set\": true,\n        \"linkedin_url\": null,\n        \"twitter_handle\": null,\n        \"invitation_status\": null\n      }\n    },\n    {\n      \"id\": 88,\n      \"status\": \"pending\",\n      \"utm_source\": \"web\",\n      \"attended_as\": null,\n      \"is_flaged\": false,\n      \"is_saved\": false,\n      \"created_at\": \"2021-02-11\",\n      \"event\": {\n        \"id\": 172,\n        \"title\": \"Usha Padberg PhD\",\n        \"edition\": \"Frankie Lehner\",\n        \"logo\": {\n          \"url\": null\n        }\n      },\n      \"country\": \"Guatemala\",\n      \"mode_of_attendance\": null,\n      \"personal_score\": null,\n      \"source_text\": null,\n      \"total_insight_review\": 0,\n      \"is_insightful\": false,\n      \"is_bookmarked\": false,\n      \"source_heading\": \"Organic\",\n      \"gc_amount\": null,\n      \"flaged_reason\": null,\n      \"flaged_by\": null,\n      \"saved_by\": null,\n      \"review_submissions\": [\n        {\n          \"id\": 76,\n          \"question_id\": 2199,\n          \"question\": null,\n          \"question_type\": null,\n          \"mode_of_attendance\": null,\n          \"answer\": \"Melvin Bahringer\",\n          \"scale\": null\n        }\n      ],\n      \"verification\": null,\n      \"reviewer\": {\n        \"id\": 77,\n        \"name\": \"Ignacio Larkin V\",\n        \"email\": \"nicolas_yundt@hodkiewicz.biz\",\n        \"role\": \"admin\",\n        \"designation\": null,\n        \"profile\": null,\n        \"last_sign_in_ip\": \"\",\n        \"last_sign_in_at\": \" \",\n        \"current_sign_in_ip\": \"\",\n        \"current_sign_in_at\": \" \",\n        \"sign_in_count\": 0,\n        \"status\": \"active\",\n        \"mobile_number\": null,\n        \"company_name\": null,\n        \"member_since\": \"11th Feb 2021\",\n        \"reward_amount\": 0,\n        \"events_reviewd\": 0,\n        \"saved_reviews\": 0,\n        \"bookmarked_events\": 0,\n        \"is_password_set\": true,\n        \"linkedin_url\": null,\n        \"twitter_handle\": null,\n        \"invitation_status\": null\n      }\n    }\n  ],\n  \"meta\": {\n    \"page\": \"1\",\n    \"limit\": \"10\",\n    \"total_records\": 2,\n    \"current_records\": 2\n  }\n}",
+      "response_headers": {
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

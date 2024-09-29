@@ -1,0 +1,10 @@
+development:
+  encoding: utf8
+  adapter: postgresql
+  database: audit_development_eventible
+  port: 5432
+production:
+  encoding: utf8
+  adapter: postgresql
+  database: audit_production_production
+  port: 5432

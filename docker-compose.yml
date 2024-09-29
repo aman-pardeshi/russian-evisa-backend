@@ -1,0 +1,58 @@
+version: '3.4'
+
+services: 
+  backend: &backend
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile
+    image: 1.0.0
+    container_name: eventible-backend
+    tmpfs:
+      - /tmp
+    stdin_open: true
+    tty: true
+    volumes:
+      - .:/app:cached
+      - rails_cache:/app/tmp/cache
+      - bundle:/bundle
+      - ./docker/db_backup:/root/db_backup
+    env_file: .env
+    restart: always
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    ports:
+      - '3000:3000'
+    depends_on:
+      - redis
+      - postgres
+
+  postgres:
+    image: postgres:12
+    container_name: eventible-postgres
+    volumes:
+      - postgres:/var/lib/postgresql/data
+      - ./log:/root/log:cached
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+      - PSQL_HISTFILE=/root/log/.psql_history
+    ports:
+      - '5432:5432'
+
+  redis:
+    image: redis:6.0.8
+    container_name: eventible-redis
+    volumes:
+      - redis:/data
+    ports:
+      - '6379:6379'
+
+        #sidekiq:
+        #<<: *backend
+        #container_name: eventible-sidekiq
+        #command: bundle exec sidekiq -C config/sidekiq.yml
+
+volumes:
+  postgres:
+  redis:
+  bundle:
+  rails_cache:

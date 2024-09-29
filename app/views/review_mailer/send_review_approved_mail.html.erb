@@ -1,0 +1,13 @@
+<p>Hi <%= @user.first_name %>,</p>
+
+<p>Your recent review for the event <b> <%= @event_name %> </b> has been approved by our team and is now live on the Eventible platform. 
+
+Your review will be a valuable addition to the Eventible platform & will help our community in discovering and choosing the best events to attend.</p>
+<% if @is_reward_for_review %>
+  <b>For all published reviews, incentives & Amazon Gift Cards will be sent across within 21 working days from the date of approval.</b>
+<%end%>
+<p>For further clarity on our processes we encourage you to visit the following section <%= link_to  "Legal Section","#{ENV.fetch("FRONTEND_URL")}/legal/general-user-terms" %></p>
+
+<p>Best,<br>
+Reviews & Quality Team<br>
+Eventible</p>

@@ -1,0 +1,41 @@
+{
+  "resource": "Dashboards",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "/dashboards/organizer",
+  "description": "Get Organizer Dashboard counts",
+  "explanation": null,
+  "parameters": [
+    {
+      "type": "string",
+      "name": "time_range",
+      "description": "Pass Date Range"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/dashboards/organizer?time_range=2021-02-10%2C2021-02-11",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/vnd.eventible.com; version=1",
+        "Content-Type": "application/json",
+        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTU0NTE2MTUsInVzZXJfaWQiOjE2fQ.VEaq4g5p5DhPQC4Po987vpfQ1_6_DzdYT1vT8EmxRrU"
+      },
+      "request_query_parameters": {
+        "time_range": "2021-02-10,2021-02-11"
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"data\": {\n    \"total_events\": 0,\n    \"total_reviews\": 0,\n    \"average_reviews_per_event\": 0,\n    \"flagged_reviews\": 0\n  }\n}",
+      "response_headers": {
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

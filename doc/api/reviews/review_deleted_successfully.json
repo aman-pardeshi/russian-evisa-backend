@@ -1,0 +1,41 @@
+{
+  "resource": "Reviews",
+  "resource_explanation": null,
+  "http_method": "DELETE",
+  "route": "/reviews/:id",
+  "description": "Review deleted Successfully",
+  "explanation": "Reviews deleted failed by unauthorized user",
+  "parameters": [
+    {
+      "type": "integer",
+      "required": true,
+      "name": "id",
+      "description": "Review Id"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "DELETE",
+      "request_path": "/reviews/84",
+      "request_body": "{}",
+      "request_headers": {
+        "Accept": "application/vnd.eventible.com; version=1",
+        "Content-Type": "application/json",
+        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTU0NTE2MzQsInVzZXJfaWQiOjczfQ.4AObN9xnIeCeVuSn2EWk0QjREpzk123DotWnCUt7Tp4"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 422,
+      "response_status_text": "Unprocessable Entity",
+      "response_body": "{\n  \"message\": \"Access Denied, you don't have permissions\"\n}",
+      "response_headers": {
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

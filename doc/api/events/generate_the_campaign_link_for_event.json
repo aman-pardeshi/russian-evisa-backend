@@ -1,0 +1,53 @@
+{
+  "resource": "Events",
+  "resource_explanation": null,
+  "http_method": "POST",
+  "route": "/events/generate_campaign_link",
+  "description": "Generate the Campaign Link for event",
+  "explanation": "Create Campaign Link for event",
+  "parameters": [
+    {
+      "type": "integer",
+      "required": true,
+      "name": "id",
+      "description": "Send event id"
+    },
+    {
+      "type": "string",
+      "required": true,
+      "name": "expiry_date",
+      "description": "send expiry date for coupon code"
+    },
+    {
+      "type": "integer",
+      "required": true,
+      "name": "reward_amount",
+      "description": "Send Reward amount"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/events/generate_campaign_link",
+      "request_body": "{\"id\":80,\"expiry_date\":\"2021-02-11\",\"reward_amount\":10}",
+      "request_headers": {
+        "Accept": "application/vnd.eventible.com; version=1",
+        "Content-Type": "application/json",
+        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTU0NTE2MjEsInVzZXJfaWQiOjMxfQ.vZoFo34wxfThUNr5PkDvrVugpnZcxVNEk98CzMZiiT8"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"data\": {\n    \"id\": 80,\n    \"title\": \"Jed Price\",\n    \"url_name\": \"NYXIUWKMZM\",\n    \"description\": \"Ut cupiditate qui. Eveniet dolor est. Earum pariatur culpa.\",\n    \"logo\": {\n      \"url\": null\n    },\n    \"banner\": {\n      \"url\": null\n    },\n    \"agenda_file\": {\n      \"url\": null\n    },\n    \"start_date\": \"2021-02-11T10:00:00.000Z\",\n    \"end_date\": \"2021-02-11T15:00:00.000Z\",\n    \"total_review\": 0,\n    \"timezone\": null,\n    \"eventible_score\": 0.0,\n    \"status\": \"pending\",\n    \"discount_percentage\": 647.0,\n    \"price\": 938,\n    \"registration_url\": \"https://robohash.org/placeatconsequunturhic.png?size=300x300&set=set1\",\n    \"event_type\": \"virtual\",\n    \"edition\": \"Carlos Treutel\",\n    \"reject_note\": null,\n    \"is_paid\": false,\n    \"date_in_days\": 0,\n    \"is_top_rated\": false,\n    \"country\": \"Vanuatu\",\n    \"job_title\": \"Marketing\",\n    \"campaign_links\": [\n      {\n        \"id\": \"31a06b25-a44f-43f0-a904-cd236abb0c77\",\n        \"expiry_date\": \"2021-02-11\",\n        \"reward_amount\": \"20\",\n        \"link\": \"http://localhost:3002/review/NYXIUWKMZM/cfoun1Dc76\"\n      },\n      {\n        \"id\": \"9022bbe2-769e-4297-b5f2-fb4982f00029\",\n        \"expiry_date\": \"2021-02-11\",\n        \"reward_amount\": \"10\",\n        \"link\": \"http://localhost:3002/review/NYXIUWKMZM/HxvzuMxqkW\"\n      }\n    ],\n    \"is_upcoming\": false,\n    \"is_bookmarked\": false,\n    \"is_insightful\": false,\n    \"coupons\": [\n      {\n        \"id\": 14,\n        \"name\": null,\n        \"description\": \"Iusto vel ducimus est.\",\n        \"discount_percentage\": 40.0,\n        \"registration_url\": \"http://steuber-larkin.co/melvina\",\n        \"validity\": \"2021-02-11T08:33:41.053Z\"\n      }\n    ]\n  }\n}",
+      "response_headers": {
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

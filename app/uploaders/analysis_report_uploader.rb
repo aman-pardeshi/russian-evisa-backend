@@ -1,0 +1,2 @@
+class AnalysisReportUploader < BaseUploader
+end

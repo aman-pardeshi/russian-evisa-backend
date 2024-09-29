@@ -1,0 +1,55 @@
+{
+  "resource": "Events",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "/events",
+  "description": "Event Listing",
+  "explanation": "Get All Event created by Venodor/Admin",
+  "parameters": [
+    {
+      "type": "integer",
+      "required": true,
+      "name": "page",
+      "description": "Page number for pagination"
+    },
+    {
+      "type": "integer",
+      "required": true,
+      "name": "limit",
+      "description": "limit for per page"
+    },
+    {
+      "type": "string",
+      "optional": true,
+      "name": "query",
+      "description": "Serach query string"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/events?page=1&limit=10",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/vnd.eventible.com; version=1",
+        "Content-Type": "application/json",
+        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTU0NTE2MTcsInVzZXJfaWQiOjIzfQ.2V0-xA-W6loikpsXZPVH3HNkvtIQy_HiObUng_GKk1I"
+      },
+      "request_query_parameters": {
+        "page": "1",
+        "limit": "10"
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"data\": [\n    {\n      \"id\": 44,\n      \"title\": \"Saran Strosin\",\n      \"url_name\": \"UUCNHTEAQX\",\n      \"description\": \"Quis et beatae. Rerum exercitationem aut. Suscipit ut et.\",\n      \"logo\": {\n        \"url\": null\n      },\n      \"banner\": {\n        \"url\": null\n      },\n      \"agenda_file\": {\n        \"url\": null\n      },\n      \"start_date\": \"2021-02-23T08:33:37.291Z\",\n      \"end_date\": \"2021-03-08T08:33:37.291Z\",\n      \"total_review\": 0,\n      \"timezone\": null,\n      \"eventible_score\": 0.0,\n      \"status\": \"approved\",\n      \"discount_percentage\": 982.0,\n      \"price\": 54,\n      \"registration_url\": \"https://robohash.org/liberovoluptatescum.png?size=300x300&set=set1\",\n      \"event_type\": \"virtual\",\n      \"edition\": \"Robert Mann\",\n      \"reject_note\": null,\n      \"is_paid\": false,\n      \"date_in_days\": 12,\n      \"is_top_rated\": false,\n      \"country\": \"Italy\",\n      \"job_title\": \"Marketing\",\n      \"campaign_links\": [\n\n      ],\n      \"is_upcoming\": true,\n      \"is_bookmarked\": false,\n      \"is_insightful\": false,\n      \"coupons\": [\n\n      ]\n    },\n    {\n      \"id\": 43,\n      \"title\": \"Mr. Edgar D'Amore\",\n      \"url_name\": \"PVDSPOUCLW\",\n      \"description\": \"Ratione quaerat aspernatur. Temporibus eveniet expedita. Repellendus odio id.\",\n      \"logo\": {\n        \"url\": null\n      },\n      \"banner\": {\n        \"url\": null\n      },\n      \"agenda_file\": {\n        \"url\": null\n      },\n      \"start_date\": \"2021-02-23T08:33:37.274Z\",\n      \"end_date\": \"2021-03-08T08:33:37.275Z\",\n      \"total_review\": 0,\n      \"timezone\": null,\n      \"eventible_score\": 0.0,\n      \"status\": \"approved\",\n      \"discount_percentage\": 39.0,\n      \"price\": 846,\n      \"registration_url\": \"https://robohash.org/ineosassumenda.png?size=300x300&set=set1\",\n      \"event_type\": \"virtual\",\n      \"edition\": \"Hilary Kihn\",\n      \"reject_note\": null,\n      \"is_paid\": false,\n      \"date_in_days\": 12,\n      \"is_top_rated\": false,\n      \"country\": \"Benin\",\n      \"job_title\": \"Marketing\",\n      \"campaign_links\": [\n\n      ],\n      \"is_upcoming\": true,\n      \"is_bookmarked\": false,\n      \"is_insightful\": false,\n      \"coupons\": [\n\n      ]\n    },\n    {\n      \"id\": 42,\n      \"title\": \"Prof. Shad Armstrong\",\n      \"url_name\": \"INXIARDZTN\",\n      \"description\": \"Fuga aspernatur earum. Nisi tempora saepe. Vitae eius et.\",\n      \"logo\": {\n        \"url\": null\n      },\n      \"banner\": {\n        \"url\": null\n      },\n      \"agenda_file\": {\n        \"url\": null\n      },\n      \"start_date\": \"2021-02-21T08:33:37.258Z\",\n      \"end_date\": \"2021-03-03T08:33:37.258Z\",\n      \"total_review\": 2,\n      \"timezone\": null,\n      \"eventible_score\": 0.0,\n      \"status\": \"approved\",\n      \"discount_percentage\": 248.0,\n      \"price\": 14,\n      \"registration_url\": \"https://robohash.org/nonadipisciomnis.png?size=300x300&set=set1\",\n      \"event_type\": \"virtual\",\n      \"edition\": \"Viviana Zulauf\",\n      \"reject_note\": null,\n      \"is_paid\": false,\n      \"date_in_days\": 10,\n      \"is_top_rated\": false,\n      \"country\": \"Portugal\",\n      \"job_title\": \"Marketing\",\n      \"campaign_links\": [\n\n      ],\n      \"is_upcoming\": true,\n      \"is_bookmarked\": false,\n      \"is_insightful\": false,\n      \"coupons\": [\n\n      ]\n    },\n    {\n      \"id\": 41,\n      \"title\": \"Tammera Dickinson\",\n      \"url_name\": \"NEQNBEHYZN\",\n      \"description\": \"Veritatis iusto tempore. Praesentium et quibusdam. Doloremque vel qui.\",\n      \"logo\": {\n        \"url\": null\n      },\n      \"banner\": {\n        \"url\": null\n      },\n      \"agenda_file\": {\n        \"url\": null\n      },\n      \"start_date\": \"2021-02-13T08:33:37.240Z\",\n      \"end_date\": \"2021-02-16T08:33:37.240Z\",\n      \"total_review\": 0,\n      \"timezone\": null,\n      \"eventible_score\": 0.0,\n      \"status\": \"approved\",\n      \"discount_percentage\": 169.0,\n      \"price\": 518,\n      \"registration_url\": \"https://robohash.org/vitaeperferendisquod.png?size=300x300&set=set1\",\n      \"event_type\": \"virtual\",\n      \"edition\": \"Blake Harber\",\n      \"reject_note\": null,\n      \"is_paid\": false,\n      \"date_in_days\": 2,\n      \"is_top_rated\": false,\n      \"country\": \"Singapore\",\n      \"job_title\": \"Marketing\",\n      \"campaign_links\": [\n\n      ],\n      \"is_upcoming\": true,\n      \"is_bookmarked\": false,\n      \"is_insightful\": false,\n      \"coupons\": [\n\n      ]\n    },\n    {\n      \"id\": 40,\n      \"title\": \"Rachell Glover\",\n      \"url_name\": \"WDBRYVAQAM\",\n      \"description\": \"Nostrum ut beatae. Esse ad quia. Hic commodi doloribus.\",\n      \"logo\": {\n        \"url\": null\n      },\n      \"banner\": {\n        \"url\": null\n      },\n      \"agenda_file\": {\n        \"url\": null\n      },\n      \"start_date\": \"2021-02-11T10:00:00.000Z\",\n      \"end_date\": \"2021-02-11T15:00:00.000Z\",\n      \"total_review\": 0,\n      \"timezone\": null,\n      \"eventible_score\": 0.0,\n      \"status\": \"pending\",\n      \"discount_percentage\": 808.0,\n      \"price\": 996,\n      \"registration_url\": \"https://robohash.org/quidolordolorem.png?size=300x300&set=set1\",\n      \"event_type\": \"virtual\",\n      \"edition\": \"Curtis Dooley\",\n      \"reject_note\": null,\n      \"is_paid\": false,\n      \"date_in_days\": 0,\n      \"is_top_rated\": false,\n      \"country\": \"Ghana\",\n      \"job_title\": \"Marketing\",\n      \"campaign_links\": [\n        {\n          \"id\": \"2cd4ba1d-58f5-4ea0-8fe0-75ea70bf58c5\",\n          \"expiry_date\": \"2021-02-11\",\n          \"reward_amount\": \"20\",\n          \"link\": \"http://localhost:3002/review/WDBRYVAQAM/1fSMDI9zIy\"\n        }\n      ],\n      \"is_upcoming\": false,\n      \"is_bookmarked\": false,\n      \"is_insightful\": false,\n      \"coupons\": [\n        {\n          \"id\": 6,\n          \"name\": null,\n          \"description\": \"Ipsum voluptas molestias aut.\",\n          \"discount_percentage\": 40.0,\n          \"registration_url\": \"http://cummings-blick.biz/mckinley\",\n          \"validity\": \"2021-02-11T08:33:37.323Z\"\n        }\n      ]\n    }\n  ],\n  \"meta\": {\n    \"page\": \"1\",\n    \"limit\": \"10\",\n    \"total_records\": 5,\n    \"current_records\": 5\n  }\n}",
+      "response_headers": {
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

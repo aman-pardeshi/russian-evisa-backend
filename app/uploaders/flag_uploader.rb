@@ -1,0 +1,2 @@
+class FlagUploader < BaseUploader
+end

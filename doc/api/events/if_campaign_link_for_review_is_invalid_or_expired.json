@@ -1,0 +1,42 @@
+{
+  "resource": "Events",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "/events/validate_campaign_link",
+  "description": "if Campaign Link for review is Invalid or expired",
+  "explanation": "if Campaign Link for review is Invalid or expired",
+  "parameters": [
+    {
+      "type": "integer",
+      "required": true,
+      "name": "id",
+      "description": "Send event id"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/events/validate_campaign_link?id=09b55fb4-ce3f-4594-ada4-9beec13c89b4",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/vnd.eventible.com; version=1",
+        "Content-Type": "application/json",
+        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTU0NTE2MjIsInVzZXJfaWQiOjMzfQ.wbeZ9VBfpXBHaXO73mZqtaoD5PNH1xHuyvrBXWRimEI"
+      },
+      "request_query_parameters": {
+        "id": "09b55fb4-ce3f-4594-ada4-9beec13c89b4"
+      },
+      "request_content_type": "application/json",
+      "response_status": 422,
+      "response_status_text": "Unprocessable Entity",
+      "response_body": "{\n  \"message\": \"link is missing\"\n}",
+      "response_headers": {
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

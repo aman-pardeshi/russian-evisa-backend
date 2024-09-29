@@ -1,0 +1,50 @@
+{
+  "resource": "Hompages",
+  "resource_explanation": null,
+  "http_method": "POST",
+  "route": "homepages/organizer_enquiry",
+  "description": "If Email address is alredy present in organizer enquiry",
+  "explanation": "failed to save enquiry",
+  "parameters": [
+    {
+      "type": "string",
+      "name": "name",
+      "description": "Pass Name"
+    },
+    {
+      "type": "string",
+      "name": "company",
+      "description": "Pass Company name"
+    },
+    {
+      "type": "string",
+      "name": "email",
+      "description": "Pass Email"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "homepages/organizer_enquiry",
+      "request_body": "{\"company\":\"josh\",\"email\":\"xyz3@gmail.com\"}",
+      "request_headers": {
+        "Accept": "application/vnd.eventible.com; version=1",
+        "Content-Type": "application/json",
+        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTU0NTE2MjksInVzZXJfaWQiOjUxfQ.6VxiU2FjoAFbQPRh-SbRwpFZypd_8GigBESvOA3HtXQ"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 422,
+      "response_status_text": "Unprocessable Entity",
+      "response_body": "{\n  \"message\": \"name, email, company is missing\"\n}",
+      "response_headers": {
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

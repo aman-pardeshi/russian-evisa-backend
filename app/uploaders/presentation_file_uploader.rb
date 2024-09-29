@@ -1,0 +1,2 @@
+class PresentationFileUploader < BaseUploader
+end

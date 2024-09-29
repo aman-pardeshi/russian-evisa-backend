@@ -1,0 +1,51 @@
+{
+  "resource": "Sessions",
+  "resource_explanation": null,
+  "http_method": "POST",
+  "route": "/sessions/google",
+  "description": "Sign in With Google",
+  "explanation": "Sign in user with Google",
+  "parameters": [
+    {
+      "required": true,
+      "name": "google_response",
+      "description": "Response Which is sent by google after login"
+    },
+    {
+      "required": true,
+      "scope": "google_response",
+      "name": "accessToken",
+      "description": "Access Token of Google"
+    },
+    {
+      "required": true,
+      "scope": "google_response",
+      "name": "profileObj",
+      "description": "Profile Object Of User"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/sessions/google",
+      "request_body": "{\"google_response\":{\"accessToken\":\"ya29.a0AfH6SMBk_emPTvRvqVR2modDBulznrAgHdnn120qrI7gLpqPfEi_ZegxnYljeL5XtgCoXidxNC-wIE3qjRBEISieHXHrj1nEozpOHmgBH_ywfXi_5RembsIWrFaTbj-PeKzghCzJe3N1MYScG8Y-VbufkZP9m17xe6gl\",\"profileObj\":{\"googleId\":\"117331728813189843960\",\"imageUrl\":\"https://lh3.googleusercontent.com/a-AOh14Gimkf_-Rw-0425QVtueNFbG1R1fx4oCW35u--YD=s96-c\",\"email\":\"prashant.bangar@joshsoftware.com\",\"name\":\"prashant bangar\",\"givenName\":\"prashant\",\"familyName\":\"bangar\"}}}",
+      "request_headers": {
+        "Accept": "application/vnd.eventible.com; version=1",
+        "Content-Type": "application/json"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"data\": {\n    \"id\": 86,\n    \"name\": \"prashant bangar\",\n    \"email\": \"prashant.bangar@joshsoftware.com\",\n    \"role\": null,\n    \"designation\": null,\n    \"profile\": {\n      \"url\": \"https://lh3.googleusercontent.com/a-AOh14Gimkf_-Rw-0425QVtueNFbG1R1fx4oCW35u--YD=s96-c\"\n    },\n    \"last_sign_in_ip\": \"127.0.0.1\",\n    \"last_sign_in_at\": \"11th Feb 2021 02:03 PM\",\n    \"current_sign_in_ip\": \"127.0.0.1\",\n    \"current_sign_in_at\": \"11th Feb 2021 02:03 PM\",\n    \"sign_in_count\": 1,\n    \"status\": \"active\",\n    \"mobile_number\": null,\n    \"company_name\": null,\n    \"member_since\": \"11th Feb 2021\",\n    \"reward_amount\": 0,\n    \"events_reviewd\": 0,\n    \"saved_reviews\": 0,\n    \"bookmarked_events\": 0,\n    \"is_password_set\": false,\n    \"linkedin_url\": null,\n    \"twitter_handle\": null\n  },\n  \"token\": \"eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTU0NTE2MzUsInVzZXJfaWQiOjg2fQ.Oflpv_AUlE9vWtzZeYt7g9eE7k_i7DoPbnu4B12aXT4\",\n  \"message\": \"login successfully\"\n}",
+      "response_headers": {
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

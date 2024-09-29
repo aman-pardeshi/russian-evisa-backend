@@ -1,0 +1,136 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# The following keys must be escaped otherwise they will not be retrieved by
+# the default I18n backend:
+#
+# true, false, on, off, yes, no
+#
+# Instead, surround them with single quotes.
+#
+# en:
+#   'true': 'foo'
+#
+# To learn more, please read the Rails Internationalization guide
+# available at https://guides.rubyonrails.org/i18n.html.
+
+en:
+  hello: 'Hello world'
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              taken: 'has already been taken'
+              blank: "can't be blank"
+              invalid: 'is invalid'
+            password:
+              blank: "can't be blank"
+              invalid: "can't be blank"
+            password_confirmation:
+              blank: "can't be blank"
+              invalid: "doesn't match Password"
+        campaign_link:
+          attributes:
+            campaign_token:
+              taken: 'Campaign link is already created for this event'
+        event:
+          attributes:
+            title:
+              taken: 'Event is already exists with given title and date'
+        claim_request:
+          attributes:
+            event_id:
+              taken: 'Claim Request you already created'
+
+  success:
+    action: '%{action} successfully'
+    love_eventible_subscribe: 'Eventible newsletter subscribed successfully'
+    organizer_enquiry: 'We received your enquiry successfully, Eventible team will contact you soon'
+    uniq_email: 'users has unique email'
+    vendor_request_submitted: 'We received your vendor access request successfully. Eventible Team will verify and contact you'
+    download_action: 'Reviews csv sheet will sent it on email'
+    analysis_report: "File is uploaded successfully and was sent to the organizer's mail"
+
+  errors:
+    not_found: '%{model} not found'
+    unauthorized_user: "Access Denied, you don't have permissions"
+    params_missing: '%{params} is missing'
+    invalid_api_key: 'Invalid API key'
+    expired_token: 'Api key is expired'
+    invalid_headers: 'No Authorization key in header'
+    social_login_failed: 'Failed to login %{account} Account'
+    something_went_wrong: 'Something went wrong, Please contact to admin'
+    invalid_param_value: '%{param} value should be %{value}'
+    invalid_campaign_link: 'Invalid Campaign link, Please check it again'
+    expired_campaign_link: 'The campaign link which you are using is expired, stay tuned you may get new link!'
+    reset_password_instruction: 'This Link Is expired, please request for another'
+    invalid_old_password: 'The old password you have entered is incorrect'
+    invalid: 'invalid %{params}'
+    invalid_csv_file: 'Invalid file type or file missing, Please upload .csv file'
+    invalid_pdf_file: 'Invalid file type or file missing, Please upload .pdf file'
+    invalid_csv_headers: 'Invalid csv headers, Please refer sample file'
+    csv_upload_stats: '%{failed} events failed, %{success} events uploaded successfully'
+    org_csv_upload_stats: '%{failed} organisers failed to upload, %{success} organisers uploaded successfully'
+    email_already_present: 'Email has already been taken '
+    invalid_access_key: 'Invalid access key!'
+    mailchimp:
+      email: '%{email} is already a list member'
+    limit_exceed: 'Pin Review Limit is exceeded'
+
+  mailer:
+    database_backup:
+      subject: 'Eventible database backup taken %{time}, size: %{size}'
+    reset_password_instruction:
+      subject: 'Welcome to Eventible!'
+    deactivate_account:
+      subject: 'Your Account has been De-activated'
+    send_vendor_request_approved_mail:
+      subject: 'Your Eventible Account has been Approved'
+    user_request_approved_mail_for_speakers_directory:
+      subject: 'Your request for The Gazebo Speaker Directory is approved!'
+    send_claim_request_approved_mail:
+      subject: 'Your Event Claim Request is Approved'
+    confirmation_instructions_for_speaker_directory:
+      subject: 'The Gazebo - Account Confirmation'
+    confirmation_instructions:
+      subject: 'Confirm your account'
+    review:
+      review_flaged_mail: 'Review Flag Alert'
+      send_review_approved_mail: 'Your Review is Approved'
+      send_review_submitted_mail: 'Thanks for Your Review'
+    campaign_builder_mail: 'ACCESS REQUEST FOR CAMPAIGN BUILDER'
+    send_event_approved_mail: 'Your New Event Request is Approved'
+    send_content_marketing_hub_request_mail: 'REQUEST FOR CONTENT MARKETING PROGRAM'
+    send_custom_review_link: 'REQUEST FOR CUSTOM REVIEW LINK'
+    enquiry_mail: 'AN ORGANIZER WANTS TO GET IN TOUCH!'
+    vendor_request_mail: 'ACCESS REQUEST FOR MY.EVENTIBLE'
+    vendor_request_mail_for_speaker_directory: 'Access request for The Gazebo'
+    send_review_alert_mail: 'New Review Received!'
+    send_run_campaign_on_your_behalf: 'Request for review recruitment service.'
+    send_reply_activation_status: 'Review Reply Activation Status Approved - Eventible'
+    notify_reviewer_organizer_comment: 'Your Review received a response from the Event Organizer'
+
+  questions:
+    title: 'Review Title - Please describe your experience in a short sentence'
+
+  flag_reasons:
+    did_not_attend_event: 'Did not attend our event'
+    in_appropriate_lang: 'Contains inappropriate language, violent or hateful speech'
+    is_duplicate: 'Is duplicate or plagiarized'

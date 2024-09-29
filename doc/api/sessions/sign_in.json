@@ -1,0 +1,44 @@
+{
+  "resource": "Sessions",
+  "resource_explanation": null,
+  "http_method": "POST",
+  "route": "/sessions",
+  "description": "Sign in",
+  "explanation": "Sign in user with email",
+  "parameters": [
+    {
+      "required": true,
+      "name": "email",
+      "description": "Email Address"
+    },
+    {
+      "required": true,
+      "name": "password",
+      "description": "password"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/sessions",
+      "request_body": "{\"email\":\"kl@gmail.com\",\"password\":\"welcome\"}",
+      "request_headers": {
+        "Accept": "application/vnd.eventible.com; version=1",
+        "Content-Type": "application/json"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"data\": {\n    \"id\": 83,\n    \"name\": \"Msgr. Judi Goodwin\",\n    \"email\": \"kl@gmail.com\",\n    \"role\": null,\n    \"designation\": null,\n    \"profile\": null,\n    \"last_sign_in_ip\": \"127.0.0.1\",\n    \"last_sign_in_at\": \"11th Feb 2021 02:03 PM\",\n    \"current_sign_in_ip\": \"127.0.0.1\",\n    \"current_sign_in_at\": \"11th Feb 2021 02:03 PM\",\n    \"sign_in_count\": 1,\n    \"status\": \"active\",\n    \"mobile_number\": null,\n    \"company_name\": null,\n    \"member_since\": \"11th Feb 2021\",\n    \"reward_amount\": 0,\n    \"events_reviewd\": 0,\n    \"saved_reviews\": 0,\n    \"bookmarked_events\": 0,\n    \"is_password_set\": true,\n    \"linkedin_url\": null,\n    \"twitter_handle\": null\n  },\n  \"token\": \"eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTU0NTE2MzUsInVzZXJfaWQiOjgzfQ.a6SGX9xpjNQnAKDb6fWGwksKDnaaznOyr62zBO-wUXs\",\n  \"message\": \"login successfully\"\n}",
+      "response_headers": {
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

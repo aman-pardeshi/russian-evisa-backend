@@ -1,0 +1,42 @@
+{
+  "resource": "Reviews",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "/reviews/:id",
+  "description": "Review details Successfully",
+  "explanation": "Reviews details successfully for authorized user",
+  "parameters": [
+    {
+      "type": "inetege",
+      "required": true,
+      "name": "id",
+      "description": "Review Id"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/reviews/78",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/vnd.eventible.com; version=1",
+        "Content-Type": "application/json",
+        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTU0NTE2MzMsInVzZXJfaWQiOjY3fQ.T53VVIszKH3UyqrLx8ylw2mvA8IWXbEO3wYRpVNhkyU"
+      },
+      "request_query_parameters": {
+        "{}": null
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"data\": {\n    \"id\": 78,\n    \"status\": \"pending\",\n    \"utm_source\": \"web\",\n    \"attended_as\": null,\n    \"is_flaged\": false,\n    \"is_saved\": false,\n    \"created_at\": \"2021-02-11\",\n    \"event\": {\n      \"id\": 167,\n      \"title\": \"Buford Hoppe\",\n      \"edition\": \"Grover Glover\",\n      \"logo\": {\n        \"url\": null\n      }\n    },\n    \"country\": \"Trinidad and Tobago\",\n    \"mode_of_attendance\": null,\n    \"personal_score\": null,\n    \"source_text\": null,\n    \"total_insight_review\": 0,\n    \"is_insightful\": false,\n    \"is_bookmarked\": false,\n    \"source_heading\": \"Organic\",\n    \"gc_amount\": null,\n    \"flaged_reason\": null,\n    \"flaged_by\": null,\n    \"saved_by\": null,\n    \"review_submissions\": [\n      {\n        \"id\": 71,\n        \"question_id\": 1934,\n        \"question\": null,\n        \"question_type\": null,\n        \"mode_of_attendance\": null,\n        \"answer\": \"Tabatha Zemlak\",\n        \"scale\": null\n      }\n    ],\n    \"verification\": null,\n    \"reviewer\": {\n      \"id\": 67,\n      \"name\": \"Nicholas McGlynn LLD\",\n      \"email\": \"emilio@bartoletti.com\",\n      \"role\": \"admin\",\n      \"designation\": null,\n      \"profile\": null,\n      \"last_sign_in_ip\": \"\",\n      \"last_sign_in_at\": \" \",\n      \"current_sign_in_ip\": \"\",\n      \"current_sign_in_at\": \" \",\n      \"sign_in_count\": 0,\n      \"status\": \"active\",\n      \"mobile_number\": null,\n      \"company_name\": null,\n      \"member_since\": \"11th Feb 2021\",\n      \"reward_amount\": 0,\n      \"events_reviewd\": 0,\n      \"saved_reviews\": 0,\n      \"bookmarked_events\": 0,\n      \"is_password_set\": true,\n      \"linkedin_url\": null,\n      \"twitter_handle\": null,\n      \"invitation_status\": null\n    }\n  }\n}",
+      "response_headers": {
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

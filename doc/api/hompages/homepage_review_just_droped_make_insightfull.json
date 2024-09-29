@@ -1,0 +1,50 @@
+{
+  "resource": "Hompages",
+  "resource_explanation": null,
+  "http_method": "POST",
+  "route": "homepages/review_insight",
+  "description": "Homepage Review just Droped make insightfull",
+  "explanation": "If user marked insightfull to true",
+  "parameters": [
+    {
+      "type": "integer",
+      "name": "review_id",
+      "description": "Review Id"
+    },
+    {
+      "type": "boolean",
+      "name": "is_bookmarked",
+      "description": "Pass Boolean value"
+    },
+    {
+      "type": "boolean",
+      "name": "is_insightful",
+      "description": "Pass Boolean value"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "homepages/review_insight",
+      "request_body": "{\"review_id\":59,\"is_insightful\":true}",
+      "request_headers": {
+        "Accept": "application/vnd.eventible.com; version=1",
+        "Content-Type": "application/json",
+        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTU0NTE2MjgsInVzZXJfaWQiOjQ5fQ.jZ58rxDX1bs0mwcqNOR_32TGVjPyTOeCf7FuS5b44gk"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"data\": {\n    \"id\": 59,\n    \"event\": {\n      \"id\": 155,\n      \"title\": \"Fr. Fredrick Keebler\",\n      \"logo\": {\n        \"url\": null\n      },\n      \"start_date\": \"2021-02-11T10:00:00.000Z\"\n    },\n    \"description\": \"Bonita Auer\",\n    \"reviewer_type\": \"User\",\n    \"reviewer\": {\n      \"name\": \"Francis Ernser\",\n      \"designation\": null,\n      \"company_name\": null,\n      \"profile\": null\n    },\n    \"is_insightful\": true,\n    \"is_bookmarked\": false,\n    \"submitted_at\": 0,\n    \"personal_score\": null,\n    \"total_insight_review\": 1\n  }\n}",
+      "response_headers": {
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

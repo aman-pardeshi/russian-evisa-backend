@@ -1,0 +1,129 @@
+{
+  "resource": "Events",
+  "resource_explanation": null,
+  "http_method": "POST",
+  "route": "/events",
+  "description": "Create Event",
+  "explanation": "Create Event",
+  "parameters": [
+    {
+      "required": true,
+      "scope": "event",
+      "name": "title",
+      "description": "Event Title"
+    },
+    {
+      "required": true,
+      "scope": "event",
+      "name": "url_name",
+      "description": "Url Name"
+    },
+    {
+      "required": true,
+      "scope": "event",
+      "name": "event_type",
+      "description": "Event Type (virtual,in_person,hybrid)"
+    },
+    {
+      "required": true,
+      "scope": "event",
+      "name": "discription",
+      "description": "Event Description"
+    },
+    {
+      "required": true,
+      "scope": "event",
+      "name": "price",
+      "description": "Event Cost send 0 if event is free"
+    },
+    {
+      "scope": "event",
+      "name": "discount_percentage",
+      "description": "Discount Percentage"
+    },
+    {
+      "scope": "event",
+      "name": "start_date",
+      "description": "Event Start Date"
+    },
+    {
+      "scope": "event",
+      "name": "end_date",
+      "description": "Event End Date"
+    },
+    {
+      "scope": "event",
+      "name": "agenda_file_url",
+      "description": "Event Agenda File URL"
+    },
+    {
+      "scope": "event",
+      "name": "parent_id",
+      "description": "if it is Parent Event Id"
+    },
+    {
+      "scope": "event",
+      "required": true,
+      "name": "job_title_id",
+      "description": "Event Catergory Id"
+    },
+    {
+      "scope": "event",
+      "required": true,
+      "name": "country_id",
+      "description": "Country ID"
+    },
+    {
+      "scope": "event",
+      "name": "edition",
+      "description": "Edition Name"
+    },
+    {
+      "scope": "event",
+      "required": true,
+      "name": "is_paid",
+      "description": "Pass This Parameter true if event is paid"
+    },
+    {
+      "scope": "event",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "items": [
+          "name,",
+          "description",
+          "registration_url",
+          "validity",
+          "discount_percentage"
+        ]
+      },
+      "name": "coupons_attributes",
+      "description": "Pass Coupons array of hash"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/events",
+      "request_body": "{\"event\":{\"title\":\"Summit 2020\",\"url_name\":\"Summit20\",\"event_type\":\"in_person\",\"discription\":\"Event Description\",\"price\":20,\"discount_percentage\":40,\"start_date\":\"2021-02-11 08:33\",\"end_date\":\"2021-02-12 08:33\",\"agenda_file_url\":\"agenda_file_url\",\"job_title_id\":29,\"country_id\":29,\"edition\":\"2020\",\"is_paid\":true,\"coupons_attributes\":[{\"name\":\"Silver Pass\",\"discount_percentage\":20,\"registration_url\":\"https:/register.me\",\"validity\":\"2021-02-11T08:33:36.677+00:00\",\"description\":\"hello\"},{\"name\":\"Gold Pass\",\"discount_percentage\":50,\"registration_url\":\"https:/register.me\",\"validity\":\"2021-02-11T08:33:36.677+00:00\",\"description\":\"hello\"},{\"name\":\"Platinum Pass\",\"discount_percentage\":80,\"registration_url\":\"https:/register.me\",\"validity\":\"2021-02-11T08:33:36.677+00:00\",\"description\":\"hello\"}]}}",
+      "request_headers": {
+        "Accept": "application/vnd.eventible.com; version=1",
+        "Content-Type": "application/json",
+        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTU0NTE2MTYsInVzZXJfaWQiOjIxfQ.TfQruiXlne7r3TqTNLUW1Da88qQRCZKSEfHsOhCNIrU"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"data\": {\n    \"id\": 34,\n    \"title\": \"Summit 2020\",\n    \"url_name\": \"Summit20\",\n    \"description\": null,\n    \"logo\": {\n      \"url\": null\n    },\n    \"banner\": {\n      \"url\": null\n    },\n    \"agenda_file\": {\n      \"url\": null\n    },\n    \"start_date\": \"2021-02-11T03:03:00.000Z\",\n    \"end_date\": \"2021-02-12T03:03:00.000Z\",\n    \"total_review\": 0,\n    \"timezone\": null,\n    \"eventible_score\": 0.0,\n    \"status\": \"pending\",\n    \"discount_percentage\": 40.0,\n    \"price\": 20,\n    \"registration_url\": null,\n    \"event_type\": \"in_person\",\n    \"edition\": \"2020\",\n    \"reject_note\": null,\n    \"is_paid\": true,\n    \"date_in_days\": 0,\n    \"is_top_rated\": false,\n    \"country\": \"Paraguay\",\n    \"job_title\": \"Marketing\",\n    \"campaign_links\": [\n\n    ],\n    \"is_upcoming\": false,\n    \"is_bookmarked\": false,\n    \"is_insightful\": false,\n    \"coupons\": [\n      {\n        \"id\": 2,\n        \"name\": \"Silver Pass\",\n        \"description\": \"hello\",\n        \"discount_percentage\": 20.0,\n        \"registration_url\": \"https:/register.me\",\n        \"validity\": \"2021-02-11T08:33:36.677Z\"\n      },\n      {\n        \"id\": 3,\n        \"name\": \"Gold Pass\",\n        \"description\": \"hello\",\n        \"discount_percentage\": 50.0,\n        \"registration_url\": \"https:/register.me\",\n        \"validity\": \"2021-02-11T08:33:36.677Z\"\n      },\n      {\n        \"id\": 4,\n        \"name\": \"Platinum Pass\",\n        \"description\": \"hello\",\n        \"discount_percentage\": 80.0,\n        \"registration_url\": \"https:/register.me\",\n        \"validity\": \"2021-02-11T08:33:36.677Z\"\n      }\n    ]\n  }\n}",
+      "response_headers": {
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

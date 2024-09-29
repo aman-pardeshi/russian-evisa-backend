@@ -1,0 +1,52 @@
+{
+  "resource": "Users",
+  "resource_explanation": null,
+  "http_method": "POST",
+  "route": "/users/send_invitation",
+  "description": "Send invitation to alerady exits user",
+  "explanation": "Send invitation to user for moderator role",
+  "parameters": [
+    {
+      "type": "string",
+      "name": "email",
+      "description": "User email Id "
+    },
+    {
+      "type": "string",
+      "required": true,
+      "name": "name",
+      "description": "User Name"
+    },
+    {
+      "type": "string",
+      "required": true,
+      "name": "role",
+      "description": "user role [moderator]"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/users/send_invitation",
+      "request_body": "{\"email\":\"theodore@okon.info\",\"name\":\"Xert Swer\",\"role\":\"moderator\"}",
+      "request_headers": {
+        "Accept": "application/vnd.eventible.com; version=1",
+        "Content-Type": "application/json",
+        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTU0NTE2MzYsInVzZXJfaWQiOjkzfQ.tRr5-iEGeAfMYZcMM8Ylnwn4VoJ2jZ7tmceJQiRyHmg"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 422,
+      "response_status_text": "Unprocessable Entity",
+      "response_body": "{\n  \"message\": \"Email has already been taken\"\n}",
+      "response_headers": {
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

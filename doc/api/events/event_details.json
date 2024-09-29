@@ -1,0 +1,40 @@
+{
+  "resource": "Events",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "/events/:id",
+  "description": "Event Details",
+  "explanation": "Get All Details of event",
+  "parameters": [
+    {
+      "required": true,
+      "name": "id",
+      "description": "Event Id"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/events/45",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/vnd.eventible.com; version=1",
+        "Content-Type": "application/json",
+        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTU0NTE2MTgsInVzZXJfaWQiOjI0fQ.QJeifVUUUDK0Eej6s58DMNHbSeuxfnapJTExekPLRVA"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"data\": {\n    \"id\": 45,\n    \"title\": \"Jamal Towne\",\n    \"url_name\": \"UEHRFWQTGJ\",\n    \"description\": \"Tempora tempore ex. Architecto omnis in. Optio qui et.\",\n    \"logo\": {\n      \"url\": null\n    },\n    \"banner\": {\n      \"url\": null\n    },\n    \"agenda_file\": {\n      \"url\": null\n    },\n    \"start_date\": \"2021-02-11T10:00:00.000Z\",\n    \"end_date\": \"2021-02-11T15:00:00.000Z\",\n    \"total_review\": 0,\n    \"timezone\": null,\n    \"eventible_score\": 0.0,\n    \"status\": \"pending\",\n    \"discount_percentage\": 936.0,\n    \"price\": 944,\n    \"registration_url\": \"https://robohash.org/idculpaut.png?size=300x300&set=set1\",\n    \"event_type\": \"virtual\",\n    \"edition\": \"Abraham Kreiger\",\n    \"reject_note\": null,\n    \"is_paid\": false,\n    \"date_in_days\": 0,\n    \"is_top_rated\": false,\n    \"country\": \"United Kingdom\",\n    \"job_title\": \"Marketing\",\n    \"campaign_links\": [\n      {\n        \"id\": \"8387c33e-f3f2-42ad-91ae-27d8578f7cae\",\n        \"expiry_date\": \"2021-02-11\",\n        \"reward_amount\": \"20\",\n        \"link\": \"http://localhost:3002/review/UEHRFWQTGJ/MrvwSVDUao\"\n      }\n    ],\n    \"is_upcoming\": false,\n    \"is_bookmarked\": false,\n    \"is_insightful\": false,\n    \"coupons\": [\n      {\n        \"id\": 7,\n        \"name\": null,\n        \"description\": \"Non sequi pariatur quia.\",\n        \"discount_percentage\": 40.0,\n        \"registration_url\": \"http://grimes.biz/sherwood\",\n        \"validity\": \"2021-02-11T08:33:37.830Z\"\n      }\n    ]\n  }\n}",
+      "response_headers": {
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

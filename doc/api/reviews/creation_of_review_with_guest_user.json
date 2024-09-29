@@ -1,0 +1,80 @@
+{
+  "resource": "Reviews",
+  "resource_explanation": null,
+  "http_method": "POST",
+  "route": "/reviews",
+  "description": "Creation of Review with guest user",
+  "explanation": "create Review",
+  "parameters": [
+    {
+      "type": "boolean",
+      "name": "create_account",
+      "description": "pass true if user click on create my eventible account"
+    },
+    {
+      "type": "object",
+      "items": [
+        "name",
+        "company_name",
+        "designation",
+        "email"
+      ],
+      "name": "user",
+      "description": "Pass User Details"
+    },
+    {
+      "required": true,
+      "name": "attended_as",
+      "description": "Attended as [attendee/speaker/sponsor]"
+    },
+    {
+      "required": true,
+      "name": "utm_source",
+      "description": "Utm source type [campaign/web]"
+    },
+    {
+      "required": true,
+      "name": "event_id",
+      "description": "Event id"
+    },
+    {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "items": [
+          "answer",
+          "question_id",
+          "scale"
+        ]
+      },
+      "required": true,
+      "name": "answers",
+      "description": "Pass array of object which contains questions and answers"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/reviews",
+      "request_body": "{\"create_account\":false,\"user\":{\"name\":\"XYZ POR\",\"email\":\"xyz@gmail.com\",\"company_name\":\"josh\",\"designation\":\"se\"},\"attended_as\":\"attendee\",\"utm_source\":\"web\",\"event_id\":165,\"answers\":[{\"question_id\":1828,\"answer\":\"no\"},{\"question_id\":1848,\"scale\":4}]}",
+      "request_headers": {
+        "Accept": "application/vnd.eventible.com; version=1",
+        "Content-Type": "application/json",
+        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTU0NTE2MzIsInVzZXJfaWQiOjYzfQ.TtIIgLZONHqb02EVUh2tZB8rkJqrBUhG4_SvY-OQ-z0"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"data\": {\n    \"id\": 75,\n    \"status\": \"pending\",\n    \"utm_source\": \"web\",\n    \"attended_as\": \"attendee\",\n    \"is_flaged\": false,\n    \"is_saved\": false,\n    \"created_at\": \"2021-02-11\",\n    \"event\": {\n      \"id\": 165,\n      \"title\": \"Anton Emard\",\n      \"edition\": \"Amb. Aida Weber\",\n      \"logo\": {\n        \"url\": null\n      }\n    },\n    \"country\": \"Isle of Man\",\n    \"mode_of_attendance\": null,\n    \"personal_score\": null,\n    \"source_text\": null,\n    \"total_insight_review\": 0,\n    \"is_insightful\": false,\n    \"is_bookmarked\": false,\n    \"source_heading\": \"Organic\",\n    \"gc_amount\": null,\n    \"flaged_reason\": null,\n    \"flaged_by\": null,\n    \"saved_by\": null,\n    \"review_submissions\": [\n      {\n        \"id\": 68,\n        \"question_id\": 1828,\n        \"question\": null,\n        \"question_type\": null,\n        \"mode_of_attendance\": null,\n        \"answer\": \"no\",\n        \"scale\": null\n      },\n      {\n        \"id\": 69,\n        \"question_id\": 1848,\n        \"question\": null,\n        \"question_type\": null,\n        \"mode_of_attendance\": null,\n        \"answer\": null,\n        \"scale\": 4\n      }\n    ],\n    \"verification\": null,\n    \"reviewer\": {\n      \"name\": \"XYZ POR\",\n      \"id\": 1,\n      \"email\": \"xyz@gmail.com\",\n      \"designation\": \"se\",\n      \"company_name\": \"josh\"\n    }\n  }\n}",
+      "response_headers": {
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "resource": "Registrations",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "/registrations/confirm",
+  "description": "If User Alerady Confirmed email OR Invalid Confirmation Token",
+  "explanation": null,
+  "parameters": [
+    {
+      "name": "confirmation_token",
+      "description": "Confirmation Token"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/registrations/confirm?confirmation_token=8czqZ7yae-Wgf4QsW2ut",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/vnd.eventible.com; version=1",
+        "Content-Type": "application/json"
+      },
+      "request_query_parameters": {
+        "confirmation_token": "8czqZ7yae-Wgf4QsW2ut"
+      },
+      "request_content_type": "application/json",
+      "response_status": 422,
+      "response_status_text": "Unprocessable Entity",
+      "response_body": "{\n  \"message\": \" Account was already confirmed, please try signing in\"\n}",
+      "response_headers": {
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

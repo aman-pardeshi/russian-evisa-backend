@@ -1,0 +1,55 @@
+{
+  "resource": "Events",
+  "resource_explanation": null,
+  "http_method": "PUT",
+  "route": "/events/:id",
+  "description": "Update event",
+  "explanation": "update Event discription and start date",
+  "parameters": [
+    {
+      "required": true,
+      "name": "id",
+      "description": "Event Id"
+    },
+    {
+      "scope": "event",
+      "name": "description",
+      "description": "Event description"
+    },
+    {
+      "scope": "event",
+      "name": "start_date",
+      "description": "Event start date"
+    },
+    {
+      "scope": "event",
+      "name": "end_date",
+      "description": "Event end date"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "PUT",
+      "request_path": "/events/55",
+      "request_body": "{\"event\":{\"description\":\"Updating Description\",\"start_date\":\"2021-02-11 08:33\",\"end_date\":\"2021-02-11 08:33\"}}",
+      "request_headers": {
+        "Accept": "application/vnd.eventible.com; version=1",
+        "Content-Type": "application/json",
+        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTU0NTE2MTksInVzZXJfaWQiOjI2fQ.inXXNiR_487DrJHE-kvZ_AjHPnnp59SuATP6BSU-Clo"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"data\": {\n    \"id\": 55,\n    \"title\": \"Alonzo Rohan\",\n    \"url_name\": \"ZESZTCVNEU\",\n    \"description\": \"Updating Description\",\n    \"logo\": {\n      \"url\": null\n    },\n    \"banner\": {\n      \"url\": null\n    },\n    \"agenda_file\": {\n      \"url\": null\n    },\n    \"start_date\": \"2021-02-11T03:03:00.000Z\",\n    \"end_date\": \"2021-02-11T03:03:00.000Z\",\n    \"total_review\": 0,\n    \"timezone\": null,\n    \"eventible_score\": 0.0,\n    \"status\": \"pending\",\n    \"discount_percentage\": 111.0,\n    \"price\": 415,\n    \"registration_url\": \"https://robohash.org/eiusquiipsum.png?size=300x300&set=set1\",\n    \"event_type\": \"virtual\",\n    \"edition\": \"Twanna Turner\",\n    \"reject_note\": null,\n    \"is_paid\": false,\n    \"date_in_days\": 0,\n    \"is_top_rated\": false,\n    \"country\": \"Cameroon\",\n    \"job_title\": \"Marketing\",\n    \"campaign_links\": [\n      {\n        \"id\": \"a37333ef-1f7f-4858-a894-b93529cf02ba\",\n        \"expiry_date\": \"2021-02-11\",\n        \"reward_amount\": \"20\",\n        \"link\": \"http://localhost:3002/review/ZESZTCVNEU/rh4LDloid4\"\n      }\n    ],\n    \"is_upcoming\": false,\n    \"is_bookmarked\": false,\n    \"is_insightful\": false,\n    \"coupons\": [\n      {\n        \"id\": 9,\n        \"name\": null,\n        \"description\": \"Facilis a sed voluptates.\",\n        \"discount_percentage\": 40.0,\n        \"registration_url\": \"http://volkman-mohr.net/lurlene\",\n        \"validity\": \"2021-02-11T08:33:38.745Z\"\n      }\n    ]\n  }\n}",
+      "response_headers": {
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "resource": "Sessions",
+  "resource_explanation": null,
+  "http_method": "POST",
+  "route": "/sessions",
+  "description": "Failure response of sign in",
+  "explanation": "if email/password in invalid\n        or user doesnot confirmed email ",
+  "parameters": [
+    {
+      "name": "email",
+      "description": "Email Address"
+    },
+    {
+      "name": "password",
+      "description": "password"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/sessions",
+      "request_body": "{\"email\":\"kl@gmail.com\",\"password\":\"123456\"}",
+      "request_headers": {
+        "Accept": "application/vnd.eventible.com; version=1",
+        "Content-Type": "application/json"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 422,
+      "response_status_text": "Unprocessable Entity",
+      "response_body": "{\n  \"message\": \"Invalid email or password.\"\n}",
+      "response_headers": {
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

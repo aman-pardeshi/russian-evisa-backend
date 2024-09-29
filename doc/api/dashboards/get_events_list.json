@@ -1,0 +1,36 @@
+{
+  "resource": "Dashboards",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "/dashboards/organizer_events",
+  "description": "Get Events list",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/dashboards/organizer_events",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/vnd.eventible.com; version=1",
+        "Content-Type": "application/json",
+        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTU0NTE2MTUsInVzZXJfaWQiOjE4fQ.CqFrk5YEFxD3__yd3T2PiwfBknhqNB51QhhTUxBbwGk"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"data\": [\n    {\n      \"id\": 24,\n      \"title\": \"Ashley Ankunding LLD\",\n      \"description\": \"Incidunt natus rerum. In et voluptate. Nostrum et nihil.\",\n      \"logo\": {\n        \"url\": null\n      },\n      \"start_date\": \"2021-02-11T10:00:00.000Z\",\n      \"end_date\": \"2021-02-09T00:00:00.000Z\",\n      \"total_review\": 0,\n      \"eventible_score\": 0.0,\n      \"edition\": \"Dr. Pasty Goldner\",\n      \"attendee\": {\n        \"count\": 0,\n        \"score\": \"N/A\"\n      },\n      \"speaker\": {\n        \"count\": 0,\n        \"score\": \"N/A\"\n      },\n      \"sponsor\": {\n        \"count\": 0,\n        \"score\": \"N/A\"\n      },\n      \"overall_score\": \"0.00\"\n    },\n    {\n      \"id\": 23,\n      \"title\": \"Shanda Crooks\",\n      \"description\": \"Voluptatem dolores quidem. Voluptatibus ea aspernatur. Minus et earum.\",\n      \"logo\": {\n        \"url\": null\n      },\n      \"start_date\": \"2021-02-11T10:00:00.000Z\",\n      \"end_date\": \"2021-02-09T00:00:00.000Z\",\n      \"total_review\": 0,\n      \"eventible_score\": 0.0,\n      \"edition\": \"Reuben Boyle MD\",\n      \"attendee\": {\n        \"count\": 0,\n        \"score\": \"N/A\"\n      },\n      \"speaker\": {\n        \"count\": 0,\n        \"score\": \"N/A\"\n      },\n      \"sponsor\": {\n        \"count\": 0,\n        \"score\": \"N/A\"\n      },\n      \"overall_score\": \"0.00\"\n    }\n  ],\n  \"meta\": {\n    \"page\": \"1\",\n    \"limit\": \"10\",\n    \"total_records\": 2,\n    \"current_records\": 2\n  }\n}",
+      "response_headers": {
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

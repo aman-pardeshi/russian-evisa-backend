@@ -1,0 +1,47 @@
+{
+  "resource": "Users",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "users/my_rewards",
+  "description": "Get My Rewards",
+  "explanation": null,
+  "parameters": [
+    {
+      "type": "integer",
+      "name": "page",
+      "description": "page number for pagination"
+    },
+    {
+      "type": "integer",
+      "name": "limit",
+      "description": "Limit Per Page For Pagination"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "users/my_rewards?page=1&limit=2",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/vnd.eventible.com; version=1",
+        "Content-Type": "application/json",
+        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTU0NTE2MzcsInVzZXJfaWQiOjEzN30.O6ycwPAPR-YxE-YmkK26tb3CTyx33NiGJF8de5pP16E"
+      },
+      "request_query_parameters": {
+        "page": "1",
+        "limit": "2"
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"rewards\": [\n\n  ],\n  \"meta\": {\n    \"page\": \"1\",\n    \"limit\": \"2\",\n    \"total_records\": 0,\n    \"current_records\": 0\n  }\n}",
+      "response_headers": {
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

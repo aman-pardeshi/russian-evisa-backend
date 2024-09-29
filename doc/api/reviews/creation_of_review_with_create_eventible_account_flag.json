@@ -1,0 +1,80 @@
+{
+  "resource": "Reviews",
+  "resource_explanation": null,
+  "http_method": "POST",
+  "route": "/reviews",
+  "description": "Creation of Review with create eventible account flag",
+  "explanation": "create Review",
+  "parameters": [
+    {
+      "type": "boolean",
+      "name": "create_account",
+      "description": "pass true if user click on create my eventible account"
+    },
+    {
+      "type": "object",
+      "items": [
+        "name",
+        "company_name",
+        "designation",
+        "email"
+      ],
+      "name": "user",
+      "description": "Pass User Details"
+    },
+    {
+      "required": true,
+      "name": "attended_as",
+      "description": "Attended as [attendee/speaker/sponsor]"
+    },
+    {
+      "required": true,
+      "name": "utm_source",
+      "description": "Utm source type [campaign/web]"
+    },
+    {
+      "required": true,
+      "name": "event_id",
+      "description": "Event id"
+    },
+    {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "items": [
+          "answer",
+          "question_id",
+          "scale"
+        ]
+      },
+      "required": true,
+      "name": "answers",
+      "description": "Pass array of object which contains questions and answers"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/reviews",
+      "request_body": "{\"create_account\":true,\"user\":{\"name\":\"XYZ POR\",\"email\":\"xyz@gmail.com\",\"company_name\":\"josh\",\"designation\":\"se\"},\"attended_as\":\"attendee\",\"utm_source\":\"web\",\"event_id\":164,\"answers\":[{\"question_id\":1775,\"answer\":\"no\"},{\"question_id\":1795,\"scale\":4}]}",
+      "request_headers": {
+        "Accept": "application/vnd.eventible.com; version=1",
+        "Content-Type": "application/json",
+        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTU0NTE2MzIsInVzZXJfaWQiOjYwfQ.4W-5i9Kib6LrQUI9rLRRG-GJK6ncSC1fTBgEkBJjerc"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"data\": {\n    \"id\": 72,\n    \"status\": \"pending\",\n    \"utm_source\": \"web\",\n    \"attended_as\": \"attendee\",\n    \"is_flaged\": false,\n    \"is_saved\": false,\n    \"created_at\": \"2021-02-11\",\n    \"event\": {\n      \"id\": 164,\n      \"title\": \"Laverne Streich\",\n      \"edition\": \"Hyman Zulauf\",\n      \"logo\": {\n        \"url\": null\n      }\n    },\n    \"country\": \"Saint Lucia\",\n    \"mode_of_attendance\": null,\n    \"personal_score\": null,\n    \"source_text\": null,\n    \"total_insight_review\": 0,\n    \"is_insightful\": false,\n    \"is_bookmarked\": false,\n    \"source_heading\": \"Organic\",\n    \"gc_amount\": null,\n    \"flaged_reason\": null,\n    \"flaged_by\": null,\n    \"saved_by\": null,\n    \"review_submissions\": [\n      {\n        \"id\": 65,\n        \"question_id\": 1775,\n        \"question\": null,\n        \"question_type\": null,\n        \"mode_of_attendance\": null,\n        \"answer\": \"no\",\n        \"scale\": null\n      },\n      {\n        \"id\": 66,\n        \"question_id\": 1795,\n        \"question\": null,\n        \"question_type\": null,\n        \"mode_of_attendance\": null,\n        \"answer\": null,\n        \"scale\": 4\n      }\n    ],\n    \"verification\": null,\n    \"reviewer\": {\n      \"id\": 62,\n      \"name\": \"XYZ POR\",\n      \"email\": \"xyz@gmail.com\",\n      \"role\": null,\n      \"designation\": \"se\",\n      \"profile\": null,\n      \"last_sign_in_ip\": \"\",\n      \"last_sign_in_at\": \" \",\n      \"current_sign_in_ip\": \"\",\n      \"current_sign_in_at\": \" \",\n      \"sign_in_count\": 0,\n      \"status\": \"active\",\n      \"mobile_number\": null,\n      \"company_name\": \"josh\",\n      \"member_since\": \"11th Feb 2021\",\n      \"reward_amount\": 0,\n      \"events_reviewd\": 0,\n      \"saved_reviews\": 0,\n      \"bookmarked_events\": 0,\n      \"is_password_set\": false,\n      \"linkedin_url\": null,\n      \"twitter_handle\": null\n    }\n  }\n}",
+      "response_headers": {
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

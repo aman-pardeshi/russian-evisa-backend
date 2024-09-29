@@ -1,0 +1,73 @@
+{
+  "resource": "Reviews",
+  "resource_explanation": null,
+  "http_method": "PUT",
+  "route": "/reviews/:id",
+  "description": "Review updated successfully by authorised user",
+  "explanation": "Review Updating successfully",
+  "parameters": [
+    {
+      "type": "integer",
+      "required": true,
+      "name": "id",
+      "description": "Review Id"
+    },
+    {
+      "type": "boolean",
+      "name": "is_flaged",
+      "description": "Pass this If review Flaged"
+    },
+    {
+      "type": "boolean",
+      "name": "is_saved",
+      "description": "Pass this If review saved"
+    },
+    {
+      "type": "string",
+      "name": "flaged_reason",
+      "description": "Pass Flaged reason"
+    },
+    {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "items": [
+            "id",
+            "question_id",
+            "answer",
+            "scale"
+          ]
+        }
+      ],
+      "required": true,
+      "name": "review_submissions_attributes",
+      "description": "Pass Review Submissions Hash"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "PUT",
+      "request_path": "/reviews/86",
+      "request_body": "{\"is_flaged\":true,\"is_saved\":true,\"flaged_reason\":\"other\",\"review_submissions_attributes\":[{\"id\":75,\"question_id\":2146,\"answer\":\"Changes\",\"scale\":0}]}",
+      "request_headers": {
+        "Accept": "application/vnd.eventible.com; version=1",
+        "Content-Type": "application/json",
+        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTU0NTE2MzQsInVzZXJfaWQiOjc1fQ.QEYacBihzpELAW_t76NRhizCXfMtlktqN15ZD76bzqA"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"data\": {\n    \"id\": 86,\n    \"status\": \"pending\",\n    \"utm_source\": \"web\",\n    \"attended_as\": null,\n    \"is_flaged\": true,\n    \"is_saved\": true,\n    \"created_at\": \"2021-02-11\",\n    \"event\": {\n      \"id\": 171,\n      \"title\": \"Cierra Pollich\",\n      \"edition\": \"Concha Rau\",\n      \"logo\": {\n        \"url\": null\n      }\n    },\n    \"country\": \"Guadeloupe\",\n    \"mode_of_attendance\": null,\n    \"personal_score\": null,\n    \"source_text\": null,\n    \"total_insight_review\": 0,\n    \"is_insightful\": false,\n    \"is_bookmarked\": false,\n    \"source_heading\": \"Organic\",\n    \"gc_amount\": null,\n    \"flaged_reason\": \"other\",\n    \"flaged_by\": {\n      \"id\": 75,\n      \"name\": \"Jan Okuneva JD\",\n      \"role\": \"admin\",\n      \"designation\": null,\n      \"company_name\": null\n    },\n    \"saved_by\": null,\n    \"review_submissions\": [\n      {\n        \"id\": 75,\n        \"question_id\": 2146,\n        \"question\": null,\n        \"question_type\": null,\n        \"mode_of_attendance\": null,\n        \"answer\": \"Changes\",\n        \"scale\": 0\n      }\n    ],\n    \"verification\": null,\n    \"reviewer\": {\n      \"id\": 75,\n      \"name\": \"Jan Okuneva JD\",\n      \"email\": \"mohammad.wilderman@pfeffer.io\",\n      \"role\": \"admin\",\n      \"designation\": null,\n      \"profile\": null,\n      \"last_sign_in_ip\": \"\",\n      \"last_sign_in_at\": \" \",\n      \"current_sign_in_ip\": \"\",\n      \"current_sign_in_at\": \" \",\n      \"sign_in_count\": 0,\n      \"status\": \"active\",\n      \"mobile_number\": null,\n      \"company_name\": null,\n      \"member_since\": \"11th Feb 2021\",\n      \"reward_amount\": 0,\n      \"events_reviewd\": 0,\n      \"saved_reviews\": 0,\n      \"bookmarked_events\": 0,\n      \"is_password_set\": true,\n      \"linkedin_url\": null,\n      \"twitter_handle\": null,\n      \"invitation_status\": null\n    }\n  }\n}",
+      "response_headers": {
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

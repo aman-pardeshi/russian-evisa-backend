@@ -1,0 +1,2 @@
+class EventImageUploader < BaseUploader
+end

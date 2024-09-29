@@ -1,0 +1,36 @@
+{
+  "resource": "Events",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "events/unclaimed_events",
+  "description": "List all unclaimed events to organizer",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "events/unclaimed_events",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/vnd.eventible.com; version=1",
+        "Content-Type": "application/json",
+        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTU0NTE2MjgsInVzZXJfaWQiOjQ0fQ.dQXVBL0OezypQhul3yo8zeVYCQLgfJDndkTraGzZ1Ew"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"data\": [\n    {\n      \"id\": 150,\n      \"title\": \"Cristen Jakubowski\",\n      \"start_date\": \"2021-02-23T08:33:47.542Z\",\n      \"end_date\": \"2021-03-08T08:33:47.542Z\",\n      \"event_type\": \"virtual\",\n      \"is_paid\": false,\n      \"is_upcoming\": false\n    },\n    {\n      \"id\": 149,\n      \"title\": \"Marco Champlin\",\n      \"start_date\": \"2021-02-23T08:33:47.517Z\",\n      \"end_date\": \"2021-03-08T08:33:47.517Z\",\n      \"event_type\": \"virtual\",\n      \"is_paid\": false,\n      \"is_upcoming\": false\n    },\n    {\n      \"id\": 148,\n      \"title\": \"Alexander Harris\",\n      \"start_date\": \"2021-02-21T08:33:47.500Z\",\n      \"end_date\": \"2021-03-03T08:33:47.500Z\",\n      \"event_type\": \"virtual\",\n      \"is_paid\": false,\n      \"is_upcoming\": false\n    },\n    {\n      \"id\": 147,\n      \"title\": \"Cristopher Lueilwitz\",\n      \"start_date\": \"2021-02-13T08:33:47.484Z\",\n      \"end_date\": \"2021-02-16T08:33:47.484Z\",\n      \"event_type\": \"virtual\",\n      \"is_paid\": false,\n      \"is_upcoming\": false\n    }\n  ],\n  \"meta\": {\n    \"page\": \"1\",\n    \"limit\": \"10\",\n    \"total_records\": 4,\n    \"current_records\": 4\n  }\n}",
+      "response_headers": {
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+<p>Hi <%= @user.name %> </p>
+<p><%= @current_user.name%> has sent you a Team Member Invitation.<br>
+Click <%= link_to "Team Invite Link", "#{ENV.fetch("FRONTEND_URL")}/team-members/invite-team-member?team_invitation_token=#{@token}&email=#{@user.email}&pswd=#{@pswd}" %>  to accept invitation.<br>
+<p>Best,<br>
+<p>Jennifer Rickman<br>
+Director – Customer Success<br>
+Eventible.com</p>

@@ -1,0 +1,36 @@
+{
+  "resource": "Events",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "/events/filters",
+  "description": "Event Filter",
+  "explanation": "Get All Event filters",
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/events/filters",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/vnd.eventible.com; version=1",
+        "Content-Type": "application/json",
+        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTU0NTE2MTcsInVzZXJfaWQiOjIyfQ.MoyCpk7GSxSoTQcuas7-KDKTRaaW8gRsK0UT4lskr8A"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"data\": {\n    \"job_titles\": [\n      {\n        \"id\": 31,\n        \"name\": \"Marketing\"\n      },\n      {\n        \"id\": 32,\n        \"name\": \"Marketing\"\n      }\n    ],\n    \"countries\": [\n      {\n        \"id\": 36,\n        \"name\": \"Faroe Islands\"\n      },\n      {\n        \"id\": 38,\n        \"name\": \"Guinea\"\n      },\n      {\n        \"id\": 40,\n        \"name\": \"Iceland\"\n      },\n      {\n        \"id\": 35,\n        \"name\": \"Nauru\"\n      },\n      {\n        \"id\": 39,\n        \"name\": \"Saint Barthelemy\"\n      },\n      {\n        \"id\": 37,\n        \"name\": \"United States of America\"\n      }\n    ],\n    \"event_types\": {\n      \"virtual\": 0,\n      \"in_person\": 1,\n      \"hybrid\": 2\n    }\n  }\n}",
+      "response_headers": {
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

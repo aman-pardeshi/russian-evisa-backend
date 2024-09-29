@@ -1,0 +1,11 @@
+<p>Hi <%= @user.name %>,</p>
+<p>Its been a while that you have visited Eventible website
+<br>
+Click here to <%= link_to 'login', 'http://wwww.eventible.com' %>
+
+<br>
+<p>Click here to <%= link_to "Unsubscribe", "#{ENV.fetch("FRONTEND_URL")}/unsubscribe?id=#{@user.id}&email=#{@user.email}" %> </p>
+</p>
+<p>Best,<br>
+<br>
+Eventible</p>

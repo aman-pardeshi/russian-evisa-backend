@@ -1,0 +1,47 @@
+{
+  "resource": "Hompages",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "homepages/review_just_droped",
+  "description": "Homepage Review just Droped Listing",
+  "explanation": "Review Just Droped API",
+  "parameters": [
+    {
+      "type": "integer",
+      "name": "page",
+      "description": "Pass Page number"
+    },
+    {
+      "type": "integer",
+      "name": "limit",
+      "description": "Pass limit for pagination"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "homepages/review_just_droped?page=1&limit=3",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/vnd.eventible.com; version=1",
+        "Content-Type": "application/json",
+        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTU0NTE2MjgsInVzZXJfaWQiOjQ4fQ.S_euAvxvyAJyvFN00UZi1zUSHJbsQVuuathFIStT1BE"
+      },
+      "request_query_parameters": {
+        "page": "1",
+        "limit": "3"
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"reviews\": [\n    {\n      \"id\": 58,\n      \"event\": {\n        \"id\": 153,\n        \"title\": \"Jewel Corkery\",\n        \"logo\": {\n          \"url\": null\n        },\n        \"start_date\": \"2021-02-11T10:00:00.000Z\"\n      },\n      \"description\": \"Isreal Weissnat\",\n      \"reviewer_type\": \"User\",\n      \"reviewer\": {\n        \"name\": \"Elwood Hammes\",\n        \"designation\": null,\n        \"company_name\": null,\n        \"profile\": null\n      },\n      \"is_insightful\": false,\n      \"is_bookmarked\": false,\n      \"submitted_at\": 0,\n      \"personal_score\": null,\n      \"total_insight_review\": 0\n    },\n    {\n      \"id\": 57,\n      \"event\": {\n        \"id\": 153,\n        \"title\": \"Jewel Corkery\",\n        \"logo\": {\n          \"url\": null\n        },\n        \"start_date\": \"2021-02-11T10:00:00.000Z\"\n      },\n      \"description\": \"Mitchel Kling\",\n      \"reviewer_type\": \"User\",\n      \"reviewer\": {\n        \"name\": \"Elwood Hammes\",\n        \"designation\": null,\n        \"company_name\": null,\n        \"profile\": null\n      },\n      \"is_insightful\": false,\n      \"is_bookmarked\": false,\n      \"submitted_at\": 0,\n      \"personal_score\": null,\n      \"total_insight_review\": 0\n    }\n  ],\n  \"meta\": {\n    \"page\": \"1\",\n    \"limit\": \"3\",\n    \"total_records\": 2\n  }\n}",
+      "response_headers": {
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

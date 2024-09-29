@@ -1,0 +1,17 @@
+Hi,
+<p><b><%= @request.created_by.first_name %></b> from <b><%= @request.created_by.company_name%></b> has requested for the content marketing program.
+The details submitted by the event organizer are as follows:</p>
+<% if @is_allowed_to_interview %>
+  <p>We would love for Eventible's Managing Editor to interview our speakers via email</p>
+<%end%>
+<% if @is_allowed_to_video_interview %>
+  <p>We would love for Eventible's Managing Editor to conduct video interviews with our speakers</p>
+<%end%>
+<% if @is_allowed_to_publish_article %>
+  <p>We are happy to contribute articles to be published to Mentorifi - Eventible's blog</p>
+<%end%>
+<% if @is_open_for_ideas_discussion %>
+  <p>We have some more ideas and would love to discuss with Eventible's Managing Editor over a call</p>
+<%end%>
+<p>Thanks,<br>
+EvBot</p>

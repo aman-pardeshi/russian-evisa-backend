@@ -1,0 +1,42 @@
+{
+  "resource": "Users",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "/users/check_email",
+  "description": "if email is already present in system",
+  "explanation": "already present in system",
+  "parameters": [
+    {
+      "type": "string",
+      "required": true,
+      "name": "email",
+      "description": "Email For check present or not"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/users/check_email?email=drew%40grimes.net",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/vnd.eventible.com; version=1",
+        "Content-Type": "application/json",
+        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTU0NTE2MzYsInVzZXJfaWQiOjEyNX0.8Sgx1DbfXAXoEEUL6EyBBJEmKDfWvpNPdFVspbSfgo0"
+      },
+      "request_query_parameters": {
+        "email": "drew@grimes.net"
+      },
+      "request_content_type": "application/json",
+      "response_status": 422,
+      "response_status_text": "Unprocessable Entity",
+      "response_body": "{\n  \"message\": \"Email has already been taken \"\n}",
+      "response_headers": {
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

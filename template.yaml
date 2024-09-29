@@ -1,0 +1,40 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: Your Rails App on Lambda!
+
+Resources:
+  RailsAppFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: .
+      Handler: config.ru
+      Runtime: ruby2.7
+      MemorySize: 1024
+      Timeout: 28
+      Environment:
+        Variables:
+          RAILS_ENV: production
+          DATABASE_URL: database-1.cn4q82a4sg0h.us-east-1.rds.amazonaws.com
+      Events:
+        Proxy:
+          Type: Api
+          Properties:
+            Path: /{proxy+}
+            Method: ANY
+        Root:
+          Type: Api
+          Properties:
+            Path: /
+            Method: ANY
+  Outputs:
+    ApiUrl:
+      Description: 'API Gateway endpoint URL for your application'
+      Value: !Sub 'https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/api/'
+      
+Parameters:
+  ApiKeyParameter:
+    Type: AWS::SSM::Parameter::Value<String>
+    Default: /MyLambdaProject/API_KEY
+  SecretKeyParameter:
+    Type: AWS::SSM::Parameter::Value<String>
+    Default: /MyLambdaProject/SECRET_KEY

@@ -1,0 +1,47 @@
+{
+  "resource": "Hompages",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "/homepages/events",
+  "description": "Event Listing",
+  "explanation": "Get All Events",
+  "parameters": [
+    {
+      "type": "integer",
+      "name": "page",
+      "description": "Pass Page number"
+    },
+    {
+      "type": "integer",
+      "name": "limit",
+      "description": "Pass limit for pagination"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/homepages/events?page=1&limit=3",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/vnd.eventible.com; version=1",
+        "Content-Type": "application/json",
+        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTU0NTE2MjgsInVzZXJfaWQiOjQ3fQ.iNE2J1S5euXHxIbPzCqzriHZ4ApzI6mTqxjADOvQLno"
+      },
+      "request_query_parameters": {
+        "page": "1",
+        "limit": "3"
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"data\": [\n    {\n      \"id\": 152,\n      \"title\": \"Christie Kemmer\",\n      \"url_name\": \"LSGIVETUPG\",\n      \"description\": \"Consequatur nulla ipsa. Vel cum vel. Officia non excepturi.\",\n      \"logo\": {\n        \"url\": null\n      },\n      \"banner\": {\n        \"url\": null\n      },\n      \"agenda_file\": {\n        \"url\": null\n      },\n      \"start_date\": \"2021-02-11T10:00:00.000Z\",\n      \"end_date\": \"2021-02-11T15:00:00.000Z\",\n      \"total_review\": 0,\n      \"timezone\": null,\n      \"eventible_score\": 0.0,\n      \"status\": \"approved\",\n      \"discount_percentage\": 62.0,\n      \"price\": 912,\n      \"registration_url\": \"https://robohash.org/voluptasquaeratadipisci.png?size=300x300&set=set1\",\n      \"event_type\": \"virtual\",\n      \"edition\": \"Mollie Jenkins\",\n      \"reject_note\": null,\n      \"is_paid\": false,\n      \"date_in_days\": 0,\n      \"is_top_rated\": true,\n      \"country\": \"Thailand\",\n      \"job_title\": \"Marketing\",\n      \"campaign_links\": [\n\n      ],\n      \"is_upcoming\": true,\n      \"is_bookmarked\": false,\n      \"is_insightful\": false,\n      \"coupons\": [\n\n      ]\n    },\n    {\n      \"id\": 151,\n      \"title\": \"Alex Champlin\",\n      \"url_name\": \"XVLAZTFOMC\",\n      \"description\": \"Facilis id facere. At error maiores. Dolorem voluptas praesentium.\",\n      \"logo\": {\n        \"url\": null\n      },\n      \"banner\": {\n        \"url\": null\n      },\n      \"agenda_file\": {\n        \"url\": null\n      },\n      \"start_date\": \"2021-02-11T10:00:00.000Z\",\n      \"end_date\": \"2021-02-11T15:00:00.000Z\",\n      \"total_review\": 2,\n      \"timezone\": null,\n      \"eventible_score\": 0.0,\n      \"status\": \"approved\",\n      \"discount_percentage\": 957.0,\n      \"price\": 553,\n      \"registration_url\": \"https://robohash.org/nonmaioresalias.png?size=300x300&set=set1\",\n      \"event_type\": \"virtual\",\n      \"edition\": \"Werner Kuhn\",\n      \"reject_note\": null,\n      \"is_paid\": false,\n      \"date_in_days\": 0,\n      \"is_top_rated\": true,\n      \"country\": \"India\",\n      \"job_title\": \"Marketing\",\n      \"campaign_links\": [\n\n      ],\n      \"is_upcoming\": true,\n      \"is_bookmarked\": false,\n      \"is_insightful\": false,\n      \"coupons\": [\n\n      ]\n    }\n  ],\n  \"meta\": {\n    \"page\": \"1\",\n    \"limit\": \"3\",\n    \"total_records\": 2\n  }\n}",
+      "response_headers": {
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

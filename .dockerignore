@@ -1,0 +1,14 @@
+.DS_Store
+.bin
+.gitignore
+.bundleignore
+.byebug_history
+tmp
+log
+test
+config/deploy
+public/packs
+public/packs-test
+node_modules
+yarn-error.log
+.env

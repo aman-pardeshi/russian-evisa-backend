@@ -1,0 +1,70 @@
+{
+  "resource": "Events",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "/events/upcoming",
+  "description": "Discover Upcoming Event With Filter",
+  "explanation": "Discover Upcoming Event Eith Filters like, time frame, event_type, job_role, country",
+  "parameters": [
+    {
+      "type": "integer",
+      "name": "event_type",
+      "description": "send Event Type"
+    },
+    {
+      "type": "integer",
+      "name": "country_id",
+      "description": "send country id"
+    },
+    {
+      "type": "integer",
+      "name": "job_title_id",
+      "description": "send job_title_id"
+    },
+    {
+      "type": "string",
+      "name": "time_frame",
+      "description": "send time_frame in [start_date,end_date]"
+    },
+    {
+      "type": "integer",
+      "name": "page",
+      "description": "Send Page Number for pagination"
+    },
+    {
+      "type": "integer",
+      "name": "limit",
+      "description": "Send Limit For Pagination"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/events/upcoming?event_type=virtual&country_id=73&job_title_id=43&page=1&limit=2",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/vnd.eventible.com; version=1",
+        "Content-Type": "application/json",
+        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTU0NTE2MTksInVzZXJfaWQiOjI4fQ.e19I7YVfpfka6dMCFFQZQTxk3dToYQHHSf5xe7HY87o"
+      },
+      "request_query_parameters": {
+        "event_type": "virtual",
+        "country_id": "73",
+        "job_title_id": "43",
+        "page": "1",
+        "limit": "2"
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"data\": [\n    {\n      \"id\": 66,\n      \"title\": \"Gracie Schoen\",\n      \"url_name\": \"UBITTQTAZF\",\n      \"description\": \"Aliquid aliquam iure. Asperiores voluptas quia. Sed explicabo et.\",\n      \"logo\": {\n        \"url\": null\n      },\n      \"banner\": {\n        \"url\": null\n      },\n      \"agenda_file\": {\n        \"url\": null\n      },\n      \"start_date\": \"2021-02-13T08:33:39.598Z\",\n      \"end_date\": \"2021-02-16T08:33:39.599Z\",\n      \"total_review\": 0,\n      \"timezone\": null,\n      \"eventible_score\": 0.0,\n      \"status\": \"approved\",\n      \"discount_percentage\": 992.0,\n      \"price\": 91,\n      \"registration_url\": \"https://robohash.org/quiaipsaea.png?size=300x300&set=set1\",\n      \"event_type\": \"virtual\",\n      \"edition\": \"Ines Kuphal\",\n      \"reject_note\": null,\n      \"is_paid\": false,\n      \"date_in_days\": 2,\n      \"is_top_rated\": false,\n      \"country\": \"Moldova\",\n      \"job_title\": \"Marketing\",\n      \"campaign_links\": [\n\n      ],\n      \"is_upcoming\": true,\n      \"is_bookmarked\": false,\n      \"is_insightful\": false,\n      \"coupons\": [\n\n      ]\n    }\n  ],\n  \"meta\": {\n    \"page\": \"1\",\n    \"limit\": \"2\",\n    \"total_records\": 1\n  }\n}",
+      "response_headers": {
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "resource": "Hompages",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "/homepages/event_details",
+  "description": "Get Event Details on homepage",
+  "explanation": "Get All Details of event",
+  "parameters": [
+    {
+      "required": true,
+      "name": "event_id",
+      "description": "Event Id"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/homepages/event_details?event_id=161",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/vnd.eventible.com; version=1",
+        "Content-Type": "application/json",
+        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTU0NTE2MjksInVzZXJfaWQiOjUyfQ.Lp6OmBuINaiAbtKPVtxKvAnQ4oMgfVq5hfTnceKcfLo"
+      },
+      "request_query_parameters": {
+        "event_id": "161"
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"data\": {\n    \"id\": 161,\n    \"title\": \"Branda Mills\",\n    \"description\": \"Earum labore ea. Distinctio est aut. Saepe ipsa et.\",\n    \"logo\": {\n      \"url\": null\n    },\n    \"banner\": {\n      \"url\": null\n    },\n    \"agenda_file\": {\n      \"url\": null\n    },\n    \"start_date\": \"2021-02-11T10:00:00.000Z\",\n    \"end_date\": \"2021-02-11T15:00:00.000Z\",\n    \"total_review\": 2,\n    \"eventible_score\": 0.0,\n    \"discount_percentage\": 60.0,\n    \"price\": 193,\n    \"registration_url\": \"https://robohash.org/estmolestiaevitae.png?size=300x300&set=set1\",\n    \"event_type\": \"virtual\",\n    \"edition\": \"Werner Conroy Jr.\",\n    \"is_paid\": false,\n    \"date_in_days\": 0,\n    \"is_top_rated\": true,\n    \"country\": \"Italy\",\n    \"job_title\": \"Marketing\",\n    \"attendee\": {\n      \"count\": 0,\n      \"score\": \"N/A\"\n    },\n    \"speaker\": {\n      \"count\": 0,\n      \"score\": \"N/A\"\n    },\n    \"sponsor\": {\n      \"count\": 0,\n      \"score\": \"N/A\"\n    },\n    \"editions_score\": [\n\n    ],\n    \"overall_score\": \"0.00\",\n    \"is_upcoming\": false,\n    \"coupons\": [\n\n    ]\n  }\n}",
+      "response_headers": {
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

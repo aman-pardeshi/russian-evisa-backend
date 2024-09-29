@@ -1,0 +1,40 @@
+{
+  "resource": "Users",
+  "resource_explanation": null,
+  "http_method": "POST",
+  "route": "/users/verify_invitation_token",
+  "description": " if Invitation Token is invalid",
+  "explanation": "invalid Invitation Token",
+  "parameters": [
+    {
+      "type": "string",
+      "name": "invitation_token",
+      "description": "Send Invitation Token"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/users/verify_invitation_token",
+      "request_body": "{\"invitation_token\":\"dfghjkl\"}",
+      "request_headers": {
+        "Accept": "application/vnd.eventible.com; version=1",
+        "Content-Type": "application/json",
+        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTU0NTE2MzYsInVzZXJfaWQiOjExM30.YsBS4e2T-UvYUj_f6J3eNfmTQJNzuSwPWoQN_sK124M"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 422,
+      "response_status_text": "Unprocessable Entity",
+      "response_body": "{\n  \"message\": \"The invitation token provided is not valid!\"\n}",
+      "response_headers": {
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

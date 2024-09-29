@@ -1,0 +1,52 @@
+{
+  "resource": "Users",
+  "resource_explanation": null,
+  "http_method": "POST",
+  "route": "/users/send_invitation",
+  "description": "Send invitation to user",
+  "explanation": "Send invitation to user for moderator role",
+  "parameters": [
+    {
+      "type": "string",
+      "name": "email",
+      "description": "User email Id "
+    },
+    {
+      "type": "string",
+      "required": true,
+      "name": "name",
+      "description": "User Name"
+    },
+    {
+      "type": "string",
+      "required": true,
+      "name": "role",
+      "description": "user role [moderator]"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/users/send_invitation",
+      "request_body": "{\"email\":\"xyz@fgh.com\",\"name\":\"Xert Swer\",\"role\":\"moderator\"}",
+      "request_headers": {
+        "Accept": "application/vnd.eventible.com; version=1",
+        "Content-Type": "application/json",
+        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTU0NTE2MzYsInVzZXJfaWQiOjkwfQ.5Qs_8O_OskWU98V6IUjU_hd4ix7kUPl4jtPC9OMf-5E"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"message\": \"An invitation email has been sent to xyz@fgh.com.\"\n}",
+      "response_headers": {
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

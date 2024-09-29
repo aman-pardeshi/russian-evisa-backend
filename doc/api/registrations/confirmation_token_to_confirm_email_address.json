@@ -1,0 +1,40 @@
+{
+  "resource": "Registrations",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "/registrations/confirm",
+  "description": "Confirmation token to confirm email address",
+  "explanation": "update Confirmation token after confirm email address of user",
+  "parameters": [
+    {
+      "required": true,
+      "name": "confirmation_token",
+      "description": "Confirmation Token"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/registrations/confirm?confirmation_token=Ysht1zcp4RyoW3WQyTkh",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/vnd.eventible.com; version=1",
+        "Content-Type": "application/json"
+      },
+      "request_query_parameters": {
+        "confirmation_token": "Ysht1zcp4RyoW3WQyTkh"
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"data\": {\n    \"id\": 56,\n    \"name\": \"Marcus Mraz Jr.\",\n    \"email\": \"testing@gmail.com\",\n    \"role\": null,\n    \"designation\": null,\n    \"profile\": null,\n    \"last_sign_in_ip\": \"127.0.0.1\",\n    \"last_sign_in_at\": \"11th Feb 2021 02:03 PM\",\n    \"current_sign_in_ip\": \"127.0.0.1\",\n    \"current_sign_in_at\": \"11th Feb 2021 02:03 PM\",\n    \"sign_in_count\": 1,\n    \"status\": \"active\",\n    \"mobile_number\": null,\n    \"company_name\": null,\n    \"member_since\": \"11th Feb 2021\",\n    \"reward_amount\": 0,\n    \"events_reviewd\": 0,\n    \"saved_reviews\": 0,\n    \"bookmarked_events\": 0,\n    \"is_password_set\": true,\n    \"linkedin_url\": null,\n    \"twitter_handle\": null\n  },\n  \"token\": \"eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTU0NTE2MzEsInVzZXJfaWQiOjU2fQ.kYGuzlC54cknYa_xRNOsSnSOkL0oI3ZlEV8lQPHDxc4\",\n  \"message\": \"login successfully\"\n}",
+      "response_headers": {
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

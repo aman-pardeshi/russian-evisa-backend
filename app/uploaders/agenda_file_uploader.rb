@@ -1,0 +1,2 @@
+class AgendaFileUploader < BaseUploader
+end

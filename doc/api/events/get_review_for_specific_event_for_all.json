@@ -1,0 +1,58 @@
+{
+  "resource": "Events",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "/events/:id/reviews",
+  "description": "Get Review for specific event for all",
+  "explanation": "Get Reviews for all",
+  "parameters": [
+    {
+      "type": "integer",
+      "required": true,
+      "name": "id",
+      "description": "Send event Id"
+    },
+    {
+      "type": "string",
+      "name": "attedend_as",
+      "description": "dont send if you want all reviews andsend attendee/speaker/sponsor for specific reviews"
+    },
+    {
+      "type": "integer",
+      "name": "page",
+      "description": "Send Page number for pagination"
+    },
+    {
+      "type": "integer",
+      "name": "limit",
+      "description": "send limit for per page"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/events/105/reviews?page=1&limit=10",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/vnd.eventible.com; version=1",
+        "Content-Type": "application/json",
+        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTU0NTE2MjMsInVzZXJfaWQiOjM2fQ.1nnNWCnJEQQxBBrTyZ9y5-2wX-g2KLg23Q9OY6-DQcI"
+      },
+      "request_query_parameters": {
+        "page": "1",
+        "limit": "10"
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"reviews\": [\n\n  ],\n  \"meta\": {\n    \"page\": \"1\",\n    \"limit\": \"10\",\n    \"total_records\": 0,\n    \"current_records\": 0\n  }\n}",
+      "response_headers": {
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

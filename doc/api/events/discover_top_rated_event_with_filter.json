@@ -1,0 +1,59 @@
+{
+  "resource": "Events",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "/events/top_rated",
+  "description": "Discover Top Rated Event With Filter",
+  "explanation": "Discover Top Rated Event Eith Filters like, job_role",
+  "parameters": [
+    {
+      "type": "integer",
+      "name": "job_title_id",
+      "description": "send Job title Id"
+    },
+    {
+      "type": "string",
+      "name": "sort_by",
+      "description": "pass sort_by [total_review/popular_score]"
+    },
+    {
+      "type": "integer",
+      "name": "page",
+      "description": "Send Page Number for pagination"
+    },
+    {
+      "type": "integer",
+      "name": "limit",
+      "description": "Send Limit For Pagination"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/events/top_rated?job_title_id=57&sort_by=total_review&page=1&limit=2",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/vnd.eventible.com; version=1",
+        "Content-Type": "application/json",
+        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTU0NTE2MjMsInVzZXJfaWQiOjM1fQ._nFpZhDn1DlBy652KhmRSBsLZk9IOVOnSNY4QTrgsXM"
+      },
+      "request_query_parameters": {
+        "job_title_id": "57",
+        "sort_by": "total_review",
+        "page": "1",
+        "limit": "2"
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"top_rated_events\": [\n\n  ],\n  \"meta\": {\n    \"page\": \"1\",\n    \"limit\": \"2\",\n    \"total_records\": 0\n  }\n}",
+      "response_headers": {
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

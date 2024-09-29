@@ -1,0 +1,41 @@
+{
+  "resource": "Dashboards",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "/dashboards/admin",
+  "description": "Get Dash board counts by date range",
+  "explanation": null,
+  "parameters": [
+    {
+      "type": "string",
+      "name": "time_frame",
+      "description": "Pass date range"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/dashboards/admin?time_frame=2021-02-10%2C2021-02-11",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/vnd.eventible.com; version=1",
+        "Content-Type": "application/json",
+        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTU0NTE2MTUsInVzZXJfaWQiOjExfQ.MSi4gSAQDx9ztQKtx3sp8chptmIwMGhwQ7-wYKvQrlE"
+      },
+      "request_query_parameters": {
+        "time_frame": "2021-02-10,2021-02-11"
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"data\": {\n    \"total_reviews\": 1,\n    \"total_events\": 4,\n    \"average_review_per_event\": 1,\n    \"total_number_of_organizers\": 1,\n    \"pending_events\": 2,\n    \"content_marketing_requests\": 0,\n    \"campaign_marketing_requests\": 0,\n    \"complete_reviews\": 0,\n    \"time_spent_per_event\": 0.0,\n    \"pending_reviews\": 1,\n    \"flagged_reviews\": 0,\n    \"decline_reviews\": 0,\n    \"hold_reviews\": 0,\n    \"total_incentives\": 0,\n    \"live_events\": 0,\n    \"flag_reviews\": {\n      \"did_not_attended_event\": null,\n      \"content_in_appropriate_language\": null,\n      \"is_duplicate\": null,\n      \"other\": null\n    }\n  }\n}",
+      "response_headers": {
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

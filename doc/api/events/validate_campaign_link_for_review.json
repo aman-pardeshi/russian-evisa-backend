@@ -1,0 +1,42 @@
+{
+  "resource": "Events",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "/events/validate_campaign_link",
+  "description": "validate Campaign Link for review",
+  "explanation": "validate Campaign Link for review",
+  "parameters": [
+    {
+      "type": "string",
+      "required": true,
+      "name": "link",
+      "description": "Send event link"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/events/validate_campaign_link?link=http%3A%2F%2Flocalhost%3A3002%2Freview%2FEDWVQBWURA%2FotSNpdpO2x",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/vnd.eventible.com; version=1",
+        "Content-Type": "application/json",
+        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTU0NTE2MjEsInVzZXJfaWQiOjMyfQ.T0X9o0Lnbh_X-8O3T3QIFo9-CXy5eTt3jN1H1fNNWdQ"
+      },
+      "request_query_parameters": {
+        "link": "http://localhost:3002/review/EDWVQBWURA/otSNpdpO2x"
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"data\": {\n    \"id\": 85,\n    \"title\": \"Emmanuel Jacobson\",\n    \"url_name\": \"EDWVQBWURA\",\n    \"description\": \"Perferendis et ipsam. Alias quasi amet. Praesentium provident delectus.\",\n    \"logo\": {\n      \"url\": null\n    },\n    \"banner\": {\n      \"url\": null\n    },\n    \"agenda_file\": {\n      \"url\": null\n    },\n    \"start_date\": \"2021-02-11T10:00:00.000Z\",\n    \"end_date\": \"2021-02-11T15:00:00.000Z\",\n    \"total_review\": 0,\n    \"timezone\": null,\n    \"eventible_score\": 0.0,\n    \"status\": \"pending\",\n    \"discount_percentage\": 105.0,\n    \"price\": 290,\n    \"registration_url\": \"https://robohash.org/adsuntquia.png?size=300x300&set=set1\",\n    \"event_type\": \"virtual\",\n    \"edition\": \"Sueann Larkin\",\n    \"reject_note\": null,\n    \"is_paid\": false,\n    \"date_in_days\": 0,\n    \"is_top_rated\": false,\n    \"country\": \"Samoa\",\n    \"job_title\": \"Marketing\",\n    \"campaign_links\": [\n      {\n        \"id\": \"a125a81b-3d0a-47db-ac94-bbd9b4c184a0\",\n        \"expiry_date\": \"2021-02-11\",\n        \"reward_amount\": \"20\",\n        \"link\": \"http://localhost:3002/review/EDWVQBWURA/otSNpdpO2x\"\n      }\n    ],\n    \"is_upcoming\": false,\n    \"is_bookmarked\": false,\n    \"is_insightful\": false,\n    \"coupons\": [\n      {\n        \"id\": 15,\n        \"name\": null,\n        \"description\": \"Omnis debitis odio aut.\",\n        \"discount_percentage\": 40.0,\n        \"registration_url\": \"http://king.biz/alonzo_stroman\",\n        \"validity\": \"2021-02-11T08:33:41.533Z\"\n      }\n    ]\n  }\n}",
+      "response_headers": {
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

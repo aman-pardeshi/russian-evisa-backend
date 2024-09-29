@@ -1,0 +1,50 @@
+node {
+   try {
+          eventible_backend()
+          send_email()
+       }catch (e) {
+       currentBuild.result = "FAILED"
+       send_email()
+       throw e
+   }
+}
+
+
+def eventible_backend(){
+    stage('Cleanup'){
+        echo "Running cleanup of dangling images and exited containers."
+        sh label: '', script: '''docker-compose --project-name=${JOB_NAME} stop &> /dev/null || true &> /dev/null
+                docker-compose --project-name=${JOB_NAME} rm --force &> /dev/null || true &> /dev/null
+                docker stop `docker ps -a -q -f status=exited` &> /dev/null || true &> /dev/null
+                docker rm -v `docker ps -a -q -f status=exited` &> /dev/null || true &> /dev/null
+                docker rm -f -v `docker ps -a -q -f status=restarting -f name=run_` &> /dev/null || true &> /dev/null
+                docker rm -f -v `docker ps -a -q -f status=running -f name=run_` &> /dev/null || true &> /dev/null
+                docker rmi `docker images --filter 'dangling=true' -q --no-trunc` &> /dev/null || true &> /dev/null'''
+    }
+
+    stage('SCM Checkout'){
+        checkout changelog: false, poll: false, scm: [$class: 'GitSCM', branches: [[name: '${sha1}']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[name: 'origin', refspec: '+refs/pull/*:refs/remotes/origin/pr/*', url: 'git@github-eventible:eventible2021/eventible-backend.git']]]
+    }
+
+    stage('Build Project') {
+            sh label: '', script: "docker-compose -f docker-compose-jenkins.yml --project-name=${JOB_NAME} build"
+    }
+
+    stage('Run Rubocop Lint'){
+        def RunRubocopLintCmd = 'bundle exec rubocop'
+        echo "Running Rubocop lint with command : ${RunRubocopLintCmd}"
+        sh label: '', script: "docker-compose -f docker-compose-jenkins.yml --project-name=${JOB_NAME} run backend $RunRubocopLintCmd"
+    }
+
+}
+
+def send_email() {
+     stage('Send-Email') {
+       emailext attachLog: true,
+       body: '$DEFAULT_CONTENT',
+       postsendScript: '$DEFAULT_POSTSEND_SCRIPT',
+       presendScript: '$DEFAULT_PRESEND_SCRIPT',
+       subject: '$DEFAULT_SUBJECT',
+       to: 'apardeshi@eventible.in, anshita@eventible.in, mshaikh@eventible.in'
+    }
+}

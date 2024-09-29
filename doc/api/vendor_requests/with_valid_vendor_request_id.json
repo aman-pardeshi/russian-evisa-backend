@@ -1,0 +1,42 @@
+{
+  "resource": "Vendor Requests",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "/vendor_requests/:id",
+  "description": "With Valid Vendor Request id",
+  "explanation": null,
+  "parameters": [
+    {
+      "type": "integer",
+      "required": true,
+      "name": "id",
+      "description": "Vendor Request ID"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/vendor_requests/5",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/vnd.eventible.com; version=1",
+        "Content-Type": "application/json",
+        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTU0NTE2MzcsInVzZXJfaWQiOjE1MH0.fXKuqmh4ebkv3VnFQGyun9JfDFAEDemg7Jzx6ApI9Tg"
+      },
+      "request_query_parameters": {
+        "{}": null
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"data\": {\n    \"id\": 5,\n    \"name\": \"Brandi Ullrich\",\n    \"designation\": \"Construction\",\n    \"company_name\": \"Homer Kreiger\",\n    \"email\": \"barbara@windler-hahn.biz\",\n    \"linkedin_url\": null,\n    \"twitter_handle\": null,\n    \"status\": \"pending\",\n    \"is_event_listed\": false,\n    \"approved_by\": null,\n    \"approved_at\": null,\n    \"rejected_at\": null,\n    \"created_at\": \"11th Feb 2021 02:03 PM\"\n  }\n}",
+      "response_headers": {
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

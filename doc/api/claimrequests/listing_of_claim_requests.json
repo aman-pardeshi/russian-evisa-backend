@@ -1,0 +1,47 @@
+{
+  "resource": "ClaimRequests",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "/claim_requests",
+  "description": "Listing of Claim requests",
+  "explanation": "listing all claim requests claim request for unclaimed event",
+  "parameters": [
+    {
+      "type": "integer",
+      "name": "page",
+      "description": "Page number for pagination"
+    },
+    {
+      "type": "integer",
+      "name": "limit",
+      "description": "Limit for pagination"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/claim_requests?page=1&limit=10",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/vnd.eventible.com; version=1",
+        "Content-Type": "application/json",
+        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTU0NTE2MTUsInVzZXJfaWQiOjV9.ed5XyYgp-QJyLGUfzCY1fXjMuwQuypSom0gcQ1keWKQ"
+      },
+      "request_query_parameters": {
+        "page": "1",
+        "limit": "10"
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"claim_requests\": [\n    {\n      \"id\": 4,\n      \"status\": \"rejected\",\n      \"created_at\": \"2021-02-11T08:33:35.186Z\",\n      \"updated_at\": \"2021-02-11T08:33:35.186Z\",\n      \"event\": {\n        \"id\": 3,\n        \"title\": \"Chet Littel\",\n        \"start_date\": \"2021-02-11T10:00:00.000Z\",\n        \"end_date\": \"2021-02-11T15:00:00.000Z\",\n        \"event_type\": \"virtual\",\n        \"is_paid\": false,\n        \"is_upcoming\": false\n      },\n      \"claimed_by\": {\n        \"id\": 7,\n        \"email\": \"peter.mclaughlin@russel.io\",\n        \"name\": \"Federico Nicolas IV\",\n        \"role\": null,\n        \"designation\": null,\n        \"company_name\": null\n      },\n      \"updated_by\": null\n    },\n    {\n      \"id\": 5,\n      \"status\": \"pending\",\n      \"created_at\": \"2021-02-11T08:33:35.218Z\",\n      \"updated_at\": \"2021-02-11T08:33:35.218Z\",\n      \"event\": {\n        \"id\": 4,\n        \"title\": \"Amb. Neomi Zieme\",\n        \"start_date\": \"2021-02-11T10:00:00.000Z\",\n        \"end_date\": \"2021-02-11T15:00:00.000Z\",\n        \"event_type\": \"virtual\",\n        \"is_paid\": false,\n        \"is_upcoming\": false\n      },\n      \"claimed_by\": {\n        \"id\": 8,\n        \"email\": \"birdie.mosciski@thiel-breitenberg.org\",\n        \"name\": \"William Christiansen\",\n        \"role\": null,\n        \"designation\": null,\n        \"company_name\": null\n      },\n      \"updated_by\": null\n    }\n  ],\n  \"meta\": {\n    \"page\": \"1\",\n    \"limit\": \"10\",\n    \"total_records\": 2,\n    \"current_records\": 2\n  }\n}",
+      "response_headers": {
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

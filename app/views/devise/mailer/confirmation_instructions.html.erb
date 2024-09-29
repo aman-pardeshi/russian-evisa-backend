@@ -1,0 +1,10 @@
+<p>Hi <%= @resource.first_name %>,</p>
+
+<p>Welcome to Eventible, the world’s first platform & community for event reviews and ratings!</p>
+<p>Our goal is to create a transparent eco-system where you can review the events you attend – and these reviews are then incredibly useful for your peers searching for the best events to attend.</p>
+<p>Your account is where you can keep track of all the events you review on behalf of the Eventible community and also a place for you to receive higher incentives and seasonal rewards from us!</p>
+<p>Please click here to re-confirm and claim your Eventible account: <%= link_to 'Confirm my account', "#{ENV.fetch("FRONTEND_URL")}/confirm-email?confirmation_token=#{@token}" %></p>
+<p>Once again, a big hearty welcome!</p>
+<p>Best,<br>
+Ankush Gupta<br>
+Founder, Eventible</p>

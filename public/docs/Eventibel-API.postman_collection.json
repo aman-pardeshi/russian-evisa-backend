@@ -1,0 +1,2607 @@
+{
+	"info": {
+		"_postman_id": "8a5e3986-38cc-40a8-bf67-20842020e79d",
+		"name": "Eventibel-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Events API",
+			"item": [
+				{
+					"name": "Event List",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.request.headers.add({key: 'Authorization', value: pm.collectionVariables.get(\"Authorization\") })",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{endpoint}}/events",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"events"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Event API",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.request.headers.add({Key:\"Authorization\", value: pm.collectionVariables.get(\"Authorization\")})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTEwMzQ0MDEsInVzZXJfaWQiOjF9.SZVL0CeKkOyOYs08UmuHS0BrGpwPj6_DuJZbIwacsNM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "event[title]",
+									"value": "New1124563",
+									"type": "text"
+								},
+								{
+									"key": "event[event_type]",
+									"value": "in_person",
+									"type": "text"
+								},
+								{
+									"key": "event[description]",
+									"value": "hello this is event",
+									"type": "text"
+								},
+								{
+									"key": "event[price]",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "event[discount_percentage]",
+									"value": "20",
+									"type": "text"
+								},
+								{
+									"key": "event[parent_id]",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "event[job_title_id]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "event[country_id]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "event[parent_id]",
+									"value": "20",
+									"type": "text"
+								},
+								{
+									"key": "event[start_date]",
+									"value": "12/2/2022",
+									"type": "text"
+								},
+								{
+									"key": "event[edition]",
+									"value": "new1234",
+									"type": "text"
+								},
+								{
+									"key": "event[coupons_attributes][0][name]",
+									"value": "hello",
+									"type": "text"
+								},
+								{
+									"key": "event[coupons_attributes][0][description]",
+									"value": "new coupon",
+									"type": "text"
+								},
+								{
+									"key": "event[coupons_attributes][0][discount_percentage]",
+									"value": "20",
+									"type": "text"
+								},
+								{
+									"key": "event[coupons_attributes][1][name]",
+									"value": "Platinum",
+									"type": "text"
+								},
+								{
+									"key": "event[coupons_attributes][1][description]",
+									"value": "new coupon",
+									"type": "text"
+								},
+								{
+									"key": "event[coupons_attributes][1][discount_percentage]",
+									"value": "20",
+									"type": "text"
+								},
+								{
+									"key": "event[agenda_file]",
+									"type": "file",
+									"src": "/home/josh/Pictures/eventible/1241-768x591.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{endpoint}}/events",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"events"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Event filters",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{endpoint}}/events/filters",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"events",
+								"filters"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Event",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.request.headers.add({key: 'Authorization', value: pm.collectionVariables.get(\"Authorization\") })"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "event[title]",
+									"value": "new updated",
+									"type": "text"
+								},
+								{
+									"key": "event[status]",
+									"value": "approved",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{endpoint}}/events/6",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"events",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Event Show",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.request.headers.add({key: 'Authorization', value: pm.collectionVariables.get(\"Authorization\") })",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.eventible.com; version=1",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MDgxNDQ0MjksInVzZXJfaWQiOjF9.8CcFV76_1jxouSeMYgMx8Nu_k8mQfDkY6Q7hn_UQyyY",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{endpoint}}/events/42",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"events",
+								"42"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Event",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.eventible.com; version=1",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MDgxNDQ0MjksInVzZXJfaWQiOjF9.8CcFV76_1jxouSeMYgMx8Nu_k8mQfDkY6Q7hn_UQyyY",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{endpoint}}/events/6",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"events",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Generate Campaign Link",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.request.headers.add({key: 'Authorization', value: pm.collectionVariables.get(\"Authorization\") })"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTEwMzQ0MDEsInVzZXJfaWQiOjF9.SZVL0CeKkOyOYs08UmuHS0BrGpwPj6_DuJZbIwacsNM",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "42",
+									"description": "Pass Event Id",
+									"type": "text"
+								},
+								{
+									"key": "expiry_date",
+									"value": "22/12/2022",
+									"description": "Pass Expiry Date",
+									"type": "text"
+								},
+								{
+									"key": "reward_amount",
+									"value": "20",
+									"description": "Pass Reward Amount",
+									"type": "text"
+								},
+								{
+									"key": "utm_source",
+									"value": "web",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "utm_medium",
+									"value": "refferal",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "created_for",
+									"value": "admin",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "utm_campaign",
+									"value": "err",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{endpoint}}/events/generate_campaign_link",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"events",
+								"generate_campaign_link"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Event Reviews",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{endpoint}}/events/1/reviews",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"events",
+								"1",
+								"reviews"
+							],
+							"query": [
+								{
+									"key": "attended_as",
+									"value": "attendee",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Event Insights",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.request.headers.add({key: 'Authorization', value: pm.collectionVariables.get(\"Authorization\") })",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "183",
+									"type": "text"
+								},
+								{
+									"key": "is_bookmarked",
+									"value": "true",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{endpoint}}/events/insights",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"events",
+								"insights"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Bulk Upload",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTMyMTY0ODAsInVzZXJfaWQiOjF9.Z8cDktOnGDw7YwB4hfv9CsWIu1W0SDkRBBI8D0rYiHo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/home/josh/Downloads/2020 events_16thJan.csv"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{endpoint}}/events/bulk_upload",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"events",
+								"bulk_upload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Event Data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{endpoint}}/events/data",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"events",
+								"data"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Validate Campaign Link",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "link",
+									"value": "http://localhost:3002/review/TryingNewEvent/2Ss9RAueg2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{endpoint}}/events/validate_campaign_link",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"events",
+								"validate_campaign_link"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "download reviews",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.request.headers.add({key: 'Authorization', value: pm.collectionVariables.get(\"Authorization\") })"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{endpoint}}/events/1/download_reviews",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"events",
+								"1",
+								"download_reviews"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upload Contact List",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.request.headers.add({key: 'Authorization', value: pm.collectionVariables.get(\"Authorization\") })"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/home/josh/Downloads/MGS Global Virtual Conference 3.0 Verified.xlsx"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{endpoint}}/events/112/outreach_contacts",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"events",
+								"112",
+								"outreach_contacts"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Sign In",
+			"item": [
+				{
+					"name": "Login With email and password",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Set JWT Token\",function(){",
+									"    var jsonData = pm.response.json()",
+									"    pm.collectionVariables.set(\"Authorization\",jsonData.token)",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/vnd.eventible.com; version=1",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "ag@eventible.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "josh1234",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{endpoint}}/sessions",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"sessions"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Sign Up",
+			"item": [
+				{
+					"name": "Sign up",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/vnd.eventible.com; version=1"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "prashant bangar",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "prashantbangar03@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "welcome",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "welcome",
+									"type": "text"
+								},
+								{
+									"key": "source",
+									"value": "login",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{endpoint}}/users",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Confirm User",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Set JWT Token\",function(){",
+									"    var jsonData = pm.response.json()",
+									"    pm.collectionVariables.set(\"Authorization\",jsonData.token)",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.eventible.com; version=1",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "confirmation_token",
+									"value": "GmbzXYWBUA4e7HPAydXs",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{endpoint}}/registrations/confirm",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"registrations",
+								"confirm"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Home Page API",
+			"item": [
+				{
+					"name": "Event Listing",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.eventible.com; version=1",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{endpoint}}/homepages/events",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"homepages",
+								"events"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upcoming Event",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/vnd.eventible.com; version=1"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "job_title_id",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "country_id",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "event_type",
+									"value": "in_person",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "time_frame",
+									"value": "11/10/2020,11/11/2020",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "sort_by",
+									"value": "eventible_score",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{endpoint}}/events/upcoming",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"events",
+								"upcoming"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Review Just Droped",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "page",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "limit",
+									"value": "10",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{endpoint}}/homepages/review_just_droped",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"homepages",
+								"review_just_droped"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insight Review",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.request.headers.add({key: 'Authorization', value: pm.collectionVariables.get(\"Authorization\") })",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "review_id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "is_insightful",
+									"value": "true",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{endpoint}}/homepages/insight_review",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"homepages",
+								"insight_review"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Organizer Enquiry",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "prashant bangar",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "prashantbanga03",
+									"type": "text"
+								},
+								{
+									"key": "company",
+									"value": "josh",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{endpoint}}/homepages/organizer_enquiry",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"homepages",
+								"organizer_enquiry"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Top Rated",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "job_title_id",
+									"value": "4",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "limit",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "sort_by",
+									"value": "total_review",
+									"type": "text"
+								},
+								{
+									"key": "query",
+									"value": "Con",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{endpoint}}/events/top_rated",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"events",
+								"top_rated"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Event Details",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "event_id",
+									"value": "183",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{endpoint}}/homepages/event_details",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"homepages",
+								"event_details"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Love Eventibel",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Prashant bangar",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "prashantbangar03@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "job_role",
+									"value": "HR",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{endpoint}}/homepages/love_eventible",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"homepages",
+								"love_eventible"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "question",
+			"item": [
+				{
+					"name": "GET Questions",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.eventible.com; version=1",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "question_for",
+									"value": "attendee",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{endpoint}}/questions",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"questions"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Review",
+			"item": [
+				{
+					"name": "checklist",
+					"item": [
+						{
+							"name": "Create Checklist",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": ""
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Create Review ",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"create_account\": false,\n    \"user\": {\n        \"name\": \"Prashant Bangar\",\n        \"company_name\": \"Josh\",\n        \"designation\": \"software\",\n        \"email\": \"prashantbangar@gmail.com\"\n    },\n    \"event_id\": 96,\n    \"attended_as\": \"attendee\",\n    \"mode_of_attendance\": \"online\",\n    \"utm_source\": \"web\",\n    \"answers\": [\n        {\n            \"question_id\": 1,\n            \"answer\": \"Hello Prashant\",\n            \"scale\": 4\n        },\n        {\n            \"question_id\": 2,\n            \"answer\": \"Hello \",\n            \"scale\": 4\n        },\n        {\n            \"question_id\": 3,\n            \"answer\": \"bye Prashant\",\n            \"scale\": 4\n        },\n        {\n            \"question_id\": 4,\n            \"answer\": \"Prashant\",\n            \"scale\": 4\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{endpoint}}/reviews",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"reviews"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Review Listing",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.request.headers.add({key: 'Authorization', value: pm.collectionVariables.get(\"Authorization\") })"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{endpoint}}/reviews",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"reviews"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Review",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.request.headers.add({key: 'Authorization', value: pm.collectionVariables.get(\"Authorization\") })"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"status\": \"approved\",\n  \"is_pinned\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{endpoint}}/reviews/394",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"reviews",
+								"394"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "saved reviews",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.request.headers.add({key: 'Authorization', value: pm.collectionVariables.get(\"Authorization\") })"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{endpoint}}/reviews/saved_reviews",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"reviews",
+								"saved_reviews"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "User List",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.request.headers.add({key: 'Authorization', value: pm.collectionVariables.get(\"Authorization\") })"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "page",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "limit",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "search_value",
+									"value": "ak",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{endpoint}}/users",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Send Invitation",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.request.headers.add({key: 'Authorization', value: pm.collectionVariables.get(\"Authorization\") })"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/vnd.eventible.com; version=1"
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTA1MzYxNDcsInVzZXJfaWQiOjE3fQ.vw2_-8_k92bipGnNyhcwxwrDIbytifjc7Dfi8wmv4ok",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "prashant bangar",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "prasg@gmail.cop12",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "prashant.bangar@joshsoftware.com",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Prashant Bangar",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "moderator",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{endpoint}}/users/send_invitation",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"users",
+								"send_invitation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.request.headers.add({key: 'Authorization', value: pm.collectionVariables.get(\"Authorization\") })"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "profile",
+									"type": "file",
+									"src": "/home/josh/Pictures/eventible/1241-768x591.png",
+									"disabled": true
+								},
+								{
+									"key": "twitter_id",
+									"value": "ghjkl",
+									"type": "text"
+								},
+								{
+									"key": "linkedin_id",
+									"value": "fghjk",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{endpoint}}/users/1",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reset Password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "reset_password_token",
+									"value": "6kx6xq9suqhpaDje1JtE",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "welcome",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "welcome",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{endpoint}}/users/reset_password",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"users",
+								"reset_password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Accept Invitation",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "invitation_token",
+									"value": "d1adb8a8c295d5db72feb518016a160dffa4a5a5cb06f9a1df16b9d4554d9d4a",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "welcome",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "welcome",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{endpoint}}/users/accept_invitation",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"users",
+								"accept_invitation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reset Password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "reset_password_token",
+									"value": "b1cbe6253c4b3cede3311e58b671a40d7861e118ee8b4fdacb21b5cc8b10880e",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "welcome",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "welcome",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{endpoint}}/users/reset_password",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"users",
+								"reset_password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Verify Invitation Token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "reset_password_token",
+									"value": "6kx6xq9suqhpaDje1JtE",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{endpoint}}/users/verify_reset_password_token",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"users",
+								"verify_reset_password_token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Verify Reset Password Token",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "reset_password_token",
+									"value": "6kx6xq9suqhpaDje1JtE",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{endpoint}}/users/verify_reset_password_token",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"users",
+								"verify_reset_password_token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Forget Password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "prashantbangar03@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{endpoint}}/users/forget_password",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"users",
+								"forget_password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Password",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.request.headers.add({key: 'Authorization', value: pm.collectionVariables.get(\"Authorization\") })",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "old_password",
+									"value": "welcome1",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "welcome2",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "welcome1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{endpoint}}/users/update_password",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"users",
+								"update_password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Check Email",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "ag@eventible.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{endpoint}}/users/check_email",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"users",
+								"check_email"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Bookmarked Events",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.request.headers.add({key: 'Authorization', value: pm.collectionVariables.get(\"Authorization\") })"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{endpoint}}/users/bookmarked_events",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"users",
+								"bookmarked_events"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "My Rewards",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.request.headers.add({key: 'Authorization', value: pm.collectionVariables.get(\"Authorization\") })"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{endpoint}}/users/my_rewards",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"users",
+								"my_rewards"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deactivate",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.request.headers.add({key: 'Authorization', value: pm.collectionVariables.get(\"Authorization\") })"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{endpoint}}/users/deactivate_account",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"users",
+								"deactivate_account"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "saved Reviews",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.request.headers.add({key: 'Authorization', value: pm.collectionVariables.get(\"Authorization\") })"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{endpoint}}/users/saved_reviews",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"users",
+								"saved_reviews"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "content_marketing_request",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.request.headers.add({key: 'Authorization', value: \"eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTUzNzAxNTMsInVzZXJfaWQiOjJ9.lOAQGjXPiZGL9qL6830ZtuWR9RdXeK9nUUbFWCXvPTk\" })"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{endpoint}}/users/content_marketing_request",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"users",
+								"content_marketing_request"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Vendor Requests",
+			"item": [
+				{
+					"name": "Listing",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.request.headers.add({key: 'Authorization', value: pm.collectionVariables.get(\"Authorization\") })"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{endpoint}}/vendor_requests",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"vendor_requests"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "test1qwei@gmail.comlqq",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "prashant bangar",
+									"type": "text"
+								},
+								{
+									"key": "designation",
+									"value": "Software Engineer",
+									"type": "text"
+								},
+								{
+									"key": "company_name",
+									"value": "Josh",
+									"type": "text"
+								},
+								{
+									"key": "linkedin_url",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "twitter_handle",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "is_event_listed",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{endpoint}}/vendor_requests",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"vendor_requests"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.request.headers.add({key: 'Authorization', value: pm.collectionVariables.get(\"Authorization\") })"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "status",
+									"value": "approved",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{endpoint}}/vendor_requests/3",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"vendor_requests",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.request.headers.add({key: 'Authorization', value: pm.collectionVariables.get(\"Authorization\") })"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{endpoint}}/vendor_requests/1",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"vendor_requests",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Claim Requests",
+			"item": [
+				{
+					"name": "Unclaimed Events",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.request.headers.add({key: 'Authorization', value: pm.collectionVariables.get(\"Authorization\") })"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{endpoint}}/events/unclaimed_events",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"events",
+								"unclaimed_events"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create claim request",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.request.headers.add({key: 'Authorization', value: pm.collectionVariables.get(\"Authorization\") })"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "event_id",
+									"value": "33",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{endpoint}}/claim_requests",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"claim_requests"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listing Cliam Request",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.request.headers.add({key: 'Authorization', value: pm.collectionVariables.get(\"Authorization\") })"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "query",
+									"value": "Data",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{endpoint}}/claim_requests",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"claim_requests"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Claim Request",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.request.headers.add({key: 'Authorization', value: pm.collectionVariables.get(\"Authorization\") })"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "status",
+									"value": "approved",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{endpoint}}/claim_requests/9",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"claim_requests",
+								"9"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Dashboard",
+			"item": [
+				{
+					"name": "admin",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.request.headers.add({key: 'Authorization', value: pm.collectionVariables.get(\"Authorization\") })"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "date_frame",
+									"value": "1-2-2021,1-3-2021",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{endpoint}}/dashboards/admin",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"dashboards",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "organizer",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.request.headers.add({key: 'Authorization', value: \"eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTUzNzAxNTMsInVzZXJfaWQiOjJ9.lOAQGjXPiZGL9qL6830ZtuWR9RdXeK9nUUbFWCXvPTk\" })"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{endpoint}}/dashboards/organizer",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"dashboards",
+								"organizer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "organizer_events",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.request.headers.add({key: 'Authorization', value: \"eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTUzNzAxNTMsInVzZXJfaWQiOjJ9.lOAQGjXPiZGL9qL6830ZtuWR9RdXeK9nUUbFWCXvPTk\" })"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{endpoint}}/dashboards/organizer_events",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"dashboards",
+								"organizer_events"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "event stat",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.request.headers.add({key: 'Authorization', value: pm.collectionVariables.get(\"Authorization\") })"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{endpoint}}/dashboards/event_statistics",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"dashboards",
+								"event_statistics"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Campaign Builder",
+			"item": [
+				{
+					"name": "Create Campaign Builder",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.request.headers.add({key: 'Authorization', value: \"eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTUzNzAxNTMsInVzZXJfaWQiOjJ9.lOAQGjXPiZGL9qL6830ZtuWR9RdXeK9nUUbFWCXvPTk\" })"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "New Campaign Link12",
+									"type": "text"
+								},
+								{
+									"key": "start_date",
+									"value": "11-2-2021",
+									"type": "text"
+								},
+								{
+									"key": "agenda_file",
+									"type": "file",
+									"src": [],
+									"disabled": true
+								},
+								{
+									"key": "suppress_list_file",
+									"type": "file",
+									"src": "/home/josh/Pictures/eventible/mqdefault.jpg"
+								},
+								{
+									"key": "exclude_keywords[]",
+									"value": "hi",
+									"type": "text"
+								},
+								{
+									"key": "title_keywords[]",
+									"value": "hi",
+									"type": "text"
+								},
+								{
+									"key": "job_titles[]",
+									"value": "yes",
+									"type": "text"
+								},
+								{
+									"key": "seniorities[]",
+									"value": "yo",
+									"type": "text"
+								},
+								{
+									"key": "end_date",
+									"value": "10-2-2021",
+									"type": "text"
+								},
+								{
+									"key": "event_type",
+									"value": "in_person",
+									"type": "text"
+								},
+								{
+									"key": "company_size",
+									"value": "1000",
+									"type": "text"
+								},
+								{
+									"key": "desired_number_of_registration",
+									"value": "100",
+									"type": "text"
+								},
+								{
+									"key": "appointment_date",
+									"value": "12-2-2021",
+									"type": "text"
+								},
+								{
+									"key": "appointment_start_time",
+									"value": "06.00",
+									"type": "text"
+								},
+								{
+									"key": "appointment_end_time",
+									"value": "08.00",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{endpoint}}/campaign_builders",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"campaign_builders"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Content Marketing",
+			"item": [
+				{
+					"name": "Create",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.request.headers.add({key: 'Authorization', value: \"eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTUzNzAxNTMsInVzZXJfaWQiOjJ9.lOAQGjXPiZGL9qL6830ZtuWR9RdXeK9nUUbFWCXvPTk\" })"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "is_allowed_to_publish_article",
+									"value": "true",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{endpoint}}/content_marketings",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"content_marketings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.request.headers.add({key: 'Authorization', value: \"eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTUzNzAxNTMsInVzZXJfaWQiOjJ9.lOAQGjXPiZGL9qL6830ZtuWR9RdXeK9nUUbFWCXvPTk\" })"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{endpoint}}/content_marketings",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"content_marketings"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"pm.request.headers.add({key: 'Accept', value: 'application/vnd.eventible.com; version=1' })"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "Authorization",
+			"value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTcwMTA5NDIsInVzZXJfaWQiOjF9.zABc6w9SpSLT_NLOfepqA15j9fr87JvP2oLpYnhv4zo"
+		}
+	]
+}

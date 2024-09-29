@@ -1,0 +1,47 @@
+{
+  "resource": "Users",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "users/saved_reviews",
+  "description": "Get Users Saved Reviews",
+  "explanation": null,
+  "parameters": [
+    {
+      "type": "integer",
+      "name": "page",
+      "description": "page number for pagination"
+    },
+    {
+      "type": "integer",
+      "name": "limit",
+      "description": "Limit Per Page For Pagination"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "users/saved_reviews?page=1&limit=2",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/vnd.eventible.com; version=1",
+        "Content-Type": "application/json",
+        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTU0NTE2MzcsInVzZXJfaWQiOjEyOX0.xxaNhyz5Lnzsxgaf_6Rq21tZaY4JhovkKqA22NK6mjw"
+      },
+      "request_query_parameters": {
+        "page": "1",
+        "limit": "2"
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"reviews\": [\n    {\n      \"id\": 94,\n      \"status\": \"pending\",\n      \"utm_source\": \"web\",\n      \"attended_as\": null,\n      \"is_flaged\": false,\n      \"is_saved\": false,\n      \"created_at\": \"2021-02-11\",\n      \"event\": {\n        \"id\": 175,\n        \"title\": \"Prof. Wilber Schiller\",\n        \"edition\": \"Terrence Rice\",\n        \"logo\": {\n          \"url\": null\n        }\n      },\n      \"country\": \"Suriname\",\n      \"mode_of_attendance\": null,\n      \"personal_score\": null,\n      \"source_text\": null,\n      \"total_insight_review\": 0,\n      \"is_insightful\": false,\n      \"is_bookmarked\": true,\n      \"source_heading\": \"Organic\",\n      \"gc_amount\": \"20\",\n      \"flaged_reason\": null,\n      \"flaged_by\": null,\n      \"saved_by\": null,\n      \"review_submissions\": [\n\n      ],\n      \"verification\": null,\n      \"reviewer\": {\n        \"id\": 129,\n        \"name\": \"Tobi Bailey Ret.\",\n        \"email\": \"jim@keeling-swaniawski.net\",\n        \"role\": null,\n        \"designation\": null,\n        \"profile\": null,\n        \"last_sign_in_ip\": \"\",\n        \"last_sign_in_at\": \" \",\n        \"current_sign_in_ip\": \"\",\n        \"current_sign_in_at\": \" \",\n        \"sign_in_count\": 0,\n        \"status\": \"active\",\n        \"mobile_number\": null,\n        \"company_name\": null,\n        \"member_since\": \"11th Feb 2021\",\n        \"reward_amount\": 0,\n        \"events_reviewd\": 0,\n        \"saved_reviews\": 1,\n        \"bookmarked_events\": 1,\n        \"is_password_set\": true,\n        \"linkedin_url\": null,\n        \"twitter_handle\": null\n      }\n    }\n  ],\n  \"meta\": {\n    \"page\": \"1\",\n    \"limit\": \"2\",\n    \"total_records\": 1,\n    \"current_records\": 1\n  }\n}",
+      "response_headers": {
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+<p>Hi <%= @resource.first_name %>,</p>
+
+<p>Welcome to The Gazebo - Speaker Directory, powered by Eventible.com.</p>
+<p>Please click here to re-confirm and claim your Eventible account: <%= link_to 'Confirm my account', "#{ENV.fetch("FRONTEND_URL")}/confirm-email?confirmation_token=#{@token}&source=#{@resource.signup_source}" %></p>
+<p>Once again, a big hearty welcome!</p>
+<p>Best,<br>
+Ankush Gupta<br>
+Founder, Eventible</p>

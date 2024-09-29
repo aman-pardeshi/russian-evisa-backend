@@ -1,0 +1,2 @@
+class AudioReviewUploader < BaseUploader
+end

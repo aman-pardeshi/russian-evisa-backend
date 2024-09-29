@@ -1,0 +1,40 @@
+{
+  "resource": "Events",
+  "resource_explanation": null,
+  "http_method": "DELETE",
+  "route": "/events/:id",
+  "description": "Delete event",
+  "explanation": "Delete Event",
+  "parameters": [
+    {
+      "required": true,
+      "name": "id",
+      "description": "Event Id"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "DELETE",
+      "request_path": "/events/60",
+      "request_body": "{}",
+      "request_headers": {
+        "Accept": "application/vnd.eventible.com; version=1",
+        "Content-Type": "application/json",
+        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTU0NTE2MTksInVzZXJfaWQiOjI3fQ.RFpfFIQq4l05dHm3Cu3y4WX00Qs_hqCPwdQTo1lKLY4"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"message\": \" event deleted successfully\"\n}",
+      "response_headers": {
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

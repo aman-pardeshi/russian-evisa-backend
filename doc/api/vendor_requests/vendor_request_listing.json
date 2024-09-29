@@ -1,0 +1,36 @@
+{
+  "resource": "Vendor Requests",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "/vendor_requests",
+  "description": "Vendor Request Listing",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/vendor_requests",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/vnd.eventible.com; version=1",
+        "Content-Type": "application/json",
+        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTU0NTE2MzcsInVzZXJfaWQiOjE0OX0.jP0rrV-uzX5ziVvaULb4c-Lhr3dSPz2aR-hN5kiDcoE"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"vendor_requests\": [\n    {\n      \"id\": 4,\n      \"name\": \"Pres. Scarlet Welch\",\n      \"designation\": \"Real-Estate\",\n      \"company_name\": \"Efren Klein\",\n      \"email\": \"miquel@vonrueden.name\",\n      \"linkedin_url\": null,\n      \"twitter_handle\": null,\n      \"status\": \"pending\",\n      \"is_event_listed\": false,\n      \"approved_by\": null,\n      \"approved_at\": null,\n      \"rejected_at\": null,\n      \"created_at\": \"11th Feb 2021 02:03 PM\"\n    }\n  ],\n  \"meta\": {\n    \"page\": \"1\",\n    \"limit\": \"10\",\n    \"total_records\": 1,\n    \"current_records\": 1\n  }\n}",
+      "response_headers": {
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

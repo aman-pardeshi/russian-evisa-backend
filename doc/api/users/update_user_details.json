@@ -1,0 +1,76 @@
+{
+  "resource": "Users",
+  "resource_explanation": null,
+  "http_method": "PUT",
+  "route": "/users/:id",
+  "description": "update user details",
+  "explanation": "update user details",
+  "parameters": [
+    {
+      "type": "integer",
+      "required": true,
+      "name": "id",
+      "description": "user id"
+    },
+    {
+      "type": "string",
+      "name": "name",
+      "description": "user email"
+    },
+    {
+      "type": "string",
+      "name": "company_name",
+      "description": "user company name"
+    },
+    {
+      "type": "string",
+      "name": "linkedin_url",
+      "description": "user linkedin id"
+    },
+    {
+      "type": "string",
+      "name": "twitter_handle",
+      "description": "user twitter id"
+    },
+    {
+      "type": "string",
+      "name": "email",
+      "description": "user email"
+    },
+    {
+      "type": "string",
+      "name": "mobile_number",
+      "description": "user mobile number"
+    },
+    {
+      "type": "string",
+      "name": "designation",
+      "description": "user job role"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "PUT",
+      "request_path": "/users/101",
+      "request_body": "{\"name\":\"Xyz Pqr\",\"company_name\":\"adsf\"}",
+      "request_headers": {
+        "Accept": "application/vnd.eventible.com; version=1",
+        "Content-Type": "application/json",
+        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTU0NTE2MzYsInVzZXJfaWQiOjEwMX0.2WXLCrFr1ng5qoGnC3VlXgWuqqUosWsCy2xvxYmEhiA"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"data\": {\n    \"id\": 101,\n    \"name\": \"Xyz Pqr\",\n    \"email\": \"danny@abernathy.biz\",\n    \"role\": \"admin\",\n    \"designation\": null,\n    \"profile\": null,\n    \"last_sign_in_ip\": \"\",\n    \"last_sign_in_at\": \" \",\n    \"current_sign_in_ip\": \"\",\n    \"current_sign_in_at\": \" \",\n    \"sign_in_count\": 0,\n    \"status\": \"active\",\n    \"mobile_number\": null,\n    \"company_name\": \"adsf\",\n    \"member_since\": \"11th Feb 2021\",\n    \"reward_amount\": 0,\n    \"events_reviewd\": 0,\n    \"saved_reviews\": 0,\n    \"bookmarked_events\": 0,\n    \"is_password_set\": true,\n    \"linkedin_url\": null,\n    \"twitter_handle\": null,\n    \"invitation_status\": null\n  }\n}",
+      "response_headers": {
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

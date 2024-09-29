@@ -1,0 +1,728 @@
+{
+  "resources": [
+    {
+      "name": "ClaimRequests",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "Create Claim request for unclaimed event",
+          "link": "claimrequests/create_claim_request_for_unclaimed_event.json",
+          "groups": "all",
+          "route": "/claim_requests",
+          "method": "post"
+        },
+        {
+          "description": "Listing of Claim requests",
+          "link": "claimrequests/listing_of_claim_requests.json",
+          "groups": "all",
+          "route": "/claim_requests",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "name": "ContentMarketings",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "Create Content Marketing Request",
+          "link": "contentmarketings/create_content_marketing_request.json",
+          "groups": "all",
+          "route": "/content_marketings",
+          "method": "post"
+        },
+        {
+          "description": "Get Organizer Content Marketing Details",
+          "link": "contentmarketings/get_organizer_content_marketing_details.json",
+          "groups": "all",
+          "route": "/users/content_marketing_request",
+          "method": "get"
+        },
+        {
+          "description": "Update Content Marketing Request",
+          "link": "contentmarketings/update_content_marketing_request.json",
+          "groups": "all",
+          "route": "/content_marketings",
+          "method": "put"
+        }
+      ]
+    },
+    {
+      "name": "Dashboards",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "Get Dash board counts by date range",
+          "link": "dashboards/get_dash_board_counts_by_date_range.json",
+          "groups": "all",
+          "route": "/dashboards/admin",
+          "method": "get"
+        },
+        {
+          "description": "Get Events list",
+          "link": "dashboards/get_events_list.json",
+          "groups": "all",
+          "route": "/dashboards/organizer_events",
+          "method": "get"
+        },
+        {
+          "description": "Get Organizer Dashboard counts",
+          "link": "dashboards/get_organizer_dashboard_counts.json",
+          "groups": "all",
+          "route": "/dashboards/organizer",
+          "method": "get"
+        },
+        {
+          "description": "Get The Dashboard Counts",
+          "link": "dashboards/get_the_dashboard_counts.json",
+          "groups": "all",
+          "route": "/dashboards/admin",
+          "method": "get"
+        },
+        {
+          "description": "Get search Events list",
+          "link": "dashboards/get_search_events_list.json",
+          "groups": "all",
+          "route": "/dashboards/organizer_events",
+          "method": "get"
+        },
+        {
+          "description": "List The Statistics for selected event",
+          "link": "dashboards/list_the_statistics_for_selected_event.json",
+          "groups": "all",
+          "route": "/dashboards/event_statistics",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "name": "Events",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "Autocomplete Search if query is missing",
+          "link": "events/autocomplete_search_if_query_is_missing.json",
+          "groups": "all",
+          "route": "/events/autocomplete",
+          "method": "get"
+        },
+        {
+          "description": "Autocomplete Search if query is present",
+          "link": "events/autocomplete_search_if_query_is_present.json",
+          "groups": "all",
+          "route": "/events/autocomplete",
+          "method": "get"
+        },
+        {
+          "description": "Create Event",
+          "link": "events/create_event.json",
+          "groups": "all",
+          "route": "/events",
+          "method": "post"
+        },
+        {
+          "description": "Delete Coupons",
+          "link": "events/delete_coupons.json",
+          "groups": "all",
+          "route": "/events/:id",
+          "method": "put"
+        },
+        {
+          "description": "Delete event",
+          "link": "events/delete_event.json",
+          "groups": "all",
+          "route": "/events/:id",
+          "method": "delete"
+        },
+        {
+          "description": "Discover Top Rated Event With Filter",
+          "link": "events/discover_top_rated_event_with_filter.json",
+          "groups": "all",
+          "route": "/events/top_rated",
+          "method": "get"
+        },
+        {
+          "description": "Discover Upcoming Event With Filter",
+          "link": "events/discover_upcoming_event_with_filter.json",
+          "groups": "all",
+          "route": "/events/upcoming",
+          "method": "get"
+        },
+        {
+          "description": "Event Details",
+          "link": "events/event_details.json",
+          "groups": "all",
+          "route": "/events/:id",
+          "method": "get"
+        },
+        {
+          "description": "Event Filter",
+          "link": "events/event_filter.json",
+          "groups": "all",
+          "route": "/events/filters",
+          "method": "get"
+        },
+        {
+          "description": "Event Listing",
+          "link": "events/event_listing.json",
+          "groups": "all",
+          "route": "/events",
+          "method": "get"
+        },
+        {
+          "description": "Event Not Found",
+          "link": "events/event_not_found.json",
+          "groups": "all",
+          "route": "/events/:id",
+          "method": "get"
+        },
+        {
+          "description": "Event mark as insightful",
+          "link": "events/event_mark_as_insightful.json",
+          "groups": "all",
+          "route": "events/insights",
+          "method": "post"
+        },
+        {
+          "description": "Events Upload - Invalid CSV file",
+          "link": "events/events_upload_-_invalid_csv_file.json",
+          "groups": "all",
+          "route": "events/bulk_upload",
+          "method": "post"
+        },
+        {
+          "description": "Events Upload - Invalid CSV headers",
+          "link": "events/events_upload_-_invalid_csv_headers.json",
+          "groups": "all",
+          "route": "events/bulk_upload",
+          "method": "post"
+        },
+        {
+          "description": "Events Upload - Valid CSV file with valid data",
+          "link": "events/events_upload_-_valid_csv_file_with_valid_data.json",
+          "groups": "all",
+          "route": "events/bulk_upload",
+          "method": "post"
+        },
+        {
+          "description": "Generate the Campaign Link for event",
+          "link": "events/generate_the_campaign_link_for_event.json",
+          "groups": "all",
+          "route": "/events/generate_campaign_link",
+          "method": "post"
+        },
+        {
+          "description": "Get Review for specific event for all",
+          "link": "events/get_review_for_specific_event_for_all.json",
+          "groups": "all",
+          "route": "/events/:id/reviews",
+          "method": "get"
+        },
+        {
+          "description": "Get Review for specific event for specific attendee mode",
+          "link": "events/get_review_for_specific_event_for_specific_attendee_mode.json",
+          "groups": "all",
+          "route": "/events/:id/reviews",
+          "method": "get"
+        },
+        {
+          "description": "Get Similar Events",
+          "link": "events/get_similar_events.json",
+          "groups": "all",
+          "route": "/events/:id/similar_events",
+          "method": "get"
+        },
+        {
+          "description": "List all unclaimed events to organizer",
+          "link": "events/list_all_unclaimed_events_to_organizer.json",
+          "groups": "all",
+          "route": "events/unclaimed_events",
+          "method": "get"
+        },
+        {
+          "description": "Update event",
+          "link": "events/update_event.json",
+          "groups": "all",
+          "route": "/events/:id",
+          "method": "put"
+        },
+        {
+          "description": "if Campaign Link for review is Invalid or expired",
+          "link": "events/if_campaign_link_for_review_is_invalid_or_expired.json",
+          "groups": "all",
+          "route": "/events/validate_campaign_link",
+          "method": "get"
+        },
+        {
+          "description": "validate Campaign Link for review",
+          "link": "events/validate_campaign_link_for_review.json",
+          "groups": "all",
+          "route": "/events/validate_campaign_link",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "name": "Hompages",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "Event Listing",
+          "link": "hompages/event_listing.json",
+          "groups": "all",
+          "route": "/homepages/events",
+          "method": "get"
+        },
+        {
+          "description": "Get Event Details on homepage",
+          "link": "hompages/get_event_details_on_homepage.json",
+          "groups": "all",
+          "route": "/homepages/event_details",
+          "method": "get"
+        },
+        {
+          "description": "Homepage Review just Droped Listing",
+          "link": "hompages/homepage_review_just_droped_listing.json",
+          "groups": "all",
+          "route": "homepages/review_just_droped",
+          "method": "get"
+        },
+        {
+          "description": "Homepage Review just Droped make insightfull",
+          "link": "hompages/homepage_review_just_droped_make_insightfull.json",
+          "groups": "all",
+          "route": "homepages/review_insight",
+          "method": "post"
+        },
+        {
+          "description": "If Email address is alredy present in organizer enquiry",
+          "link": "hompages/if_email_address_is_alredy_present_in_organizer_enquiry.json",
+          "groups": "all",
+          "route": "homepages/organizer_enquiry",
+          "method": "post"
+        },
+        {
+          "description": "Organizer Enquiry API",
+          "link": "hompages/organizer_enquiry_api.json",
+          "groups": "all",
+          "route": "homepages/organizer_enquiry",
+          "method": "post"
+        }
+      ]
+    },
+    {
+      "name": "Questitons",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "If Pass invalid parameter of question_for",
+          "link": "questitons/if_pass_invalid_parameter_of_question_for.json",
+          "groups": "all",
+          "route": "/questions",
+          "method": "get"
+        },
+        {
+          "description": "Question Listing",
+          "link": "questitons/question_listing.json",
+          "groups": "all",
+          "route": "/questions",
+          "method": "get"
+        },
+        {
+          "description": "Specific Question Listing according to attend as attendee or speaker or sponsor",
+          "link": "questitons/specific_question_listing_according_to_attend_as_attendee_or_speaker_or_sponsor.json",
+          "groups": "all",
+          "route": "/questions",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "name": "Registrations",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "Confirmation token to confirm email address",
+          "link": "registrations/confirmation_token_to_confirm_email_address.json",
+          "groups": "all",
+          "route": "/registrations/confirm",
+          "method": "get"
+        },
+        {
+          "description": "Failed To Signup Due To Invalid Email OR\n      Email already has taken by other",
+          "link": "registrations/failed_to_signup_due_to_invalid_email_or_email_already_has_taken_by_other.json",
+          "groups": "all",
+          "route": "/users",
+          "method": "post"
+        },
+        {
+          "description": "If User Alerady Confirmed email OR Invalid Confirmation Token",
+          "link": "registrations/if_user_alerady_confirmed_email_or_invalid_confirmation_token.json",
+          "groups": "all",
+          "route": "/registrations/confirm",
+          "method": "get"
+        },
+        {
+          "description": "Sign up",
+          "link": "registrations/sign_up.json",
+          "groups": "all",
+          "route": "/users",
+          "method": "post"
+        }
+      ]
+    },
+    {
+      "name": "Reviews",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "Create Verification for review",
+          "link": "reviews/create_verification_for_review.json",
+          "groups": "all",
+          "route": "/reviews/:review_id/verifications",
+          "method": "post"
+        },
+        {
+          "description": "Creation of Review with create eventible account flag",
+          "link": "reviews/creation_of_review_with_create_eventible_account_flag.json",
+          "groups": "all",
+          "route": "/reviews",
+          "method": "post"
+        },
+        {
+          "description": "Creation of Review with guest user",
+          "link": "reviews/creation_of_review_with_guest_user.json",
+          "groups": "all",
+          "route": "/reviews",
+          "method": "post"
+        },
+        {
+          "description": "Creation of Review with login user",
+          "link": "reviews/creation_of_review_with_login_user.json",
+          "groups": "all",
+          "route": "/reviews",
+          "method": "post"
+        },
+        {
+          "description": "List The Saved Reviews",
+          "link": "reviews/list_the_saved_reviews.json",
+          "groups": "all",
+          "route": "/reviews/saved_reviews",
+          "method": "get"
+        },
+        {
+          "description": "Review Listing on admin side",
+          "link": "reviews/review_listing_on_admin_side.json",
+          "groups": "all",
+          "route": "/reviews",
+          "method": "get"
+        },
+        {
+          "description": "Review creation failed due to missing params",
+          "link": "reviews/review_creation_failed_due_to_missing_params.json",
+          "groups": "all",
+          "route": "/reviews",
+          "method": "post"
+        },
+        {
+          "description": "Review deleted Successfully",
+          "link": "reviews/review_deleted_successfully.json",
+          "groups": "all",
+          "route": "/reviews/:id",
+          "method": "delete"
+        },
+        {
+          "description": "Review deleted Successfully",
+          "link": "reviews/review_deleted_successfully.json",
+          "groups": "all",
+          "route": "/reviews/:id",
+          "method": "delete"
+        },
+        {
+          "description": "Review details Successfully",
+          "link": "reviews/review_details_successfully.json",
+          "groups": "all",
+          "route": "/reviews/:id",
+          "method": "get"
+        },
+        {
+          "description": "Review details failed",
+          "link": "reviews/review_details_failed.json",
+          "groups": "all",
+          "route": "/reviews/:id",
+          "method": "get"
+        },
+        {
+          "description": "Review updated successfully by authorised user",
+          "link": "reviews/review_updated_successfully_by_authorised_user.json",
+          "groups": "all",
+          "route": "/reviews/:id",
+          "method": "put"
+        },
+        {
+          "description": "Update Verification for review",
+          "link": "reviews/update_verification_for_review.json",
+          "groups": "all",
+          "route": "/reviews/:review_id/verifications/:id",
+          "method": "put"
+        }
+      ]
+    },
+    {
+      "name": "Sessions",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "Failure Response if user sent invalid params",
+          "link": "sessions/failure_response_if_user_sent_invalid_params.json",
+          "groups": "all",
+          "route": "/sessions/google",
+          "method": "post"
+        },
+        {
+          "description": "Failure response of sign in",
+          "link": "sessions/failure_response_of_sign_in.json",
+          "groups": "all",
+          "route": "/sessions",
+          "method": "post"
+        },
+        {
+          "description": "Sign in",
+          "link": "sessions/sign_in.json",
+          "groups": "all",
+          "route": "/sessions",
+          "method": "post"
+        },
+        {
+          "description": "Sign in With Google",
+          "link": "sessions/sign_in_with_google.json",
+          "groups": "all",
+          "route": "/sessions/google",
+          "method": "post"
+        }
+      ]
+    },
+    {
+      "name": "Users",
+      "explanation": null,
+      "examples": [
+        {
+          "description": " if Invitation Token is invalid",
+          "link": "users/_if_invitation_token_is_invalid.json",
+          "groups": "all",
+          "route": "/users/verify_invitation_token",
+          "method": "post"
+        },
+        {
+          "description": " if Invitation Token is valid",
+          "link": "users/_if_invitation_token_is_valid.json",
+          "groups": "all",
+          "route": "/users/verify_invitation_token",
+          "method": "post"
+        },
+        {
+          "description": " if Reset Password Token is invalid",
+          "link": "users/_if_reset_password_token_is_invalid.json",
+          "groups": "all",
+          "route": "/users/verify_reset_password_token",
+          "method": "post"
+        },
+        {
+          "description": " if old password donest not matched",
+          "link": "users/_if_old_password_donest_not_matched.json",
+          "groups": "all",
+          "route": "/users/update_password",
+          "method": "post"
+        },
+        {
+          "description": " if old password matched and updated successfully",
+          "link": "users/_if_old_password_matched_and_updated_successfully.json",
+          "groups": "all",
+          "route": "/users/update_password",
+          "method": "post"
+        },
+        {
+          "description": "Accept invitation to user",
+          "link": "users/accept_invitation_to_user.json",
+          "groups": "all",
+          "route": "/users/accept_invitation",
+          "method": "post"
+        },
+        {
+          "description": "Deactivate Account",
+          "link": "users/deactivate_account.json",
+          "groups": "all",
+          "route": "users/deactivate_account",
+          "method": "get"
+        },
+        {
+          "description": "Get Bookmarked events",
+          "link": "users/get_bookmarked_events.json",
+          "groups": "all",
+          "route": "users/bookmarked_events",
+          "method": "get"
+        },
+        {
+          "description": "Get My Rewards",
+          "link": "users/get_my_rewards.json",
+          "groups": "all",
+          "route": "users/my_rewards",
+          "method": "get"
+        },
+        {
+          "description": "Get Reviewed events",
+          "link": "users/get_reviewed_events.json",
+          "groups": "all",
+          "route": "users/reviewed_events",
+          "method": "get"
+        },
+        {
+          "description": "Get Users Saved Reviews",
+          "link": "users/get_users_saved_reviews.json",
+          "groups": "all",
+          "route": "users/saved_reviews",
+          "method": "get"
+        },
+        {
+          "description": "Send Reset Password Token of user to update password",
+          "link": "users/send_reset_password_token_of_user_to_update_password.json",
+          "groups": "all",
+          "route": "/users/reset_password",
+          "method": "post"
+        },
+        {
+          "description": "Send invitation to alerady exits user",
+          "link": "users/send_invitation_to_alerady_exits_user.json",
+          "groups": "all",
+          "route": "/users/send_invitation",
+          "method": "post"
+        },
+        {
+          "description": "Send invitation to user",
+          "link": "users/send_invitation_to_user.json",
+          "groups": "all",
+          "route": "/users/send_invitation",
+          "method": "post"
+        },
+        {
+          "description": "User Listing",
+          "link": "users/user_listing.json",
+          "groups": "all",
+          "route": "/users",
+          "method": "get"
+        },
+        {
+          "description": "Verify Reset Password Token",
+          "link": "users/verify_reset_password_token.json",
+          "groups": "all",
+          "route": "/users/verify_reset_password_token",
+          "method": "post"
+        },
+        {
+          "description": "get user details",
+          "link": "users/get_user_details.json",
+          "groups": "all",
+          "route": "/users/:id",
+          "method": "get"
+        },
+        {
+          "description": "if email is already present in system",
+          "link": "users/if_email_is_already_present_in_system.json",
+          "groups": "all",
+          "route": "/users/check_email",
+          "method": "get"
+        },
+        {
+          "description": "if email is invalid then sent error",
+          "link": "users/if_email_is_invalid_then_sent_error.json",
+          "groups": "all",
+          "route": "/users/forgot_password",
+          "method": "post"
+        },
+        {
+          "description": "if email is unique",
+          "link": "users/if_email_is_unique.json",
+          "groups": "all",
+          "route": "/users/check_email",
+          "method": "get"
+        },
+        {
+          "description": "if email is valid then sent reset password link",
+          "link": "users/if_email_is_valid_then_sent_reset_password_link.json",
+          "groups": "all",
+          "route": "/users/forgot_password",
+          "method": "post"
+        },
+        {
+          "description": "unauthorised user cant Send invitation to user",
+          "link": "users/unauthorised_user_cant_send_invitation_to_user.json",
+          "groups": "all",
+          "route": "/users/send_invitation",
+          "method": "post"
+        },
+        {
+          "description": "update user details",
+          "link": "users/update_user_details.json",
+          "groups": "all",
+          "route": "/users/:id",
+          "method": "put"
+        },
+        {
+          "description": "user delete",
+          "link": "users/user_delete.json",
+          "groups": "all",
+          "route": "/users/:id",
+          "method": "delete"
+        }
+      ]
+    },
+    {
+      "name": "Vendor Requests",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "Create Vendor Request",
+          "link": "vendor_requests/create_vendor_request.json",
+          "groups": "all",
+          "route": "/vendor_requests",
+          "method": "post"
+        },
+        {
+          "description": "Create Vendor Request Failed",
+          "link": "vendor_requests/create_vendor_request_failed.json",
+          "groups": "all",
+          "route": "/vendor_requests",
+          "method": "post"
+        },
+        {
+          "description": "Update status With valid Vendor Request id",
+          "link": "vendor_requests/update_status_with_valid_vendor_request_id.json",
+          "groups": "all",
+          "route": "/vendor_requests/:id",
+          "method": "get"
+        },
+        {
+          "description": "Vendor Request Listing",
+          "link": "vendor_requests/vendor_request_listing.json",
+          "groups": "all",
+          "route": "/vendor_requests",
+          "method": "get"
+        },
+        {
+          "description": "With InValid Vendor Request id",
+          "link": "vendor_requests/with_invalid_vendor_request_id.json",
+          "groups": "all",
+          "route": "/vendor_requests/:id",
+          "method": "get"
+        },
+        {
+          "description": "With Valid Vendor Request id",
+          "link": "vendor_requests/with_valid_vendor_request_id.json",
+          "groups": "all",
+          "route": "/vendor_requests/:id",
+          "method": "get"
+        }
+      ]
+    }
+  ]
+}
