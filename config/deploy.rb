@@ -1,31 +1,33 @@
 require 'mina/rails'
 require 'mina/git'
-require 'mina/rvm'
+require 'mina/rbenv'
 require 'mina/puma'
+require 'mina/bundler'
+
 
 server = ENV['server'] || 'staging'
 
 if server == 'staging'
-  ip = '44.242.49.51'
+  ip = '13.51.11.204'
   env = 'staging'
-  branch_name = ENV['branch'] || 'staging'
+  branch_name = ENV['branch'] || 'main'
 elsif server == 'preproduction'
-  ip = '34.216.130.68'
+  # ip = '34.216.130.68'
   env = 'preproduction'
   branch_name = 'prep'
 elsif server == 'production'
-  ip = '54.188.15.40'
+  ip = '13.51.11.204'
   env = 'production'
-  branch_name = 'master'
+  branch_name = 'main'
 end
 
-set :application_name, 'eventible-backend'
-set :rvm_use_path, '/usr/local/rvm/scripts/rvm'
-# set :rbenv_use_path, '/usr/local/rbenv/bin/rbenv'
+set :application_name, 'russian-evisa-backend'
+# set :rvm_use_path, '/usr/local/rvm/scripts/rvm'
+set :rbenv_use_path, '/usr/local/rbenv/bin/rbenv'
 set :user, 'ubuntu'
 set :domain, ip
-set :deploy_to, '/www/eventible-backend'
-set :repository, 'git@github.com:eventible2021/eventible-backend.git'
+set :deploy_to, '/www/russian-evisa-backend'
+set :repository, 'git@github.com:aman-pardeshi/russian-evisa-backend.git'
 set :branch, branch_name
 set :rails_env, env
 set :forward_agent, true
@@ -33,9 +35,9 @@ set :forward_agent, true
 set :shared_dirs, fetch(:shared_dirs, []).push('public/assets', 'tmp/pids', 'tmp/sockets')
 set :shared_files, fetch(:shared_files, []).push('config/database.yml', 'config/master.key', 'config/secrets.yml', 'config/storage.yml', 'config/puma.rb', '.env', 'config/audited.yml')
 
-# task :remote_environment do
-#   invoke :'rbenv:load'
-# end
+task :remote_environment do
+  invoke :'rbenv:load'
+end
 
 task :setup do
   command %[touch "#{fetch(:shared_path)}/config/master.key"]
