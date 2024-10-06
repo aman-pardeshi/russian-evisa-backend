@@ -43,3 +43,7 @@ config/audited.yml
 /public/uploads 
 
 .vscode
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml

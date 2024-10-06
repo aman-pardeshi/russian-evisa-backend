@@ -63,9 +63,6 @@ task :deploy do
 
     on :launch do
       invoke :'puma:phased_restart'
-      in_path(fetch(:current_path)) do
-        command %{sudo monit restart sidekiq}
-      end
     end
   end
 end
