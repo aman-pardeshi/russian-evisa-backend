@@ -1,4 +1,4 @@
-class V1::DashboardsController < V1::BaseController
+class DashboardsController < BaseController
   before_action :authenticate!
 
   def admin

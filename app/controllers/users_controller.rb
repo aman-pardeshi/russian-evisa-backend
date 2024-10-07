@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module V1
-  class UsersController < V1::BaseController
+  class UsersController < BaseController
     skip_before_action :authenticate!,
       only: %i[accept_invitation reset_password
         verify_invitation_token verify_reset_password_token

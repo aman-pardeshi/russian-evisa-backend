@@ -1,5 +1,5 @@
 module V1
-  class TeamMembersController < V1::BaseController
+  class TeamMembersController < BaseController
     skip_before_action :authenticate!,
       only: [ :team_invite_response ]
 
