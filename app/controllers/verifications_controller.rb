@@ -1,4 +1,4 @@
-class V1::VerificationsController < BaseController
+class VerificationsController < BaseController
 
   def create
     run V1::Verification::Operation::Create do|result|
