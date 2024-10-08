@@ -8,7 +8,7 @@ require 'mina/bundler'
 server = ENV['server'] || 'staging'
 
 if server == 'staging'
-  ip = '13.51.11.204'
+  ip = '54.245.247.194'
   env = 'staging'
   branch_name = ENV['branch'] || 'main'
 elsif server == 'preproduction'
@@ -21,12 +21,12 @@ elsif server == 'production'
   branch_name = 'main'
 end
 
-set :application_name, 'russian-evisa-backend'
-# set :rvm_use_path, '/usr/local/rvm/scripts/rvm'
-set :rbenv_use_path, '/usr/local/rbenv/bin/rbenv'
+set :application_name, 'eventible-backend'
+set :rvm_use_path, '/usr/local/rvm/scripts/rvm'
+# set :rbenv_use_path, '/usr/local/rbenv/bin/rbenv'
 set :user, 'ubuntu'
 set :domain, ip
-set :deploy_to, '/www/russian-evisa-backend'
+set :deploy_to, '/www/eventible-backend'
 set :repository, 'git@github.com:aman-pardeshi/russian-evisa-backend.git'
 set :branch, branch_name
 set :rails_env, env
@@ -35,9 +35,9 @@ set :forward_agent, true
 set :shared_dirs, fetch(:shared_dirs, []).push('public/assets', 'tmp/pids', 'tmp/sockets')
 set :shared_files, fetch(:shared_files, []).push('config/database.yml', 'config/master.key', 'config/secrets.yml', 'config/storage.yml', 'config/puma.rb', '.env', 'config/audited.yml')
 
-task :remote_environment do
-  invoke :'rbenv:load'
-end
+# task :remote_environment do
+#   invoke :'rbenv:load'
+# end
 
 task :setup do
   command %[touch "#{fetch(:shared_path)}/config/master.key"]
@@ -63,6 +63,9 @@ task :deploy do
 
     on :launch do
       invoke :'puma:phased_restart'
+      in_path(fetch(:current_path)) do
+        command %{sudo monit restart sidekiq}
+      end
     end
   end
 end
