@@ -45,6 +45,25 @@ class EvisaApplicationsController < BaseController
   end
 
   def upload_documents
+    run V1::EvisaApplication::Operation::UploadDocument do |result| 
+      return render json: {
+        data: result[:application],
+        status: 200 
+      }
+    end
+
+    render json: { message: result[:error] }, status: ERROR_STATUS_CODE 
+  end
+
+  def get_application_details
+    run V1::EvisaApplication::Operation::ApplicationDetails do |result| 
+      return render json: {
+        data: result[:application],
+        status: 200 
+      }
+    end
+
+    render json: { message: result[:error] }, status: ERROR_STATUS_CODE 
   end
 
   def all_admin_applications

@@ -47,6 +47,7 @@ gem 'carrierwave-aws'
 gem 'carrierwave', '~> 1.0'
 gem 'mini_magick'
 gem 'aws-sdk-rails'
+gem 'fog-aws'
 
 # Blazing fast application deployment tool.
 gem 'mina', '~> 1.2', '>= 1.2.3'
