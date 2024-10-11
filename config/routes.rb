@@ -57,7 +57,16 @@ Rails.application.routes.draw do
       post :update_passport_details
       post :upload_documents
       post :get_application_details
-      get :all_admin_applications
+      
+    end
+  end
+
+  resources :admin do 
+    collection do
+      post :submitted_applications
+      post :applied_applications
+      post :all_applications
+      post :update_status
     end
   end
 end
