@@ -1,6 +1,8 @@
 class CreateApplication < ActiveRecord::Migration[6.0]
   def change
-    create_table :applications, id: :uuid  do |t|
+    create_table :applications do |t|
+      t.uuid :reference_id, unique: true 
+      t.string :submission_id, unique: true 
       t.references :user
       t.string :first_name
       t.string :last_name
@@ -22,9 +24,20 @@ class CreateApplication < ActiveRecord::Migration[6.0]
       t.string :photo
       t.string :passport_photo_front
       t.string :passport_photo_back
-      t.string :fees
+      t.string :visa_fee
+      t.string :service_fee
       t.integer :status, :default => 0
       t.integer :payment_status, :default => 0
+      t.string :payment_reference_number
+      t.datetime :submitted_on
+      t.datetime :visa_applied_at
+      t.references :visa_applied_by
+      t.datetime :approved_at
+      t.references :approved_by
+      t.string :approval_document
+      t.datetime :rejected_at
+      t.references :rejected_by
+      t.string :rejection_note
 
       t.timestamps 
     end

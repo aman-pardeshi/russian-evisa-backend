@@ -9,7 +9,7 @@ module V1::EvisaApplication::Operation
     step :create
     
     def create(ctx, current_user:, **)
-      ctx[:application_id] = Application.create({user: ctx[:current_user]}).id
+      ctx[:reference_id] = Application.create({user: ctx[:current_user]}).reference_id
     end
   end
 end

@@ -13,11 +13,11 @@ module V1::EvisaApplication::Operation
     fail :no_application_found
 
     def check_params(ctx, params:, **)
-      params[:applicationId].present?
+      params[:referenceId].present?
     end
     
     def find_application(ctx, params:, **) 
-      application = Application.find_by(id: params[:applicationId])
+      application = Application.find_by(reference_id: params[:referenceId])
       ctx[:application] = application 
 
       application.present?

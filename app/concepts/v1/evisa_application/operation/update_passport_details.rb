@@ -12,11 +12,11 @@ module V1::EvisaApplication::Operation
     fail -> (ctx, application:, **) { ctx[:error] = application.errors.full_messages }, fail_fast: true
 
     def check_params(ctx, params:, **)
-      params[:applicationId].present?
+      params[:referenceId].present?
     end
 
     def update(ctx, params:, **)
-      application = Application.find(params[:applicationId])
+      application = Application.find_by(reference_id: params[:referenceId])
 
       passport_details_params = {
         passport_number: params[:passportNumber],

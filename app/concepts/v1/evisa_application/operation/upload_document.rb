@@ -14,11 +14,11 @@ module V1::EvisaApplication::Operation
 
 
     def check_params(ctx, params:, **)
-      params[:applicationId].present? || params[:photo].present? || params[:passport].present?
+      params[:referenceId].present? || params[:photo].present? || params[:passportFront].present?
     end
 
     def update(ctx, params:, **)
-      application = Application.find(params[:applicationId])
+      application = Application.find_by(reference_id: params[:referenceId])
 
       file_params = {
         photo: params[:photo],

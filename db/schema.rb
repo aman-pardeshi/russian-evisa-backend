@@ -10,12 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_10_11_104512) do
+ActiveRecord::Schema.define(version: 2024_10_12_064914) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "applications", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+  create_table "application_histories", force: :cascade do |t|
+    t.bigint "application_id", null: false
+    t.bigint "user_id", null: false
+    t.string "description"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["application_id"], name: "index_application_histories_on_application_id"
+    t.index ["user_id"], name: "index_application_histories_on_user_id"
+  end
+
+  create_table "applications", force: :cascade do |t|
+    t.uuid "reference_id"
+    t.string "submission_id"
     t.bigint "user_id"
     t.string "first_name"
     t.string "last_name"
@@ -37,13 +49,26 @@ ActiveRecord::Schema.define(version: 2024_10_11_104512) do
     t.string "photo"
     t.string "passport_photo_front"
     t.string "passport_photo_back"
-    t.string "fees"
+    t.string "visa_fee"
+    t.string "service_fee"
     t.integer "status", default: 0
     t.integer "payment_status", default: 0
+    t.string "payment_reference_number"
+    t.datetime "submitted_on"
+    t.datetime "visa_applied_at"
+    t.bigint "visa_applied_by_id"
+    t.datetime "approved_at"
+    t.bigint "approved_by_id"
+    t.string "approval_document"
+    t.datetime "rejected_at"
+    t.bigint "rejected_by_id"
+    t.string "rejection_note"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "application_id"
+    t.index ["approved_by_id"], name: "index_applications_on_approved_by_id"
+    t.index ["rejected_by_id"], name: "index_applications_on_rejected_by_id"
     t.index ["user_id"], name: "index_applications_on_user_id"
+    t.index ["visa_applied_by_id"], name: "index_applications_on_visa_applied_by_id"
   end
 
   create_table "login_accounts", force: :cascade do |t|
@@ -84,4 +109,6 @@ ActiveRecord::Schema.define(version: 2024_10_11_104512) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "application_histories", "applications"
+  add_foreign_key "application_histories", "users"
 end

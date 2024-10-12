@@ -10,6 +10,7 @@ module V1::AdminPortal::Operation
 
     def get_applications(ctx, current_user:, **)
       ctx[:applications] = Application.where(status: 'submitted').order(id: :desc)
+
     end
   end
 end

@@ -57,6 +57,7 @@ Rails.application.routes.draw do
       post :update_passport_details
       post :upload_documents
       post :get_application_details
+      post :update_status
       
     end
   end
@@ -66,7 +67,19 @@ Rails.application.routes.draw do
       post :submitted_applications
       post :applied_applications
       post :all_applications
-      post :update_status
+      post :apply_visa
+      post :approve_visa
+      post :reject_visa
+    end
+  end
+
+  resources :report do
+    collection do
+      post :submitted_applications
+      post :applied_visa
+      post :processed_visa
+      post :accounts_report
+      post :incomplete_applications
     end
   end
 end

@@ -4,7 +4,7 @@ class EvisaApplicationsController < BaseController
   def create
     run V1::EvisaApplication::Operation::Create do |result| 
       return render json: {
-        application_id: result[:application_id]
+        reference_id: result[:reference_id]
       }
     end
 
@@ -58,7 +58,7 @@ class EvisaApplicationsController < BaseController
   def get_application_details
     run V1::EvisaApplication::Operation::ApplicationDetails do |result| 
       return render json: {
-        data: result[:application],
+        data: V1::ApplicationSerializer.new(result[:application]).as_json,
         status: 200 
       }
     end
@@ -70,6 +70,17 @@ class EvisaApplicationsController < BaseController
     run V1::EvisaApplication::Operation::AllAdminApplications do |result| 
       return render json: {
         data: result[:applications],
+        status: 200 
+      }
+    end
+
+    render json: { message: result[:error] }, status: ERROR_STATUS_CODE 
+  end
+
+  def update_status
+    run V1::EvisaApplication::Operation::UpdateStatus do |result| 
+      return render json: {
+        data: V1::ApplicationSerializer.new(result[:application]).as_json,
         status: 200 
       }
     end
