@@ -73,7 +73,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :report do
+  resources :reports do
     collection do
       post :submitted_applications
       post :applied_visa

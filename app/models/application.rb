@@ -56,3 +56,5 @@ class Application < ApplicationRecord
     )
   end
 end
+
+# ["incomplete", "submitted", "applied", "approved", "rejected"]

@@ -20,6 +20,7 @@ module V1::EvisaApplication::Operation
       application.update({
         status: 'submitted',
         payment_status: 'paid',
+        payment_reference_number: 'PAYIEIJEHERWIh',
         submitted_on: DateTime.now
       })
       application.log_submission
