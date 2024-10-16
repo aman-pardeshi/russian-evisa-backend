@@ -39,105 +39,9 @@ class UserMailer < ApplicationMailer
     mail(to: ENV.fetch("EVENTIBLE_TEAM_EMAILS"), subject: I18n.t("mailer.campaign_builder_mail") )
   end
 
-  def send_event_approved_mail(event)
-    @event = event
-    @owner = event.owner
-    mail(to: @owner.email, subject: I18n.t("mailer.send_event_approved_mail"))
-  end
-
-  def send_content_marketing_hub_request_mail(content_marketing)
-    @request = content_marketing
-    @is_allowed_to_interview = @request.is_allowed_to_interview
-    @is_allowed_to_video_interview = @request.is_allowed_to_video_interview
-    @is_allowed_to_publish_article = @request.is_allowed_to_publish_article
-    @is_open_for_ideas_discussion = @request.is_open_for_ideas_discussion
-    mail(to: ENV.fetch("EVENTIBLE_CONTENT_TEAM_EMAILS"),
-      subject: I18n.t("mailer.send_content_marketing_hub_request_mail"))
-  end
-
-  def send_custom_review_link(event)
-    @event = event
-    @owner = event.owner
-    mail(to: ENV.fetch("EVENTIBLE_TEAM_EMAILS"), subject: I18n.t("mailer.send_custom_review_link"))
-  end
-
-  def vendor_request_mail(user)
-    @user = user
-    mail(to: ENV.fetch("EVENTIBLE_TEAM_EMAILS"), subject: I18n.t("mailer.vendor_request_mail"))
-  end
-
-  def vendor_request_mail_for_speaker_directory(user)
-    @user = user
-    @user_role = user.role.capitalize
-    mail(to: ENV.fetch("EVENTIBLE_TEAM_EMAILS"), subject: I18n.t("mailer.vendor_request_mail_for_speaker_directory"))
-  end
-
-  def send_review_alert_mail(reviewer, event, title, owner)
-    @event_title = event.title
-    @organizer = owner
-    @reviewer = reviewer
-    @title = title
-    mail(to: @organizer.email, subject: I18n.t("mailer.send_review_alert_mail"))
-  end
-
-  def send_run_campaign_on_your_behalf(user)
-    @user = user
-    mail(to: ENV.fetch("EVENTIBLE_TEAM_EMAILS"), subject: I18n.t("mailer.send_run_campaign_on_your_behalf"))
-  end
-
-  def send_reviews_on_mail(user, file_path, event_title)
-    @user = user
-    attachments["#{event_title}_reviews.csv"] = open("#{file_path}").read()
-    mail(to: user.email, subject: "#{event_title.capitalize} Reviews")
-  end
-
-  def send_email_report_on_mail(user, file_path)
-    @user = user
-    attachments["report.csv"] = open("#{file_path}").read()
-    mail(to: user.email, subject: "Report Export")
-  end
-
-  def send_cralwer_details_on_mail(user, file_path)
-    @user = user
-    attachments["crawled-url-details-report.csv"] = open("#{file_path}").read()
-    mail(to: user.email, subject: "Crawled Url Report Export")
-  end
-
-  def send_webinar_registration_report_on_mail(mail_id, file_path)
-    attachments["registration_report.csv"] = open("#{file_path}").read()
-    mail(to: mail_id, subject: "Webinar Rgistration Report")
-  end
-
-  def notify_reviewer_organizer_comment_mail(organizer, reviewer, organizer_comment, event_name)
-    @organizer = organizer
-    @reviewer = reviewer
-    puts "@reviewer #{@reviewer.inspect}"
-    @organizer_comment = organizer_comment
-    @event_name = event_name
-    mail(to: @reviewer.email, subject: I18n.t("mailer.notify_reviewer_organizer_comment"))
-  end
-
-  def edition_is_created_mail(event, user)
-    @event = event
-    @user = user
-    mail(to: @user.email, subject: "New edition added to the event")
-  end
-
-
   def send_last_login_activity_mail(user)
     @user = user
     mail(to: @user.email, subject: "#{@user.name} activity on Eventible")
-  end
-
-
-
-
-
-
-  def send_score_increment_mail(user, event)
-    @user = user
-    @event = event
-    mail(to: @user.email, subject: "Event #{@event.title} score increases")
   end
 
   def send_team_invite_mail(user, token, current_user, pswd)
@@ -234,6 +138,11 @@ class UserMailer < ApplicationMailer
     @event = event
     @organizer = organizer
     mail(to: email, subject: "Banner Design Request for Event Landing Page on Eventible")
+  end
+
+  def send_otp_for_new_user(email, otp)
+    @otp = otp
+    mail(to: email, subject: "One Time Password for Email verification")
   end
 end
 

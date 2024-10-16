@@ -20,6 +20,5 @@ module V1::User::Operation
     def send_remainder_mail(ctx, user:, **)
       UserMailer.send_vendor_request_approved_mail(user).deliver!
     end
-
   end
 end

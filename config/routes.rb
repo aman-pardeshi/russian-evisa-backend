@@ -37,6 +37,7 @@ Rails.application.routes.draw do
       get :run_campaign_on_your_behalf
       get :send_remainder
       put :unsubscribe_user
+      post :send_otp
     end
   end
 

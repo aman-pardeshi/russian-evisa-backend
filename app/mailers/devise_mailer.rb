@@ -12,9 +12,9 @@ class DeviseMailer < Devise::Mailer
     super
   end
 
-  def confirmation_instructions(record, token, opts={})
-    opts[:template_name] = "confirmation_instructions"
-    opts[:subject] = I18n.t("mailer.confirmation_instructions.subject")
-    super
-  end
+  # def confirmation_instructions(record, token, opts={})
+  #   opts[:template_name] = "confirmation_instructions"
+  #   opts[:subject] = I18n.t("mailer.confirmation_instructions.subject")
+  #   super
+  # end
 end
