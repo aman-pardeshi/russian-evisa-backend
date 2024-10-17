@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'support@eventible.com'
+  default from: 'amnprdsi@gmail.com'
   layout 'mailer'
 end
