@@ -26,7 +26,7 @@ module V1::EvisaApplication::Operation
         intented_date_of_entry: params[:intentedDateOfEntry],
         is_other_nationality: params[:isOtherNationality],
         other_nationality: params[:otherNationality],
-        year_of_acquistion: params[:yearOfAcquistion],
+        year_of_acquistion: params[:yearOfAcquisition],
       }
 
       application.update(passport_details_params)

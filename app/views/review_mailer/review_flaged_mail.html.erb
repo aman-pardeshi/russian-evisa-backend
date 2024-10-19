@@ -1,8 +1,0 @@
-Hi <%= @user.first_name %>,
-<p>Thank you for flagging the review titled: <b><%= @review_title %></b> - which was received for the event: <b><%= @event_name%></b><br>
-Our quality team will now further investigate this case and let you know of our decision within the next 21 working days.<br>
-For further clarity on our processes we encourage you to visit the following section: <%= link_to  "Legal Section","#{ENV.fetch("FRONTEND_URL")}/legal/general-user-terms" %>
-</p>
-<p>Best,<br>
-Partner Success Team<br>
-Eventible</p>

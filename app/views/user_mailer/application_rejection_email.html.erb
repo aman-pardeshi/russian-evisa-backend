@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  </head>
+  <body>
+    <div>
+      <p>Dear <%= @user.name %>,</p>
+
+      <p>
+        We regret to inform you that your Russian eVisa application has been
+        <b>rejected.</b> <br />
+        Unfortunately, this means that you will not be able to travel to Russia
+        with the current visa application.
+      </p>
+
+      <h4>Rejection Reason:</h4>
+      <%= @application.rejection_note %>
+
+      <p>
+        We understand this may be disappointing, but you may reapply by
+        addressing the potential issues that led to the rejection. If you need
+        assistance with the reapplication process, our team is here to help.
+      </p>
+
+      <p>
+        For any further inquiries or clarification, please do not hesitate to
+        contact us.
+      </p>
+
+      <p>
+        We apologize for any inconvenience caused and are ready to assist you
+        with the next steps.
+      </p>
+
+      <p>
+        Best regards, <br />
+        Russian Evisa Team
+      </p>
+    </div>
+  </body>
+</html>

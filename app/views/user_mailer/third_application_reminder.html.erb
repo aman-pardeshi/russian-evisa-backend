@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  </head>
+  <body>
+    <div>
+      <p>Dear <%= @user.name %>,</p>
+
+      <p>
+        You’re just a few steps away from completing your Russian eVisa
+        application. Completing it now will guarantee a smooth visa process and
+        give you peace of mind for your upcoming trip to Russia.
+      </p>
+
+      <p>
+        <%= link_to "Click here to complete your application",
+        "#{ENV.fetch("FRONTEND_URL")}/application" %>
+      </p>
+
+      <p>
+        If you need help, our support team is available to assist you at every
+        step. Don’t wait until it’s too late!
+      </p>
+
+      <p>
+        Warm regards, <br />
+        Russian Evisa Team
+      </p>
+    </div>
+  </body>
+</html>

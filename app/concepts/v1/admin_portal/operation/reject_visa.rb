@@ -26,7 +26,7 @@ module V1::AdminPortal::Operation
       ctx[:error] = "Evisa already rejected"
     end
 
-    def update(ctx, params:, **)
+    def update(ctx, params:, current_user:, **)
       application = Application.find_by(reference_id: params[:referenceId])
 
       application.update({
@@ -37,6 +37,8 @@ module V1::AdminPortal::Operation
       })
       application.log_visa_status_change('rejected', current_user)
       
+      UserMailer.application_rejection_email(application).deliver!
+
       ctx[:application] = application
     end
   end

@@ -35,6 +35,8 @@ module V1::AdminPortal::Operation
         approved_by: current_user
       })
       application.log_visa_status_change('approved', current_user)
+
+      UserMailer.application_approval_email(application).deliver!
       
       ctx[:application] = application
     end

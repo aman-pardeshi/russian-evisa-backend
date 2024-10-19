@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module V1::AdminPortal::Operation
-  class AppliedApplications < Trailblazer::Operation
+  class SubmittedApplications < Trailblazer::Operation
 
     step V1::Api::Macro.CheckAuthorizedUser
     fail V1::Api::Macro.AccessDenied
@@ -9,7 +9,7 @@ module V1::AdminPortal::Operation
     step :get_applications
 
     def get_applications(ctx, params:, current_user:, **)
-      applications = Application.where(status: 'applied').order(id: :desc)
+      applications = Application.submitted.order(id: :desc)
 
       case params[:searchBy]
         when 'date'

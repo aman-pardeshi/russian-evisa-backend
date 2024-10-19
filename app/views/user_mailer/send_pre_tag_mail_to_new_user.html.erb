@@ -1,5 +1,0 @@
-<p> Hi <%= @user.name%>.<br>
-<p>Welcome to Eventible. </p>
-<%= link_to "Click here", "#{ENV.fetch("FRONTEND_URL")}/team-members/invite-team-member?team_invitation_token=#{@token}&email=#{@user.email}&pswd=#{@pswd}&preTag=#{true}" %>  to check your event information.
-<p>Thanks,<br>
-Eventible</p>

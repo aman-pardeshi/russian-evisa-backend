@@ -14,7 +14,7 @@ module V1::EvisaApplication::Operation
       params[:referenceId].present?
     end
 
-    def update(ctx, params:, **)
+    def update(ctx, params:, current_user:, **)
       application = Application.find_by(reference_id: params[:referenceId])
 
       application.update({
@@ -23,6 +23,9 @@ module V1::EvisaApplication::Operation
         payment_reference_number: 'PAYIEIJEHERWIh',
         submitted_on: DateTime.now
       })
+
+      UserMailer.application_submitted_acknowledge(current_user).deliver!
+      AdminMailer.notify_admin_new_application(current_user, application).deliver!
       application.log_submission
       ctx[:application] = application
     end

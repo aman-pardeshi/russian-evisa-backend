@@ -22,4 +22,10 @@ class AdminMailer < ApplicationMailer
     @event = event
     mail(to: ['ag@eventible.com','abakhshi@eventible.in'], subject: "An organizer replied to a review")
   end
+
+  def notify_admin_new_application(user, application)
+    @user = user
+    @application = application
+    mail(to: ['admin@russianevisa.com'], subject: "New Payment Received – Russian eVisa Application for #{user.name}")
+  end
 end

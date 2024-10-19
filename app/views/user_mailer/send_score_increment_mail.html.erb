@@ -1,7 +1,0 @@
-<p>Hi <%= @user.name %>,</p>
-<p> <%= @event.title %> score has been increased !!</p>
-<br>
-<p>Click here to <%= link_to "Unsubscribe", "#{ENV.fetch("FRONTEND_URL")}/unsubscribe?id=#{@user.id}&email=#{@user.email}" %> </p>
-<p>Best,<br>
-<br>
-Eventible</p>

@@ -7,6 +7,7 @@ class Application < ApplicationRecord
   mount_uploader :photo, PhotoUploader
   mount_uploader :passport_photo_front, PassportFrontUploader
   mount_uploader :passport_photo_back, PassportBackUploader
+  mount_uploader :approval_document, ApprovalDocumentUploader
   has_many :application_histories
   after_create :log_creation
   belongs_to :visa_applied_by, class_name: "User", foreign_key: "visa_applied_by_id", optional: true
@@ -15,6 +16,8 @@ class Application < ApplicationRecord
 
   def generate_reference_id
     self.reference_id = SecureRandom.uuid if reference_id.blank?
+    self.visa_fee = 50
+    self.service_fee = 10
   end
 
   def generate_application_id

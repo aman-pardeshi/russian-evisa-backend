@@ -9,7 +9,7 @@ module V1::EvisaApplication::Operation
     step :get_applications
 
     def get_applications(ctx, current_user:, **)
-      ctx[:applications] = Application.where(user_id: current_user.id).order(id: :desc)
+      ctx[:applications] = Application.where(user_id: current_user.id, status: 'incomplete').order(id: :desc)
     end
   end
 end

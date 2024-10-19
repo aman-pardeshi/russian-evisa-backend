@@ -27,7 +27,7 @@ module V1::EvisaApplication::Operation
         country: params[:country],
         email: params[:email],
         country_code: params[:countryCode],
-        mobile: params[:mobile]
+        mobile: params[:contactNo]
       }
 
       application.update(personal_details_params)

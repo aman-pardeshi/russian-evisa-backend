@@ -45,7 +45,7 @@ class AdminController < BaseController
 
   def reject_visa
     run V1::AdminPortal::Operation::RejectVisa do |result| 
-      return cache_render V1::AdminApplicationSerializer, result[:applications], status: 200 
+      return cache_render V1::AdminApplicationSerializer, result[:application], status: 200 
     end
 
     render json: { message: result[:error] }, status: ERROR_STATUS_CODE 

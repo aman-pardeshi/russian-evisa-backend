@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  </head>
+  <body>
+    <div>
+      <p>Hi Team,</p>
+
+      <p>
+        We’ve received a new eVisa application with payment successfully
+        processed. <br />
+        Below are the details of the applicant:
+      </p>
+
+      <p>
+        Applicant Details: <br /><br />
+
+        Name: <%= @application.first_name %><br />
+        Application ID: <%= @application.submission_id %> <br />
+        Nationality: <%= @application.country %> <br />
+        Visa Fee: <%= @application.visa_fee %> <br />
+        Service Fee: <%= @application.service_fee %> <br />
+        Payment Date: <%= @application.submitted_on %> <br />
+        Travel Dates: <%= @application.intented_date_of_entry %> <br />
+        Submission Date: <%= @application.submitted_on %> <br />
+      </p>
+
+      <p>
+        Best regards, <br />
+        Russian Evisa Team
+      </p>
+    </div>
+  </body>
+</html>
