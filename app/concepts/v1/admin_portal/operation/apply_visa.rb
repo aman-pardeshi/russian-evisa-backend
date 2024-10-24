@@ -8,7 +8,8 @@ module V1::AdminPortal::Operation
     step :check_params
     fail V1::Api::Macro.ParamsMissing(params: 'refrence id')
 
-
+    step :check_for_duplicate_update
+    fail :duplicate_status_update, fail_fast: true
 
     step :update
 
