@@ -14,7 +14,7 @@ end
 #   rake "generate_sitemap_xml:create_xml_of_published_urls"
 # end
 
-At 12:00 AM, every day
+# At 12:00 AM, every day
 every '0 0 * * *' do
   rake "send_application_reminder_mails:send_reminder"
 end
