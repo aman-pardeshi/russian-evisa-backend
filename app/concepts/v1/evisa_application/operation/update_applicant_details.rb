@@ -19,10 +19,10 @@ module V1::EvisaApplication::Operation
       application = Application.find_by(reference_id: params[:referenceId])
 
       personal_details_params = {
-        first_name: params[:firstName],
-        last_name: params[:lastName],
+        first_name: params[:firstName].upcase,
+        last_name: params[:lastName].upcase,
         date_of_birth: params[:dateOfBirth],
-        place_of_birth: params[:placeOfBirth],
+        place_of_birth: params[:placeOfBirth].upcase,
         gender: params[:gender],
         country: params[:country],
         email: params[:email],

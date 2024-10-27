@@ -19,8 +19,8 @@ module V1::EvisaApplication::Operation
       application = Application.find_by(reference_id: params[:referenceId])
 
       passport_details_params = {
-        passport_number: params[:passportNumber],
-        passport_place_of_issue: params[:passportPlaceOfIssue],
+        passport_number: params[:passportNumber].upcase,
+        passport_place_of_issue: params[:passportPlaceOfIssue].upcase,
         passport_date_of_issue: params[:passportDateOfIssue],
         passport_expiry_date: params[:passportExpiryDate],
         intented_date_of_entry: params[:intentedDateOfEntry],

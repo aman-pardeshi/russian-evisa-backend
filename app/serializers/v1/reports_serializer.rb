@@ -19,5 +19,9 @@ module V1
     def rejected_at
       model.rejected_at.present? ? model.rejected_at.strftime("%B %d, %Y") : ''
     end
+
+    def visa_applied_by
+      model.visa_applied_by.as_json(only: [:id, :name, :role])
+    end
   end
 end
