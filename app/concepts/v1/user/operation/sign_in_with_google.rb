@@ -11,7 +11,7 @@ module V1::User::Operation
 
     def check_params(ctx, params:, **)
       params[:google_response].present? &&
-      params[:google_response]["accessToken"].present? &&
+      # params[:google_response]["accessToken"].present? &&
       params[:google_response]["profileObj"].present?
     end
 
@@ -33,6 +33,7 @@ module V1::User::Operation
     def find_or_create_user(ctx, user_params:, **)
       user = User.find_or_initialize_by(email: user_params[:email])
       user.name = user_params[:name]
+      user.role = 'applicant'
       user.skip_password_validation = true
       user.skip_confirmation_notification!
       ctx[:user] = user if user.save! && user.active?
