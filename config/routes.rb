@@ -59,6 +59,7 @@ Rails.application.routes.draw do
       post :upload_documents
       post :get_application_details
       post :update_status
+      post :track_status
       
     end
   end

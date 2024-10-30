@@ -17,7 +17,7 @@ class Application < ApplicationRecord
   def generate_reference_id
     self.reference_id = SecureRandom.uuid if reference_id.blank?
     self.visa_fee = 50
-    self.service_fee = 10
+    self.service_fee = 50
   end
 
   def generate_application_id

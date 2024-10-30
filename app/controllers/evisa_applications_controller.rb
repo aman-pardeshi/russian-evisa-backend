@@ -87,4 +87,14 @@ class EvisaApplicationsController < BaseController
 
     render json: { message: result[:error] }, status: ERROR_STATUS_CODE 
   end
+
+  def track_status
+    run V1::EvisaApplication::Operation::TrackStatus do |result|
+      return cache_render V1::TrackStatusSerializer, result[:application], status: 200
+    end
+
+    render json: {
+      message: result[:error], status: ERROR_STATUS_CODE
+    }
+  end
 end
