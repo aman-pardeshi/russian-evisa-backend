@@ -17,7 +17,7 @@ module V1::AdminPortal::Operation
             from_date = Date.strptime(params[:fromDate], '%d-%m-%Y')
             to_date = Date.strptime(params[:toDate], '%d-%m-%Y').end_of_day
 
-            applications = applications.where(created_at: from_date..to_date)
+            applications = applications.where(submitted_on: from_date..to_date)
           end
         when 'applicationId'
           applications = applications.where(submission_id: params[:applicationId])
