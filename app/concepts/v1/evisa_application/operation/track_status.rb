@@ -5,17 +5,16 @@ module V1::EvisaApplication::Operation
   class TrackStatus < Trailblazer::Operation
 
     step :check_params
-    fail V1::Api::Macro.ParamsMissing(params: 'Application ID or Date of birth'), fail_fast: true
+    fail V1::Api::Macro.ParamsMissing(params: 'Application ID'), fail_fast: true
 
     step :find_application
 
     def check_params(ctx, params:, **)
-      params[:referenceId].present? && params[:dateOfBirth].present?
+      params[:referenceId].present? 
     end
 
-    def find_application(ctx, params:, **)
-      
-      ctx[:application] = Application.where(submission_id: params[:referenceId], date_of_birth: params[:dateOfBirth])
+    def find_application(ctx, params:, **)      
+      ctx[:application] = Application.where(reference_id: params[:referenceId])
     end
   end
 end

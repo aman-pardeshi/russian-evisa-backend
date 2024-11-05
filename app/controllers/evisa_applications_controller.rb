@@ -11,8 +11,29 @@ class EvisaApplicationsController < BaseController
     render json: { message: result[:error] }, status: ERROR_STATUS_CODE 
   end
 
+  def delete
+    run V1::EvisaApplication::Operation::Delete do |result| 
+      return render json: {
+        message: "Application Deleted Successfully!"
+      }
+    end
+
+    render json: { message: result[:error] }, status: ERROR_STATUS_CODE 
+  end
+
   def get_all_applications
     run V1::EvisaApplication::Operation::AllApplications do |result| 
+      return render json: {
+        data: result[:applications],
+        status: 200 
+      }
+    end
+
+    render json: { message: result[:error] }, status: ERROR_STATUS_CODE 
+  end
+
+  def get_all_submitted_applications
+    run V1::EvisaApplication::Operation::AllSubmittedApplications do |result| 
       return render json: {
         data: result[:applications],
         status: 200 

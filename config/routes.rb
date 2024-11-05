@@ -53,7 +53,9 @@ Rails.application.routes.draw do
 
   resources :evisa_applications, only: [:create] do 
     collection do
+      post :delete
       get :get_all_applications
+      get :get_all_submitted_applications
       post :update_applicant_details
       post :update_passport_details
       post :upload_documents
