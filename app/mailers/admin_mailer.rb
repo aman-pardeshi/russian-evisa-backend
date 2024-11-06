@@ -26,6 +26,6 @@ class AdminMailer < ApplicationMailer
   def notify_admin_new_application(user, application)
     @user = user
     @application = application
-    mail(to: ['admin@russianevisa.com'], subject: "New Payment Received – Russian eVisa Application for #{user.name}")
+    mail(to: ['saransh@techmidori.com', 'amnprdsi@gmail.com'], subject: "New Payment Received – Russian eVisa Application for #{user.name}")
   end
 end
