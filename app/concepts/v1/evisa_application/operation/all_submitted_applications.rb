@@ -9,7 +9,8 @@ module V1::EvisaApplication::Operation
     step :get_applications
     
     def get_applications(ctx, current_user:, **)
-      ctx[:applications] = Application.where(user_id: current_user.id, status: 'submitted').order(id: :desc)
+      required_status = ['submitted', 'applied', 'approved', 'rejected']
+      ctx[:applications] = Application.where(user_id: current_user.id, status: required_status).order(id: :desc)
     end
   end
 end
