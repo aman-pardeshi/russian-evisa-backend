@@ -9,19 +9,6 @@ class AdminMailer < ApplicationMailer
     )
   end
 
-  def notify_admin_event_edit(user, event)
-    @user = user
-    @event = event
-    mail(to: ['ag@eventible.com','abakhshi@eventible.in'], subject: "#{@user.name} updated event: #{@event.title}")
-  end
-
-  def notify_admin_organizer_reply(organizer, reviewer, comment, event)
-    @organizer = organizer
-    @reviewer = reviewer
-    @comment = comment
-    @event = event
-    mail(to: ['ag@eventible.com','abakhshi@eventible.in'], subject: "An organizer replied to a review")
-  end
 
   def notify_admin_new_application(user, application)
     @user = user
