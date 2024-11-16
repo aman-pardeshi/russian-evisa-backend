@@ -76,6 +76,39 @@ class EvisaApplicationsController < BaseController
     render json: { message: result[:error] }, status: ERROR_STATUS_CODE 
   end
 
+  def update_employement_details
+    run V1::EvisaApplication::Operation::UpdateEmploymentDetails do |result| 
+      return render json: {
+        data: result[:application],
+        status: 200 
+      }
+    end
+
+    render json: { message: result[:error] }, status: ERROR_STATUS_CODE 
+  end
+
+  def update_relatives_details
+    run V1::EvisaApplication::Operation::UpdateRelativesDetails do |result| 
+      return render json: {
+        data: result[:application],
+        status: 200 
+      }
+    end
+
+    render json: { message: result[:error] }, status: ERROR_STATUS_CODE 
+  end
+
+  def update_additional_details
+    run V1::EvisaApplication::Operation::UpdateAdditionalDetails do |result| 
+      return render json: {
+        data: result[:application],
+        status: 200 
+      }
+    end
+
+    render json: { message: result[:error] }, status: ERROR_STATUS_CODE 
+  end
+
   def get_application_details
     run V1::EvisaApplication::Operation::ApplicationDetails do |result| 
       return render json: {

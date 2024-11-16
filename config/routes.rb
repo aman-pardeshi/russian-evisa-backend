@@ -59,6 +59,9 @@ Rails.application.routes.draw do
       post :update_applicant_details
       post :update_passport_details
       post :upload_documents
+      post :update_employement_details
+      post :update_relatives_details
+      post :update_additional_details
       post :get_application_details
       post :update_status
       post :track_status

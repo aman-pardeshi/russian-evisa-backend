@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_10_12_064914) do
+ActiveRecord::Schema.define(version: 2024_11_13_165800) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -65,6 +65,22 @@ ActiveRecord::Schema.define(version: 2024_10_12_064914) do
     t.string "rejection_note"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "home_address"
+    t.string "trip_purpose"
+    t.date "return_date"
+    t.string "currently_employed_or_studying"
+    t.json "employment_or_study_details"
+    t.string "type_of_accommodation"
+    t.string "locality"
+    t.json "accommodation_details"
+    t.string "marital_status"
+    t.json "partner_details"
+    t.boolean "has_mother"
+    t.json "mother_details"
+    t.boolean "has_father"
+    t.json "father_details"
+    t.boolean "visited_countries_recently"
+    t.json "visited_countries_details"
     t.index ["approved_by_id"], name: "index_applications_on_approved_by_id"
     t.index ["rejected_by_id"], name: "index_applications_on_rejected_by_id"
     t.index ["user_id"], name: "index_applications_on_user_id"

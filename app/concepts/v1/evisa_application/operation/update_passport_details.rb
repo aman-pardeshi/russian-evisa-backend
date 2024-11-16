@@ -25,6 +25,8 @@ module V1::EvisaApplication::Operation
         passport_expiry_date: params[:passportExpiryDate],
         intented_date_of_entry: params[:intentedDateOfEntry],
         is_other_nationality: params[:isOtherNationality],
+        return_date: params[:returnDate],
+        trip_purpose: params[:purposeOfTheTrip],
         other_nationality: params[:otherNationality],
         year_of_acquistion: params[:yearOfAcquisition],
       }
