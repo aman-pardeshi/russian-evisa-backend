@@ -5,9 +5,9 @@
 #   end
 # end
 
-every 6.month do
-  rake "audited_cleaner:perform"
-end
+# every 6.month do
+#   rake "audited_cleaner:perform"
+# end
 
 #At 12:00 AM, every 15 days
 # every '0 0 */15 * *' do
